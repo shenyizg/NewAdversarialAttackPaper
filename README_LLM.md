@@ -1,9 +1,161 @@
 # Latest Large Language Model Attack Papers
-**update at 2025-02-28 09:49:29**
+**update at 2025-03-03 09:51:19**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
-## **1. Great, Now Write an Article About That: The Crescendo Multi-Turn LLM Jailbreak Attack**
+## **1. Logicbreaks: A Framework for Understanding Subversion of Rule-based Inference**
+
+cs.AI
+
+**SubmitDate**: 2025-02-27    [abs](http://arxiv.org/abs/2407.00075v4) [paper-pdf](http://arxiv.org/pdf/2407.00075v4)
+
+**Authors**: Anton Xue, Avishree Khare, Rajeev Alur, Surbhi Goel, Eric Wong
+
+**Abstract**: We study how to subvert large language models (LLMs) from following prompt-specified rules. We first formalize rule-following as inference in propositional Horn logic, a mathematical system in which rules have the form "if $P$ and $Q$, then $R$" for some propositions $P$, $Q$, and $R$. Next, we prove that although small transformers can faithfully follow such rules, maliciously crafted prompts can still mislead both theoretical constructions and models learned from data. Furthermore, we demonstrate that popular attack algorithms on LLMs find adversarial prompts and induce attention patterns that align with our theory. Our novel logic-based framework provides a foundation for studying LLMs in rule-based settings, enabling a formal analysis of tasks like logical reasoning and jailbreak attacks.
+
+
+
+## **2. Beyond Natural Language Perplexity: Detecting Dead Code Poisoning in Code Generation Datasets**
+
+cs.CL
+
+**SubmitDate**: 2025-02-28    [abs](http://arxiv.org/abs/2502.20246v2) [paper-pdf](http://arxiv.org/pdf/2502.20246v2)
+
+**Authors**: Chi-Chien Tsai, Chia-Mu Yu, Ying-Dar Lin, Yu-Sung Wu, Wei-Bin Lee
+
+**Abstract**: The increasing adoption of large language models (LLMs) for code-related tasks has raised concerns about the security of their training datasets. One critical threat is dead code poisoning, where syntactically valid but functionally redundant code is injected into training data to manipulate model behavior. Such attacks can degrade the performance of neural code search systems, leading to biased or insecure code suggestions. Existing detection methods, such as token-level perplexity analysis, fail to effectively identify dead code due to the structural and contextual characteristics of programming languages. In this paper, we propose DePA (Dead Code Perplexity Analysis), a novel line-level detection and cleansing method tailored to the structural properties of code. DePA computes line-level perplexity by leveraging the contextual relationships between code lines and identifies anomalous lines by comparing their perplexity to the overall distribution within the file. Our experiments on benchmark datasets demonstrate that DePA significantly outperforms existing methods, achieving 0.14-0.19 improvement in detection F1-score and a 44-65% increase in poisoned segment localization precision. Furthermore, DePA enhances detection speed by 0.62-23x, making it practical for large-scale dataset cleansing. Overall, by addressing the unique challenges of dead code poisoning, DePA provides a robust and efficient solution for safeguarding the integrity of code generation model training datasets.
+
+
+
+## **3. Behind the Tip of Efficiency: Uncovering the Submerged Threats of Jailbreak Attacks in Small Language Models**
+
+cs.CR
+
+12 pages. 6 figures
+
+**SubmitDate**: 2025-02-28    [abs](http://arxiv.org/abs/2502.19883v2) [paper-pdf](http://arxiv.org/pdf/2502.19883v2)
+
+**Authors**: Sibo Yi, Tianshuo Cong, Xinlei He, Qi Li, Jiaxing Song
+
+**Abstract**: Small language models (SLMs) have become increasingly prominent in the deployment on edge devices due to their high efficiency and low computational cost. While researchers continue to advance the capabilities of SLMs through innovative training strategies and model compression techniques, the security risks of SLMs have received considerably less attention compared to large language models (LLMs).To fill this gap, we provide a comprehensive empirical study to evaluate the security performance of 13 state-of-the-art SLMs under various jailbreak attacks. Our experiments demonstrate that most SLMs are quite susceptible to existing jailbreak attacks, while some of them are even vulnerable to direct harmful prompts.To address the safety concerns, we evaluate several representative defense methods and demonstrate their effectiveness in enhancing the security of SLMs. We further analyze the potential security degradation caused by different SLM techniques including architecture compression, quantization, knowledge distillation, and so on. We expect that our research can highlight the security challenges of SLMs and provide valuable insights to future work in developing more robust and secure SLMs.
+
+
+
+## **4. Trustworthy AI-Generative Content for Intelligent Network Service: Robustness, Security, and Fairness**
+
+cs.CR
+
+**SubmitDate**: 2025-02-27    [abs](http://arxiv.org/abs/2405.05930v2) [paper-pdf](http://arxiv.org/pdf/2405.05930v2)
+
+**Authors**: Siyuan Li, Xi Lin, Yaju Liu, Xiang Chen, Jianhua Li
+
+**Abstract**: AI-generated content (AIGC) models, represented by large language models (LLM), have revolutionized content creation. High-speed next-generation communication technology is an ideal platform for providing powerful AIGC network services. At the same time, advanced AIGC techniques can also make future network services more intelligent, especially various online content generation services. However, the significant untrustworthiness concerns of current AIGC models, such as robustness, security, and fairness, greatly affect the credibility of intelligent network services, especially in ensuring secure AIGC services. This paper proposes TrustGAIN, a trustworthy AIGC framework that incorporates robust, secure, and fair network services. We first discuss the robustness to adversarial attacks faced by AIGC models in network systems and the corresponding protection issues. Subsequently, we emphasize the importance of avoiding unsafe and illegal services and ensuring the fairness of the AIGC network services. Then as a case study, we propose a novel sentiment analysis-based detection method to guide the robust detection of unsafe content in network services. We conduct our experiments on fake news, malicious code, and unsafe review datasets to represent LLM application scenarios. Our results indicate that TrustGAIN is an exploration of future networks that can support trustworthy AIGC network services.
+
+
+
+## **5. The Hidden Risks of Large Reasoning Models: A Safety Assessment of R1**
+
+cs.CY
+
+**SubmitDate**: 2025-02-27    [abs](http://arxiv.org/abs/2502.12659v3) [paper-pdf](http://arxiv.org/pdf/2502.12659v3)
+
+**Authors**: Kaiwen Zhou, Chengzhi Liu, Xuandong Zhao, Shreedhar Jangam, Jayanth Srinivasa, Gaowen Liu, Dawn Song, Xin Eric Wang
+
+**Abstract**: The rapid development of large reasoning models, such as OpenAI-o3 and DeepSeek-R1, has led to significant improvements in complex reasoning over non-reasoning large language models~(LLMs). However, their enhanced capabilities, combined with the open-source access of models like DeepSeek-R1, raise serious safety concerns, particularly regarding their potential for misuse. In this work, we present a comprehensive safety assessment of these reasoning models, leveraging established safety benchmarks to evaluate their compliance with safety regulations. Furthermore, we investigate their susceptibility to adversarial attacks, such as jailbreaking and prompt injection, to assess their robustness in real-world applications. Through our multi-faceted analysis, we uncover four key findings: (1) There is a significant safety gap between the open-source R1 models and the o3-mini model, on both safety benchmark and attack, suggesting more safety effort on R1 is needed. (2) The distilled reasoning model shows poorer safety performance compared to its safety-aligned base models. (3) The stronger the model's reasoning ability, the greater the potential harm it may cause when answering unsafe questions. (4) The thinking process in R1 models pose greater safety concerns than their final answers. Our study provides insights into the security implications of reasoning models and highlights the need for further advancements in R1 models' safety to close the gap.
+
+
+
+## **6. Foot-In-The-Door: A Multi-turn Jailbreak for LLMs**
+
+cs.CL
+
+19 pages, 8 figures
+
+**SubmitDate**: 2025-02-28    [abs](http://arxiv.org/abs/2502.19820v2) [paper-pdf](http://arxiv.org/pdf/2502.19820v2)
+
+**Authors**: Zixuan Weng, Xiaolong Jin, Jinyuan Jia, Xiangyu Zhang
+
+**Abstract**: Ensuring AI safety is crucial as large language models become increasingly integrated into real-world applications. A key challenge is jailbreak, where adversarial prompts bypass built-in safeguards to elicit harmful disallowed outputs. Inspired by psychological foot-in-the-door principles, we introduce FITD,a novel multi-turn jailbreak method that leverages the phenomenon where minor initial commitments lower resistance to more significant or more unethical transgressions. Our approach progressively escalates the malicious intent of user queries through intermediate bridge prompts and aligns the model's response by itself to induce toxic responses. Extensive experimental results on two jailbreak benchmarks demonstrate that FITD achieves an average attack success rate of 94% across seven widely used models, outperforming existing state-of-the-art methods. Additionally, we provide an in-depth analysis of LLM self-corruption, highlighting vulnerabilities in current alignment strategies and emphasizing the risks inherent in multi-turn interactions. The code is available at https://github.com/Jinxiaolong1129/Foot-in-the-door-Jailbreak.
+
+
+
+## **7. Tokens for Learning, Tokens for Unlearning: Mitigating Membership Inference Attacks in Large Language Models via Dual-Purpose Training**
+
+cs.LG
+
+**SubmitDate**: 2025-02-27    [abs](http://arxiv.org/abs/2502.19726v1) [paper-pdf](http://arxiv.org/pdf/2502.19726v1)
+
+**Authors**: Toan Tran, Ruixuan Liu, Li Xiong
+
+**Abstract**: Large language models (LLMs) have become the backbone of modern natural language processing but pose privacy concerns about leaking sensitive training data. Membership inference attacks (MIAs), which aim to infer whether a sample is included in a model's training dataset, can serve as a foundation for broader privacy threats. Existing defenses designed for traditional classification models do not account for the sequential nature of text data. As a result, they either require significant computational resources or fail to effectively mitigate privacy risks in LLMs. In this work, we propose a lightweight yet effective empirical privacy defense for protecting training data of language modeling by leveraging the token-specific characteristics. By analyzing token dynamics during training, we propose a token selection strategy that categorizes tokens into hard tokens for learning and memorized tokens for unlearning. Subsequently, our training-phase defense optimizes a novel dual-purpose token-level loss to achieve a Pareto-optimal balance between utility and privacy. Extensive experiments demonstrate that our approach not only provides strong protection against MIAs but also improves language modeling performance by around 10\% across various LLM architectures and datasets compared to the baselines.
+
+
+
+## **8. Stealthy Backdoor Attack in Self-Supervised Learning Vision Encoders for Large Vision Language Models**
+
+cs.CV
+
+**SubmitDate**: 2025-02-27    [abs](http://arxiv.org/abs/2502.18290v2) [paper-pdf](http://arxiv.org/pdf/2502.18290v2)
+
+**Authors**: Zhaoyi Liu, Huan Zhang
+
+**Abstract**: Self-supervised learning (SSL) vision encoders learn high-quality image representations and thus have become a vital part of developing vision modality of large vision language models (LVLMs). Due to the high cost of training such encoders, pre-trained encoders are widely shared and deployed into many LVLMs, which are security-critical or bear societal significance. Under this practical scenario, we reveal a new backdoor threat that significant visual hallucinations can be induced into these LVLMs by merely compromising vision encoders. Because of the sharing and reuse of these encoders, many downstream LVLMs may inherit backdoor behaviors from encoders, leading to widespread backdoors. In this work, we propose BadVision, the first method to exploit this vulnerability in SSL vision encoders for LVLMs with novel trigger optimization and backdoor learning techniques. We evaluate BadVision on two types of SSL encoders and LVLMs across eight benchmarks. We show that BadVision effectively drives the LVLMs to attacker-chosen hallucination with over 99% attack success rate, causing a 77.6% relative visual understanding error while maintaining the stealthiness. SoTA backdoor detection methods cannot detect our attack effectively.
+
+
+
+## **9. MAA: Meticulous Adversarial Attack against Vision-Language Pre-trained Models**
+
+cs.CV
+
+**SubmitDate**: 2025-02-27    [abs](http://arxiv.org/abs/2502.08079v2) [paper-pdf](http://arxiv.org/pdf/2502.08079v2)
+
+**Authors**: Peng-Fei Zhang, Guangdong Bai, Zi Huang
+
+**Abstract**: Current adversarial attacks for evaluating the robustness of vision-language pre-trained (VLP) models in multi-modal tasks suffer from limited transferability, where attacks crafted for a specific model often struggle to generalize effectively across different models, limiting their utility in assessing robustness more broadly. This is mainly attributed to the over-reliance on model-specific features and regions, particularly in the image modality. In this paper, we propose an elegant yet highly effective method termed Meticulous Adversarial Attack (MAA) to fully exploit model-independent characteristics and vulnerabilities of individual samples, achieving enhanced generalizability and reduced model dependence. MAA emphasizes fine-grained optimization of adversarial images by developing a novel resizing and sliding crop (RScrop) technique, incorporating a multi-granularity similarity disruption (MGSD) strategy. Extensive experiments across diverse VLP models, multiple benchmark datasets, and a variety of downstream tasks demonstrate that MAA significantly enhances the effectiveness and transferability of adversarial attacks. A large cohort of performance studies is conducted to generate insights into the effectiveness of various model configurations, guiding future advancements in this domain.
+
+
+
+## **10. M-LLM Based Video Frame Selection for Efficient Video Understanding**
+
+cs.CV
+
+**SubmitDate**: 2025-02-27    [abs](http://arxiv.org/abs/2502.19680v1) [paper-pdf](http://arxiv.org/pdf/2502.19680v1)
+
+**Authors**: Kai Hu, Feng Gao, Xiaohan Nie, Peng Zhou, Son Tran, Tal Neiman, Lingyun Wang, Mubarak Shah, Raffay Hamid, Bing Yin, Trishul Chilimbi
+
+**Abstract**: Recent advances in Multi-Modal Large Language Models (M-LLMs) show promising results in video reasoning. Popular Multi-Modal Large Language Model (M-LLM) frameworks usually apply naive uniform sampling to reduce the number of video frames that are fed into an M-LLM, particularly for long context videos. However, it could lose crucial context in certain periods of a video, so that the downstream M-LLM may not have sufficient visual information to answer a question. To attack this pain point, we propose a light-weight M-LLM -based frame selection method that adaptively select frames that are more relevant to users' queries. In order to train the proposed frame selector, we introduce two supervision signals (i) Spatial signal, where single frame importance score by prompting a M-LLM; (ii) Temporal signal, in which multiple frames selection by prompting Large Language Model (LLM) using the captions of all frame candidates. The selected frames are then digested by a frozen downstream video M-LLM for visual reasoning and question answering. Empirical results show that the proposed M-LLM video frame selector improves the performances various downstream video Large Language Model (video-LLM) across medium (ActivityNet, NExT-QA) and long (EgoSchema, LongVideoBench) context video question answering benchmarks.
+
+
+
+## **11. Improving Adversarial Transferability in MLLMs via Dynamic Vision-Language Alignment Attack**
+
+cs.CV
+
+arXiv admin note: text overlap with arXiv:2403.09766
+
+**SubmitDate**: 2025-02-27    [abs](http://arxiv.org/abs/2502.19672v1) [paper-pdf](http://arxiv.org/pdf/2502.19672v1)
+
+**Authors**: Chenhe Gu, Jindong Gu, Andong Hua, Yao Qin
+
+**Abstract**: Multimodal Large Language Models (MLLMs), built upon LLMs, have recently gained attention for their capabilities in image recognition and understanding. However, while MLLMs are vulnerable to adversarial attacks, the transferability of these attacks across different models remains limited, especially under targeted attack setting. Existing methods primarily focus on vision-specific perturbations but struggle with the complex nature of vision-language modality alignment. In this work, we introduce the Dynamic Vision-Language Alignment (DynVLA) Attack, a novel approach that injects dynamic perturbations into the vision-language connector to enhance generalization across diverse vision-language alignment of different models. Our experimental results show that DynVLA significantly improves the transferability of adversarial examples across various MLLMs, including BLIP2, InstructBLIP, MiniGPT4, LLaVA, and closed-source models such as Gemini.
+
+
+
+## **12. H-CoT: Hijacking the Chain-of-Thought Safety Reasoning Mechanism to Jailbreak Large Reasoning Models, Including OpenAI o1/o3, DeepSeek-R1, and Gemini 2.0 Flash Thinking**
+
+cs.CL
+
+Website: https://maliciouseducator.org/
+
+**SubmitDate**: 2025-02-27    [abs](http://arxiv.org/abs/2502.12893v2) [paper-pdf](http://arxiv.org/pdf/2502.12893v2)
+
+**Authors**: Martin Kuo, Jianyi Zhang, Aolin Ding, Qinsi Wang, Louis DiValentin, Yujia Bao, Wei Wei, Hai Li, Yiran Chen
+
+**Abstract**: Large Reasoning Models (LRMs) have recently extended their powerful reasoning capabilities to safety checks-using chain-of-thought reasoning to decide whether a request should be answered. While this new approach offers a promising route for balancing model utility and safety, its robustness remains underexplored. To address this gap, we introduce Malicious-Educator, a benchmark that disguises extremely dangerous or malicious requests beneath seemingly legitimate educational prompts. Our experiments reveal severe security flaws in popular commercial-grade LRMs, including OpenAI o1/o3, DeepSeek-R1, and Gemini 2.0 Flash Thinking. For instance, although OpenAI's o1 model initially maintains a high refusal rate of about 98%, subsequent model updates significantly compromise its safety; and attackers can easily extract criminal strategies from DeepSeek-R1 and Gemini 2.0 Flash Thinking without any additional tricks. To further highlight these vulnerabilities, we propose Hijacking Chain-of-Thought (H-CoT), a universal and transferable attack method that leverages the model's own displayed intermediate reasoning to jailbreak its safety reasoning mechanism. Under H-CoT, refusal rates sharply decline-dropping from 98% to below 2%-and, in some instances, even transform initially cautious tones into ones that are willing to provide harmful content. We hope these findings underscore the urgent need for more robust safety mechanisms to preserve the benefits of advanced reasoning capabilities without compromising ethical standards.
+
+
+
+## **13. Great, Now Write an Article About That: The Crescendo Multi-Turn LLM Jailbreak Attack**
 
 cs.CR
 
@@ -17,7 +169,7 @@ Accepted at USENIX Security 2025
 
 
 
-## **2. Beyond Surface-Level Patterns: An Essence-Driven Defense Framework Against Jailbreak Attacks in LLMs**
+## **14. Beyond Surface-Level Patterns: An Essence-Driven Defense Framework Against Jailbreak Attacks in LLMs**
 
 cs.CR
 
@@ -31,7 +183,7 @@ cs.CR
 
 
 
-## **3. Towards Label-Only Membership Inference Attack against Pre-trained Large Language Models**
+## **15. Towards Label-Only Membership Inference Attack against Pre-trained Large Language Models**
 
 cs.CR
 
@@ -45,7 +197,7 @@ Accepted by USENIX Security 2025
 
 
 
-## **4. JailBench: A Comprehensive Chinese Security Assessment Benchmark for Large Language Models**
+## **16. JailBench: A Comprehensive Chinese Security Assessment Benchmark for Large Language Models**
 
 cs.CL
 
@@ -59,7 +211,7 @@ cs.CL
 
 
 
-## **5. Defense Against Prompt Injection Attack by Leveraging Attack Techniques**
+## **17. Defense Against Prompt Injection Attack by Leveraging Attack Techniques**
 
 cs.CR
 
@@ -73,19 +225,7 @@ cs.CR
 
 
 
-## **6. Stealthy Backdoor Attack in Self-Supervised Learning Vision Encoders for Large Vision Language Models**
-
-cs.CV
-
-**SubmitDate**: 2025-02-27    [abs](http://arxiv.org/abs/2502.18290v2) [paper-pdf](http://arxiv.org/pdf/2502.18290v2)
-
-**Authors**: Zhaoyi Liu, Huan Zhang
-
-**Abstract**: Self-supervised learning (SSL) vision encoders learn high-quality image representations and thus have become a vital part of developing vision modality of large vision language models (LVLMs). Due to the high cost of training such encoders, pre-trained encoders are widely shared and deployed into many LVLMs, which are security-critical or bear societal significance. Under this practical scenario, we reveal a new backdoor threat that significant visual hallucinations can be induced into these LVLMs by merely compromising vision encoders. Because of the sharing and reuse of these encoders, many downstream LVLMs may inherit backdoor behaviors from encoders, leading to widespread backdoors. In this work, we propose BadVision, the first method to exploit this vulnerability in SSL vision encoders for LVLMs with novel trigger optimization and backdoor learning techniques. We evaluate BadVision on two types of SSL encoders and LVLMs across eight benchmarks. We show that BadVision effectively drives the LVLMs to attacker-chosen hallucination with over 99% attack success rate, causing a 77.6% relative visual understanding error while maintaining the stealthiness. SoTA backdoor detection methods cannot detect our attack effectively.
-
-
-
-## **7. Topic-FlipRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks to Retrieval-Augmented Generation Models**
+## **18. Topic-FlipRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks to Retrieval-Augmented Generation Models**
 
 cs.CL
 
@@ -97,7 +237,7 @@ cs.CL
 
 
 
-## **8. CLIPure: Purification in Latent Space via CLIP for Adversarially Robust Zero-Shot Classification**
+## **19. CLIPure: Purification in Latent Space via CLIP for Adversarially Robust Zero-Shot Classification**
 
 cs.CV
 
@@ -111,7 +251,7 @@ accepted by ICLR 2025
 
 
 
-## **9. Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks**
+## **20. Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks**
 
 cs.CR
 
@@ -123,7 +263,7 @@ cs.CR
 
 
 
-## **10. Efficient Safety Retrofitting Against Jailbreaking for LLMs**
+## **21. Efficient Safety Retrofitting Against Jailbreaking for LLMs**
 
 cs.CL
 
@@ -135,7 +275,7 @@ cs.CL
 
 
 
-## **11. S$^4$ST: A Strong, Self-transferable, faSt, and Simple Scale Transformation for Transferable Targeted Attack**
+## **22. S$^4$ST: A Strong, Self-transferable, faSt, and Simple Scale Transformation for Transferable Targeted Attack**
 
 cs.CR
 
@@ -149,19 +289,7 @@ cs.CR
 
 
 
-## **12. The Hidden Risks of Large Reasoning Models: A Safety Assessment of R1**
-
-cs.CY
-
-**SubmitDate**: 2025-02-27    [abs](http://arxiv.org/abs/2502.12659v3) [paper-pdf](http://arxiv.org/pdf/2502.12659v3)
-
-**Authors**: Kaiwen Zhou, Chengzhi Liu, Xuandong Zhao, Shreedhar Jangam, Jayanth Srinivasa, Gaowen Liu, Dawn Song, Xin Eric Wang
-
-**Abstract**: The rapid development of large reasoning models, such as OpenAI-o3 and DeepSeek-R1, has led to significant improvements in complex reasoning over non-reasoning large language models~(LLMs). However, their enhanced capabilities, combined with the open-source access of models like DeepSeek-R1, raise serious safety concerns, particularly regarding their potential for misuse. In this work, we present a comprehensive safety assessment of these reasoning models, leveraging established safety benchmarks to evaluate their compliance with safety regulations. Furthermore, we investigate their susceptibility to adversarial attacks, such as jailbreaking and prompt injection, to assess their robustness in real-world applications. Through our multi-faceted analysis, we uncover four key findings: (1) There is a significant safety gap between the open-source R1 models and the o3-mini model, on both safety benchmark and attack, suggesting more safety effort on R1 is needed. (2) The distilled reasoning model shows poorer safety performance compared to its safety-aligned base models. (3) The stronger the model's reasoning ability, the greater the potential harm it may cause when answering unsafe questions. (4) The thinking process in R1 models pose greater safety concerns than their final answers. Our study provides insights into the security implications of reasoning models and highlights the need for further advancements in R1 models' safety to close the gap.
-
-
-
-## **13. MM-PoisonRAG: Disrupting Multimodal RAG with Local and Global Poisoning Attacks**
+## **23. MM-PoisonRAG: Disrupting Multimodal RAG with Local and Global Poisoning Attacks**
 
 cs.LG
 
@@ -175,7 +303,7 @@ Code is available at https://github.com/HyeonjeongHa/MM-PoisonRAG
 
 
 
-## **14. Towards Effective Evaluations and Comparisons for LLM Unlearning Methods**
+## **24. Towards Effective Evaluations and Comparisons for LLM Unlearning Methods**
 
 cs.LG
 
@@ -187,7 +315,7 @@ cs.LG
 
 
 
-## **15. Design and implementation of a distributed security threat detection system integrating federated learning and multimodal LLM**
+## **25. Design and implementation of a distributed security threat detection system integrating federated learning and multimodal LLM**
 
 cs.CR
 
@@ -199,7 +327,7 @@ cs.CR
 
 
 
-## **16. Proactive Privacy Amnesia for Large Language Models: Safeguarding PII with Negligible Impact on Model Utility**
+## **26. Proactive Privacy Amnesia for Large Language Models: Safeguarding PII with Negligible Impact on Model Utility**
 
 cs.CL
 
@@ -213,7 +341,7 @@ ICLR'25 Poster. Project page and code is available at  https://ppa-iclr2025.my.c
 
 
 
-## **17. The Geometry of Refusal in Large Language Models: Concept Cones and Representational Independence**
+## **27. The Geometry of Refusal in Large Language Models: Concept Cones and Representational Independence**
 
 cs.LG
 
@@ -225,7 +353,7 @@ cs.LG
 
 
 
-## **18. Dataset Featurization: Uncovering Natural Language Features through Unsupervised Data Reconstruction**
+## **28. Dataset Featurization: Uncovering Natural Language Features through Unsupervised Data Reconstruction**
 
 cs.AI
 
@@ -237,7 +365,7 @@ cs.AI
 
 
 
-## **19. Emoti-Attack: Zero-Perturbation Adversarial Attacks on NLP Systems via Emoji Sequences**
+## **29. Emoti-Attack: Zero-Perturbation Adversarial Attacks on NLP Systems via Emoji Sequences**
 
 cs.AI
 
@@ -249,7 +377,7 @@ cs.AI
 
 
 
-## **20. REINFORCE Adversarial Attacks on Large Language Models: An Adaptive, Distributional, and Semantic Objective**
+## **30. REINFORCE Adversarial Attacks on Large Language Models: An Adaptive, Distributional, and Semantic Objective**
 
 cs.LG
 
@@ -263,7 +391,7 @@ cs.LG
 
 
 
-## **21. Adversarial Training for Defense Against Label Poisoning Attacks**
+## **31. Adversarial Training for Defense Against Label Poisoning Attacks**
 
 cs.LG
 
@@ -277,7 +405,7 @@ Accepted at the International Conference on Learning Representations  (ICLR 2025
 
 
 
-## **22. GuidedBench: Equipping Jailbreak Evaluation with Guidelines**
+## **32. GuidedBench: Equipping Jailbreak Evaluation with Guidelines**
 
 cs.CL
 
@@ -291,7 +419,7 @@ Homepage: https://sproutnan.github.io/AI-Safety_Benchmark/
 
 
 
-## **23. Char-mander Use mBackdoor! A Study of Cross-lingual Backdoor Attacks in Multilingual LLMs**
+## **33. Char-mander Use mBackdoor! A Study of Cross-lingual Backdoor Attacks in Multilingual LLMs**
 
 cs.CL
 
@@ -303,7 +431,7 @@ cs.CL
 
 
 
-## **24. PAPILLON: Efficient and Stealthy Fuzz Testing-Powered Jailbreaks for LLMs**
+## **34. PAPILLON: Efficient and Stealthy Fuzz Testing-Powered Jailbreaks for LLMs**
 
 cs.CR
 
@@ -315,7 +443,7 @@ cs.CR
 
 
 
-## **25. Dysca: A Dynamic and Scalable Benchmark for Evaluating Perception Ability of LVLMs**
+## **35. Dysca: A Dynamic and Scalable Benchmark for Evaluating Perception Ability of LVLMs**
 
 cs.CV
 
@@ -329,7 +457,7 @@ Accepted by ICLR2025
 
 
 
-## **26. Guardians of the Agentic System: Preventing Many Shots Jailbreak with Agentic System**
+## **36. Guardians of the Agentic System: Preventing Many Shots Jailbreak with Agentic System**
 
 cs.CR
 
@@ -343,7 +471,7 @@ cs.CR
 
 
 
-## **27. RapidPen: Fully Automated IP-to-Shell Penetration Testing with LLM-based Agents**
+## **37. RapidPen: Fully Automated IP-to-Shell Penetration Testing with LLM-based Agents**
 
 cs.CR
 
@@ -355,7 +483,7 @@ cs.CR
 
 
 
-## **28. Tracking the Copyright of Large Vision-Language Models through Parameter Learning Adversarial Images**
+## **38. Tracking the Copyright of Large Vision-Language Models through Parameter Learning Adversarial Images**
 
 cs.AI
 
@@ -369,7 +497,7 @@ Accepted to ICLR 2025
 
 
 
-## **29. Can Indirect Prompt Injection Attacks Be Detected and Removed?**
+## **39. Can Indirect Prompt Injection Attacks Be Detected and Removed?**
 
 cs.CR
 
@@ -383,7 +511,7 @@ cs.CR
 
 
 
-## **30. SafeRAG: Benchmarking Security in Retrieval-Augmented Generation of Large Language Model**
+## **40. SafeRAG: Benchmarking Security in Retrieval-Augmented Generation of Large Language Model**
 
 cs.CR
 
@@ -395,7 +523,7 @@ cs.CR
 
 
 
-## **31. On Calibration of LLM-based Guard Models for Reliable Content Moderation**
+## **41. On Calibration of LLM-based Guard Models for Reliable Content Moderation**
 
 cs.CR
 
@@ -409,7 +537,7 @@ Accepted to ICLR 2025
 
 
 
-## **32. Intrinsic Model Weaknesses: How Priming Attacks Unveil Vulnerabilities in Large Language Models**
+## **42. Intrinsic Model Weaknesses: How Priming Attacks Unveil Vulnerabilities in Large Language Models**
 
 cs.CL
 
@@ -421,7 +549,7 @@ cs.CL
 
 
 
-## **33. Swallowing the Poison Pills: Insights from Vulnerability Disparity Among LLMs**
+## **43. Swallowing the Poison Pills: Insights from Vulnerability Disparity Among LLMs**
 
 cs.CR
 
@@ -433,7 +561,7 @@ cs.CR
 
 
 
-## **34. A generative approach to LLM harmfulness detection with special red flag tokens**
+## **44. A generative approach to LLM harmfulness detection with special red flag tokens**
 
 cs.CL
 
@@ -447,7 +575,7 @@ cs.CL
 
 
 
-## **35. ELBA-Bench: An Efficient Learning Backdoor Attacks Benchmark for Large Language Models**
+## **45. ELBA-Bench: An Efficient Learning Backdoor Attacks Benchmark for Large Language Models**
 
 cs.CR
 
@@ -459,7 +587,7 @@ cs.CR
 
 
 
-## **36. Na'vi or Knave: Jailbreaking Language Models via Metaphorical Avatars**
+## **46. Na'vi or Knave: Jailbreaking Language Models via Metaphorical Avatars**
 
 cs.CL
 
@@ -473,7 +601,7 @@ Our study requires further in-depth research to ensure the  comprehensiveness an
 
 
 
-## **37. Humanizing the Machine: Proxy Attacks to Mislead LLM Detectors**
+## **47. Humanizing the Machine: Proxy Attacks to Mislead LLM Detectors**
 
 cs.LG
 
@@ -487,7 +615,7 @@ cs.LG
 
 
 
-## **38. Be a Multitude to Itself: A Prompt Evolution Framework for Red Teaming**
+## **48. Be a Multitude to Itself: A Prompt Evolution Framework for Red Teaming**
 
 cs.CL
 
@@ -499,7 +627,7 @@ cs.CL
 
 
 
-## **39. Merger-as-a-Stealer: Stealing Targeted PII from Aligned LLMs with Model Merging**
+## **49. Merger-as-a-Stealer: Stealing Targeted PII from Aligned LLMs with Model Merging**
 
 cs.CR
 
@@ -513,7 +641,7 @@ cs.CR
 
 
 
-## **40. Stealing Training Data from Large Language Models in Decentralized Training through Activation Inversion Attack**
+## **50. Stealing Training Data from Large Language Models in Decentralized Training through Activation Inversion Attack**
 
 cs.CR
 
@@ -524,138 +652,6 @@ cs.CR
 **Authors**: Chenxi Dai, Lin Lu, Pan Zhou
 
 **Abstract**: Decentralized training has become a resource-efficient framework to democratize the training of large language models (LLMs). However, the privacy risks associated with this framework, particularly due to the potential inclusion of sensitive data in training datasets, remain unexplored. This paper identifies a novel and realistic attack surface: the privacy leakage from training data in decentralized training, and proposes \textit{activation inversion attack} (AIA) for the first time. AIA first constructs a shadow dataset comprising text labels and corresponding activations using public datasets. Leveraging this dataset, an attack model can be trained to reconstruct the training data from activations in victim decentralized training. We conduct extensive experiments on various LLMs and publicly available datasets to demonstrate the susceptibility of decentralized training to AIA. These findings highlight the urgent need to enhance security measures in decentralized training to mitigate privacy risks in training LLMs.
-
-
-
-## **41. Understanding the Effectiveness of Coverage Criteria for Large Language Models: A Special Angle from Jailbreak Attacks**
-
-cs.SE
-
-**SubmitDate**: 2025-02-22    [abs](http://arxiv.org/abs/2408.15207v2) [paper-pdf](http://arxiv.org/pdf/2408.15207v2)
-
-**Authors**: Shide Zhou, Tianlin Li, Kailong Wang, Yihao Huang, Ling Shi, Yang Liu, Haoyu Wang
-
-**Abstract**: Large language models (LLMs) have revolutionized artificial intelligence, but their increasing deployment across critical domains has raised concerns about their abnormal behaviors when faced with malicious attacks. Such vulnerability alerts the widespread inadequacy of pre-release testing.In this paper, we conduct a comprehensive empirical study to evaluate the effectiveness of traditional coverage criteria in identifying such inadequacies, exemplified by the significant security concern of jailbreak attacks.Our study begins with a clustering analysis of the hidden states of LLMs, revealing that the embedded characteristics effectively distinguish between different query types. We then systematically evaluate the performance of these criteria across three key dimensions: criterion level, layer level, and token level. Our research uncovers significant differences in neuron coverage when LLMs process normal versus jailbreak queries, aligning with our clustering experiments.Leveraging these findings, we propose three practical applications of coverage criteria in the context of LLM security testing. Specifically, we develop a real-time jailbreak detection mechanism that achieves high accuracy (93.61% on average) in classifying queries as normal or jailbreak. Furthermore, we explore the use of coverage levels to prioritize test cases, improving testing efficiency by focusing on high-risk interactions and removing redundant tests. Lastly, we introduce a coverage-guided approach for generating jailbreak attack examples, enabling systematic refinement of prompts to uncover vulnerabilities. This study improves our understanding of LLM security testing, enhances their safety, and provides a foundation for developing more robust AI applications.
-
-
-
-## **42. TurboFuzzLLM: Turbocharging Mutation-based Fuzzing for Effectively Jailbreaking Large Language Models in Practice**
-
-cs.CR
-
-Accepted at NAACL 2025 industry track, 12 pages, 5 figures
-
-**SubmitDate**: 2025-02-21    [abs](http://arxiv.org/abs/2502.18504v1) [paper-pdf](http://arxiv.org/pdf/2502.18504v1)
-
-**Authors**: Aman Goel, Xian Carrie Wu, Zhe Wang, Dmitriy Bespalov, Yanjun Qi
-
-**Abstract**: Jailbreaking large-language models (LLMs) involves testing their robustness against adversarial prompts and evaluating their ability to withstand prompt attacks that could elicit unauthorized or malicious responses. In this paper, we present TurboFuzzLLM, a mutation-based fuzzing technique for efficiently finding a collection of effective jailbreaking templates that, when combined with harmful questions, can lead a target LLM to produce harmful responses through black-box access via user prompts. We describe the limitations of directly applying existing template-based attacking techniques in practice, and present functional and efficiency-focused upgrades we added to mutation-based fuzzing to generate effective jailbreaking templates automatically. TurboFuzzLLM achieves $\geq$ 95\% attack success rates (ASR) on public datasets for leading LLMs (including GPT-4o \& GPT-4 Turbo), shows impressive generalizability to unseen harmful questions, and helps in improving model defenses to prompt attacks.
-
-
-
-## **43. CVE-LLM : Ontology-Assisted Automatic Vulnerability Evaluation Using Large Language Models**
-
-cs.CL
-
-arXiv admin note: substantial text overlap with arXiv:2407.14640
-
-**SubmitDate**: 2025-02-21    [abs](http://arxiv.org/abs/2502.15932v1) [paper-pdf](http://arxiv.org/pdf/2502.15932v1)
-
-**Authors**: Rikhiya Ghosh, Hans-Martin von Stockhausen, Martin Schmitt, George Marica Vasile, Sanjeev Kumar Karn, Oladimeji Farri
-
-**Abstract**: The National Vulnerability Database (NVD) publishes over a thousand new vulnerabilities monthly, with a projected 25 percent increase in 2024, highlighting the crucial need for rapid vulnerability identification to mitigate cybersecurity attacks and save costs and resources. In this work, we propose using large language models (LLMs) to learn vulnerability evaluation from historical assessments of medical device vulnerabilities in a single manufacturer's portfolio. We highlight the effectiveness and challenges of using LLMs for automatic vulnerability evaluation and introduce a method to enrich historical data with cybersecurity ontologies, enabling the system to understand new vulnerabilities without retraining the LLM. Our LLM system integrates with the in-house application - Cybersecurity Management System (CSMS) - to help Siemens Healthineers (SHS) product cybersecurity experts efficiently assess the vulnerabilities in our products. Also, we present guidelines for efficient integration of LLMs into the cybersecurity tool.
-
-
-
-## **44. Defending Jailbreak Prompts via In-Context Adversarial Game**
-
-cs.LG
-
-EMNLP 2024 Main Paper
-
-**SubmitDate**: 2025-02-21    [abs](http://arxiv.org/abs/2402.13148v3) [paper-pdf](http://arxiv.org/pdf/2402.13148v3)
-
-**Authors**: Yujun Zhou, Yufei Han, Haomin Zhuang, Kehan Guo, Zhenwen Liang, Hongyan Bao, Xiangliang Zhang
-
-**Abstract**: Large Language Models (LLMs) demonstrate remarkable capabilities across diverse applications. However, concerns regarding their security, particularly the vulnerability to jailbreak attacks, persist. Drawing inspiration from adversarial training in deep learning and LLM agent learning processes, we introduce the In-Context Adversarial Game (ICAG) for defending against jailbreaks without the need for fine-tuning. ICAG leverages agent learning to conduct an adversarial game, aiming to dynamically extend knowledge to defend against jailbreaks. Unlike traditional methods that rely on static datasets, ICAG employs an iterative process to enhance both the defense and attack agents. This continuous improvement process strengthens defenses against newly generated jailbreak prompts. Our empirical studies affirm ICAG's efficacy, where LLMs safeguarded by ICAG exhibit significantly reduced jailbreak success rates across various attack scenarios. Moreover, ICAG demonstrates remarkable transferability to other LLMs, indicating its potential as a versatile defense mechanism.
-
-
-
-## **45. IPAD: Inverse Prompt for AI Detection -- A Robust and Explainable LLM-Generated Text Detector**
-
-cs.LG
-
-**SubmitDate**: 2025-02-21    [abs](http://arxiv.org/abs/2502.15902v1) [paper-pdf](http://arxiv.org/pdf/2502.15902v1)
-
-**Authors**: Zheng Chen, Yushi Feng, Changyang He, Yue Deng, Hongxi Pu, Bo Li
-
-**Abstract**: Large Language Models (LLMs) have attained human-level fluency in text generation, which complicates the distinguishing between human-written and LLM-generated texts. This increases the risk of misuse and highlights the need for reliable detectors. Yet, existing detectors exhibit poor robustness on out-of-distribution (OOD) data and attacked data, which is critical for real-world scenarios. Also, they struggle to provide explainable evidence to support their decisions, thus undermining the reliability. In light of these challenges, we propose IPAD (Inverse Prompt for AI Detection), a novel framework consisting of a Prompt Inverter that identifies predicted prompts that could have generated the input text, and a Distinguisher that examines how well the input texts align with the predicted prompts. We develop and examine two versions of Distinguishers. Empirical evaluations demonstrate that both Distinguishers perform significantly better than the baseline methods, with version2 outperforming baselines by 9.73% on in-distribution data (F1-score) and 12.65% on OOD data (AUROC). Furthermore, a user study is conducted to illustrate that IPAD enhances the AI detection trustworthiness by allowing users to directly examine the decision-making evidence, which provides interpretable support for its state-of-the-art detection results.
-
-
-
-## **46. A Comprehensive Survey on the Trustworthiness of Large Language Models in Healthcare**
-
-cs.CY
-
-**SubmitDate**: 2025-02-21    [abs](http://arxiv.org/abs/2502.15871v1) [paper-pdf](http://arxiv.org/pdf/2502.15871v1)
-
-**Authors**: Manar Aljohani, Jun Hou, Sindhura Kommu, Xuan Wang
-
-**Abstract**: The application of large language models (LLMs) in healthcare has the potential to revolutionize clinical decision-making, medical research, and patient care. As LLMs are increasingly integrated into healthcare systems, several critical challenges must be addressed to ensure their reliable and ethical deployment. These challenges include truthfulness, where models generate misleading information; privacy, with risks of unintentional data retention; robustness, requiring defenses against adversarial attacks; fairness, addressing biases in clinical outcomes; explainability, ensuring transparent decision-making; and safety, mitigating risks of misinformation and medical errors. Recently, researchers have begun developing benchmarks and evaluation frameworks to systematically assess the trustworthiness of LLMs. However, the trustworthiness of LLMs in healthcare remains underexplored, lacking a systematic review that provides a comprehensive understanding and future insights into this area. This survey bridges this gap by providing a comprehensive overview of the recent research of existing methodologies and solutions aimed at mitigating the above risks in healthcare. By focusing on key trustworthiness dimensions including truthfulness, privacy and safety, robustness, fairness and bias, and explainability, we present a thorough analysis of how these issues impact the reliability and ethical use of LLMs in healthcare. This paper highlights ongoing efforts and offers insights into future research directions to ensure the safe and trustworthy deployment of LLMs in healthcare.
-
-
-
-## **47. SafeInt: Shielding Large Language Models from Jailbreak Attacks via Safety-Aware Representation Intervention**
-
-cs.CL
-
-**SubmitDate**: 2025-02-21    [abs](http://arxiv.org/abs/2502.15594v1) [paper-pdf](http://arxiv.org/pdf/2502.15594v1)
-
-**Authors**: Jiaqi Wu, Chen Chen, Chunyan Hou, Xiaojie Yuan
-
-**Abstract**: With the widespread real-world deployment of large language models (LLMs), ensuring their behavior complies with safety standards has become crucial. Jailbreak attacks exploit vulnerabilities in LLMs to induce undesirable behavior, posing a significant threat to LLM safety. Previous defenses often fail to achieve both effectiveness and efficiency simultaneously. Defenses from a representation perspective offer new insights, but existing interventions cannot dynamically adjust representations based on the harmfulness of the queries. To address this limitation while ensuring both effectiveness and efficiency, we propose SafeIntervention (SafeInt), a novel defense method that shields LLMs from jailbreak attacks through safety-aware representation intervention. SafeInt is built on our analysis of the representations of jailbreak samples. It adjusts representation distributions of jailbreak samples through intervention to align them with the representations of unsafe samples while minimizing unnecessary perturbations to jailbreak-irrelevant representations. We conduct comprehensive experiments covering six jailbreak attacks, two jailbreak datasets, and two utility benchmarks. Experimental results demonstrate that SafeInt outperforms all baselines in defending LLMs against jailbreak attacks while largely maintaining utility. Additionally, we evaluate SafeInt against adaptive attacks and verify its effectiveness in mitigating real-time attacks.
-
-
-
-## **48. Interpreting and Steering LLMs with Mutual Information-based Explanations on Sparse Autoencoders**
-
-cs.CL
-
-Pre-print. 20 pages, 5 figures
-
-**SubmitDate**: 2025-02-21    [abs](http://arxiv.org/abs/2502.15576v1) [paper-pdf](http://arxiv.org/pdf/2502.15576v1)
-
-**Authors**: Xuansheng Wu, Jiayi Yuan, Wenlin Yao, Xiaoming Zhai, Ninghao Liu
-
-**Abstract**: Large language models (LLMs) excel at handling human queries, but they can occasionally generate flawed or unexpected responses. Understanding their internal states is crucial for understanding their successes, diagnosing their failures, and refining their capabilities. Although sparse autoencoders (SAEs) have shown promise for interpreting LLM internal representations, limited research has explored how to better explain SAE features, i.e., understanding the semantic meaning of features learned by SAE. Our theoretical analysis reveals that existing explanation methods suffer from the frequency bias issue, where they emphasize linguistic patterns over semantic concepts, while the latter is more critical to steer LLM behaviors. To address this, we propose using a fixed vocabulary set for feature interpretations and designing a mutual information-based objective, aiming to better capture the semantic meaning behind these features. We further propose two runtime steering strategies that adjust the learned feature activations based on their corresponding explanations. Empirical results show that, compared to baselines, our method provides more discourse-level explanations and effectively steers LLM behaviors to defend against jailbreak attacks. These findings highlight the value of explanations for steering LLM behaviors in downstream applications. We will release our code and data once accepted.
-
-
-
-## **49. Construction and Evaluation of LLM-based agents for Semi-Autonomous penetration testing**
-
-cs.CR
-
-7 pages, 4 tables and 1 figure
-
-**SubmitDate**: 2025-02-21    [abs](http://arxiv.org/abs/2502.15506v1) [paper-pdf](http://arxiv.org/pdf/2502.15506v1)
-
-**Authors**: Masaya Kobayashi, Masane Fuchi, Amar Zanashir, Tomonori Yoneda, Tomohiro Takagi
-
-**Abstract**: With the emergence of high-performance large language models (LLMs) such as GPT, Claude, and Gemini, the autonomous and semi-autonomous execution of tasks has significantly advanced across various domains. However, in highly specialized fields such as cybersecurity, full autonomy remains a challenge. This difficulty primarily stems from the limitations of LLMs in reasoning capabilities and domain-specific knowledge. We propose a system that semi-autonomously executes complex cybersecurity workflows by employing multiple LLMs modules to formulate attack strategies, generate commands, and analyze results, thereby addressing the aforementioned challenges. In our experiments using Hack The Box virtual machines, we confirmed that our system can autonomously construct attack strategies, issue appropriate commands, and automate certain processes, thereby reducing the need for manual intervention.
-
-
-
-## **50. Single-pass Detection of Jailbreaking Input in Large Language Models**
-
-cs.LG
-
-Accepted in TMLR 2025
-
-**SubmitDate**: 2025-02-21    [abs](http://arxiv.org/abs/2502.15435v1) [paper-pdf](http://arxiv.org/pdf/2502.15435v1)
-
-**Authors**: Leyla Naz Candogan, Yongtao Wu, Elias Abad Rocamora, Grigorios G. Chrysos, Volkan Cevher
-
-**Abstract**: Defending aligned Large Language Models (LLMs) against jailbreaking attacks is a challenging problem, with existing approaches requiring multiple requests or even queries to auxiliary LLMs, making them computationally heavy. Instead, we focus on detecting jailbreaking input in a single forward pass. Our method, called Single Pass Detection SPD, leverages the information carried by the logits to predict whether the output sentence will be harmful. This allows us to defend in just one forward pass. SPD can not only detect attacks effectively on open-source models, but also minimizes the misclassification of harmless inputs. Furthermore, we show that SPD remains effective even without complete logit access in GPT-3.5 and GPT-4. We believe that our proposed method offers a promising approach to efficiently safeguard LLMs against adversarial attacks.
 
 
 
