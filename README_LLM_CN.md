@@ -1,9 +1,55 @@
 # Latest Large Language Model Attack Papers
-**update at 2025-04-11 10:00:35**
+**update at 2025-04-14 11:09:28**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Benchmarking Adversarial Robustness to Bias Elicitation in Large Language Models: Scalable Automated Assessment with LLM-as-a-Judge**
+## **1. MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits**
+
+HCP安全审计：具有模型上下文协议的LLM允许重大安全漏洞 cs.CR
+
+27 pages, 21 figures, and 2 Tables. Cleans up the TeX source
+
+**SubmitDate**: 2025-04-11    [abs](http://arxiv.org/abs/2504.03767v2) [paper-pdf](http://arxiv.org/pdf/2504.03767v2)
+
+**Authors**: Brandon Radosevich, John Halloran
+
+**Abstract**: To reduce development overhead and enable seamless integration between potential components comprising any given generative AI application, the Model Context Protocol (MCP) (Anthropic, 2024) has recently been released and subsequently widely adopted. The MCP is an open protocol that standardizes API calls to large language models (LLMs), data sources, and agentic tools. By connecting multiple MCP servers, each defined with a set of tools, resources, and prompts, users are able to define automated workflows fully driven by LLMs. However, we show that the current MCP design carries a wide range of security risks for end users. In particular, we demonstrate that industry-leading LLMs may be coerced into using MCP tools to compromise an AI developer's system through various attacks, such as malicious code execution, remote access control, and credential theft. To proactively mitigate these and related attacks, we introduce a safety auditing tool, MCPSafetyScanner, the first agentic tool to assess the security of an arbitrary MCP server. MCPScanner uses several agents to (a) automatically determine adversarial samples given an MCP server's tools and resources; (b) search for related vulnerabilities and remediations based on those samples; and (c) generate a security report detailing all findings. Our work highlights serious security issues with general-purpose agentic workflows while also providing a proactive tool to audit MCP server safety and address detected vulnerabilities before deployment.   The described MCP server auditing tool, MCPSafetyScanner, is freely available at: https://github.com/johnhalloran321/mcpSafetyScanner
+
+摘要: 为了减少开发费用并实现构成任何给定生成式人工智能应用程序的潜在组件之间的无缝集成，模型上下文协议（HCP）（Anthropic，2024）最近发布并随后广泛采用。HCP是一种开放协议，可同步化对大型语言模型（LLM）、数据源和代理工具的API调用。通过连接多个HCP服务器（每个服务器都定义了一组工具、资源和提示），用户能够定义完全由LLM驱动的自动化工作流程。然而，我们表明当前的LCP设计对最终用户来说存在广泛的安全风险。特别是，我们证明了行业领先的LLM可能会被迫使用LCP工具通过各种攻击（例如恶意代码执行、远程访问控制和凭证盗窃）来危害人工智能开发人员的系统。为了主动缓解这些攻击和相关攻击，我们引入了安全审计工具MCPSafetyScanner，这是第一个评估任意LCP服务器安全性的代理工具。MCPScanner使用多个代理来（a）在给定HCP服务器的工具和资源的情况下自动确定对抗样本;（b）根据这些样本搜索相关漏洞和补救措施;以及（c）生成详细说明所有发现结果的安全报告。我们的工作强调了通用代理工作流程的严重安全问题，同时还提供了一种主动工具来审计LCP服务器的安全性并在部署之前解决检测到的漏洞。   所描述的LCP服务器审计工具MCPSafetyScanner可在以下网址免费获取：https://github.com/johnhalloran321/mcpSafetyScanner
+
+
+
+## **2. SCAM: A Real-World Typographic Robustness Evaluation for Multimodal Foundation Models**
+
+SCAM：多模式基础模型的真实印刷稳健性评估 cs.CV
+
+Submitted to CVPR 2025 Workshop EVAL-FoMo-2
+
+**SubmitDate**: 2025-04-11    [abs](http://arxiv.org/abs/2504.04893v2) [paper-pdf](http://arxiv.org/pdf/2504.04893v2)
+
+**Authors**: Justus Westerhoff, Erblina Purelku, Jakob Hackstein, Leo Pinetzki, Lorenz Hufe
+
+**Abstract**: Typographic attacks exploit the interplay between text and visual content in multimodal foundation models, causing misclassifications when misleading text is embedded within images. However, existing datasets are limited in size and diversity, making it difficult to study such vulnerabilities. In this paper, we introduce SCAM, the largest and most diverse dataset of real-world typographic attack images to date, containing 1,162 images across hundreds of object categories and attack words. Through extensive benchmarking of Vision-Language Models (VLMs) on SCAM, we demonstrate that typographic attacks significantly degrade performance, and identify that training data and model architecture influence the susceptibility to these attacks. Our findings reveal that typographic attacks persist in state-of-the-art Large Vision-Language Models (LVLMs) due to the choice of their vision encoder, though larger Large Language Models (LLMs) backbones help mitigate their vulnerability. Additionally, we demonstrate that synthetic attacks closely resemble real-world (handwritten) attacks, validating their use in research. Our work provides a comprehensive resource and empirical insights to facilitate future research toward robust and trustworthy multimodal AI systems. We publicly release the datasets introduced in this paper under https://huggingface.co/datasets/BLISS-e-V/SCAM, along with the code for evaluations at https://github.com/Bliss-e-V/SCAM.
+
+摘要: 印刷攻击利用多模式基础模型中文本和视觉内容之间的相互作用，当误导性文本嵌入图像中时，会导致错误分类。然而，现有数据集的大小和多样性有限，因此很难研究此类漏洞。在本文中，我们介绍了SCAM，这是迄今为止最大、最多样化的现实世界印刷攻击图像数据集，包含涵盖数百个对象类别和攻击词的1，162张图像。通过对SCAM上的视觉语言模型（VLM）进行广泛的基准测试，我们证明了印刷攻击会显着降低性能，并确定训练数据和模型架构会影响对这些攻击的易感性。我们的研究结果表明，由于视觉编码器的选择，印刷攻击在最先进的大型视觉语言模型（LVLM）中持续存在，尽管更大的大型语言模型（LLM）主干有助于减轻它们的脆弱性。此外，我们还证明合成攻击与现实世界（手写）攻击非常相似，验证了它们在研究中的用途。我们的工作提供了全面的资源和经验见解，以促进未来对稳健且值得信赖的多模式人工智能系统的研究。我们在https：//huggingface.co/guardets/BLISS-e-V/SCAM下公开发布本文中介绍的数据集，以及https://github.com/Bliss-e-V/SCAM上的评估代码。
+
+
+
+## **3. GenXSS: an AI-Driven Framework for Automated Detection of XSS Attacks in WAFs**
+
+GenXSS：用于自动检测WAF中XSS攻击的人工智能驱动框架 cs.CR
+
+**SubmitDate**: 2025-04-11    [abs](http://arxiv.org/abs/2504.08176v1) [paper-pdf](http://arxiv.org/pdf/2504.08176v1)
+
+**Authors**: Vahid Babaey, Arun Ravindran
+
+**Abstract**: The increasing reliance on web services has led to a rise in cybersecurity threats, particularly Cross-Site Scripting (XSS) attacks, which target client-side layers of web applications by injecting malicious scripts. Traditional Web Application Firewalls (WAFs) struggle to detect highly obfuscated and complex attacks, as their rules require manual updates. This paper presents a novel generative AI framework that leverages Large Language Models (LLMs) to enhance XSS mitigation. The framework achieves two primary objectives: (1) generating sophisticated and syntactically validated XSS payloads using in-context learning, and (2) automating defense mechanisms by testing these attacks against a vulnerable application secured by a WAF, classifying bypassing attacks, and generating effective WAF security rules. Experimental results using GPT-4o demonstrate the framework's effectiveness generating 264 XSS payloads, 83% of which were validated, with 80% bypassing ModSecurity WAF equipped with an industry standard security rule set developed by the Open Web Application Security Project (OWASP) to protect against web vulnerabilities. Through rule generation, 86% of previously successful attacks were blocked using only 15 new rules. In comparison, Google Gemini Pro achieved a lower bypass rate of 63%, highlighting performance differences across LLMs.
+
+摘要: 对网络服务的依赖日益增加，导致网络安全威胁的增加，特别是跨站点脚本（XSS）攻击，这些攻击通过注入恶意脚本来针对网络应用程序的客户端层。传统的Web应用程序防火墙（WAF）很难检测高度模糊和复杂的攻击，因为它们的规则需要手动更新。本文提出了一种新颖的生成式人工智能框架，该框架利用大型语言模型（LLM）来增强XSS缓解。该框架实现了两个主要目标：（1）使用上下文学习生成复杂且经过语法验证的XSS有效负载，以及（2）通过针对WAF保护的脆弱应用程序测试这些攻击、对绕过攻击进行分类并生成有效的WAF安全规则来自动化防御机制。使用GPT-4 o的实验结果证明了该框架的有效性，生成264个XSS有效负载，其中83%经过验证，80%绕过ModSecurity WAF，该WAF配备了开放Web应用程序安全项目（OWISP）开发的行业标准安全规则集，以防止网络漏洞。通过规则生成，仅使用15个新规则就阻止了86%之前成功的攻击。相比之下，Google Gemini Pro的绕过率较低，为63%，凸显了LLM之间的性能差异。
+
+
+
+## **4. Benchmarking Adversarial Robustness to Bias Elicitation in Large Language Models: Scalable Automated Assessment with LLM-as-a-Judge**
 
 大型语言模型中对偏见激发的对抗鲁棒性进行基准测试：利用LLM作为评委的可扩展自动化评估 cs.CL
 
@@ -17,7 +63,7 @@
 
 
 
-## **2. PR-Attack: Coordinated Prompt-RAG Attacks on Retrieval-Augmented Generation in Large Language Models via Bilevel Optimization**
+## **5. PR-Attack: Coordinated Prompt-RAG Attacks on Retrieval-Augmented Generation in Large Language Models via Bilevel Optimization**
 
 PR攻击：通过二层优化对大型语言模型中的检索增强生成进行协调的预算-RAG攻击 cs.CR
 
@@ -33,7 +79,7 @@ Accepted at SIGIR 2025
 
 
 
-## **3. Agent That Debugs: Dynamic State-Guided Vulnerability Repair**
+## **6. Agent That Debugs: Dynamic State-Guided Vulnerability Repair**
 
 调试代理：动态状态引导的漏洞修复 cs.SE
 
@@ -47,7 +93,7 @@ Accepted at SIGIR 2025
 
 
 
-## **4. Defense against Prompt Injection Attacks via Mixture of Encodings**
+## **7. Defense against Prompt Injection Attacks via Mixture of Encodings**
 
 通过混合编码防御即时注入攻击 cs.CL
 
@@ -61,7 +107,7 @@ Accepted at SIGIR 2025
 
 
 
-## **5. Achilles Heel of Distributed Multi-Agent Systems**
+## **8. Achilles Heel of Distributed Multi-Agent Systems**
 
 分布式多智能体系统的致命弱点 cs.MA
 
@@ -75,7 +121,7 @@ Accepted at SIGIR 2025
 
 
 
-## **6. Code Generation with Small Language Models: A Deep Evaluation on Codeforces**
+## **9. Code Generation with Small Language Models: A Deep Evaluation on Codeforces**
 
 使用小语言模型的代码生成：对代码力量的深入评估 cs.SE
 
@@ -89,7 +135,7 @@ Accepted at SIGIR 2025
 
 
 
-## **7. LLM Safeguard is a Double-Edged Sword: Exploiting False Positives for Denial-of-Service Attacks**
+## **10. LLM Safeguard is a Double-Edged Sword: Exploiting False Positives for Denial-of-Service Attacks**
 
 LLM保障是一把双刃剑：利用假阳性进行拒绝服务攻击 cs.CR
 
@@ -103,7 +149,7 @@ LLM保障是一把双刃剑：利用假阳性进行拒绝服务攻击 cs.CR
 
 
 
-## **8. Navigating the Rabbit Hole: Emergent Biases in LLM-Generated Attack Narratives Targeting Mental Health Groups**
+## **11. Navigating the Rabbit Hole: Emergent Biases in LLM-Generated Attack Narratives Targeting Mental Health Groups**
 
 穿越兔子洞：LLM生成的针对心理健康群体的攻击叙事中的紧急偏见 cs.CL
 
@@ -117,7 +163,7 @@ LLM保障是一把双刃剑：利用假阳性进行拒绝服务攻击 cs.CR
 
 
 
-## **9. JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model**
+## **12. JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model**
 
 JailDAM：使用视觉语言模型的自适应记忆的越狱检测 cs.CR
 
@@ -131,7 +177,7 @@ JailDAM：使用视觉语言模型的自适应记忆的越狱检测 cs.CR
 
 
 
-## **10. StealthRank: LLM Ranking Manipulation via Stealthy Prompt Optimization**
+## **13. StealthRank: LLM Ranking Manipulation via Stealthy Prompt Optimization**
 
 StealthRank：通过StealthPropriation优化进行LLM排名操纵 cs.IR
 
@@ -145,7 +191,7 @@ StealthRank：通过StealthPropriation优化进行LLM排名操纵 cs.IR
 
 
 
-## **11. Separator Injection Attack: Uncovering Dialogue Biases in Large Language Models Caused by Role Separators**
+## **14. Separator Injection Attack: Uncovering Dialogue Biases in Large Language Models Caused by Role Separators**
 
 分隔符注入攻击：揭露角色分隔符引起的大型语言模型中的对话偏见 cs.CL
 
@@ -159,7 +205,7 @@ StealthRank：通过StealthPropriation优化进行LLM排名操纵 cs.IR
 
 
 
-## **12. Sugar-Coated Poison: Benign Generation Unlocks LLM Jailbreaking**
+## **15. Sugar-Coated Poison: Benign Generation Unlocks LLM Jailbreaking**
 
 糖衣毒药：良性一代解锁法学硕士越狱 cs.CR
 
@@ -173,7 +219,7 @@ StealthRank：通过StealthPropriation优化进行LLM排名操纵 cs.IR
 
 
 
-## **13. SceneTAP: Scene-Coherent Typographic Adversarial Planner against Vision-Language Models in Real-World Environments**
+## **16. SceneTAP: Scene-Coherent Typographic Adversarial Planner against Vision-Language Models in Real-World Environments**
 
 SceneRAP：针对现实世界环境中视觉语言模型的场景一致印刷对抗规划器 cs.CV
 
@@ -187,7 +233,7 @@ SceneRAP：针对现实世界环境中视觉语言模型的场景一致印刷对
 
 
 
-## **14. Revealing the Intrinsic Ethical Vulnerability of Aligned Large Language Models**
+## **17. Revealing the Intrinsic Ethical Vulnerability of Aligned Large Language Models**
 
 揭示一致大型语言模型内在的道德脆弱性 cs.CL
 
@@ -201,7 +247,7 @@ SceneRAP：针对现实世界环境中视觉语言模型的场景一致印刷对
 
 
 
-## **15. A Domain-Based Taxonomy of Jailbreak Vulnerabilities in Large Language Models**
+## **18. A Domain-Based Taxonomy of Jailbreak Vulnerabilities in Large Language Models**
 
 大型语言模型中基于领域的越狱漏洞分类 cs.CL
 
@@ -217,23 +263,7 @@ SceneRAP：针对现实世界环境中视觉语言模型的场景一致印刷对
 
 
 
-## **16. SCAM: A Real-World Typographic Robustness Evaluation for Multimodal Foundation Models**
-
-SCAM：多模式基础模型的真实印刷稳健性评估 cs.CV
-
-Submitted to CVPR 2025 Workshop EVAL-FoMo-2
-
-**SubmitDate**: 2025-04-07    [abs](http://arxiv.org/abs/2504.04893v1) [paper-pdf](http://arxiv.org/pdf/2504.04893v1)
-
-**Authors**: Justus Westerhoff, Erblina Purellku, Jakob Hackstein, Leo Pinetzki, Lorenz Hufe
-
-**Abstract**: Typographic attacks exploit the interplay between text and visual content in multimodal foundation models, causing misclassifications when misleading text is embedded within images. However, existing datasets are limited in size and diversity, making it difficult to study such vulnerabilities. In this paper, we introduce SCAM, the largest and most diverse dataset of real-world typographic attack images to date, containing 1,162 images across hundreds of object categories and attack words. Through extensive benchmarking of Vision-Language Models (VLMs) on SCAM, we demonstrate that typographic attacks significantly degrade performance, and identify that training data and model architecture influence the susceptibility to these attacks. Our findings reveal that typographic attacks persist in state-of-the-art Large Vision-Language Models (LVLMs) due to the choice of their vision encoder, though larger Large Language Models (LLMs) backbones help mitigate their vulnerability. Additionally, we demonstrate that synthetic attacks closely resemble real-world (handwritten) attacks, validating their use in research. Our work provides a comprehensive resource and empirical insights to facilitate future research toward robust and trustworthy multimodal AI systems. We publicly release the datasets introduced in this paper under https://huggingface.co/datasets/BLISS-e-V/SCAM, along with the code for evaluations at https://github.com/Bliss-e-V/SCAM.
-
-摘要: 印刷攻击利用多模式基础模型中文本和视觉内容之间的相互作用，当误导性文本嵌入图像中时，会导致错误分类。然而，现有数据集的大小和多样性有限，因此很难研究此类漏洞。在本文中，我们介绍了SCAM，这是迄今为止最大、最多样化的现实世界印刷攻击图像数据集，包含涵盖数百个对象类别和攻击词的1，162张图像。通过对SCAM上的视觉语言模型（VLM）进行广泛的基准测试，我们证明了印刷攻击会显着降低性能，并确定训练数据和模型架构会影响对这些攻击的易感性。我们的研究结果表明，由于视觉编码器的选择，印刷攻击在最先进的大型视觉语言模型（LVLM）中持续存在，尽管更大的大型语言模型（LLM）主干有助于减轻它们的脆弱性。此外，我们还证明合成攻击与现实世界（手写）攻击非常相似，验证了它们在研究中的用途。我们的工作提供了全面的资源和经验见解，以促进未来对稳健且值得信赖的多模式人工智能系统的研究。我们在https：//huggingface.co/guardets/BLISS-e-V/SCAM下公开发布本文中介绍的数据集，以及https://github.com/Bliss-e-V/SCAM上的评估代码。
-
-
-
-## **17. Don't Lag, RAG: Training-Free Adversarial Detection Using RAG**
+## **19. Don't Lag, RAG: Training-Free Adversarial Detection Using RAG**
 
 不要落后，RAG：使用RAG进行免训练对抗检测 cs.AI
 
@@ -247,7 +277,7 @@ Submitted to CVPR 2025 Workshop EVAL-FoMo-2
 
 
 
-## **18. SINCon: Mitigate LLM-Generated Malicious Message Injection Attack for Rumor Detection**
+## **20. SINCon: Mitigate LLM-Generated Malicious Message Injection Attack for Rumor Detection**
 
 SINCon：缓解LLM生成的恶意消息注入攻击以进行谣言检测 cs.CR
 
@@ -261,7 +291,7 @@ SINCon：缓解LLM生成的恶意消息注入攻击以进行谣言检测 cs.CR
 
 
 
-## **19. PiCo: Jailbreaking Multimodal Large Language Models via $\textbf{Pi}$ctorial $\textbf{Co}$de Contextualization**
+## **21. PiCo: Jailbreaking Multimodal Large Language Models via $\textbf{Pi}$ctorial $\textbf{Co}$de Contextualization**
 
 PiCo：通过$\textBF{Pi}$ctorial $\textBF{Co}$de上下文化破解多模式大型语言模型 cs.CR
 
@@ -275,7 +305,7 @@ PiCo：通过$\textBF{Pi}$ctorial $\textBF{Co}$de上下文化破解多模式大�
 
 
 
-## **20. Select Me! When You Need a Tool: A Black-box Text Attack on Tool Selection**
+## **22. Select Me! When You Need a Tool: A Black-box Text Attack on Tool Selection**
 
 选择我！当您需要工具时：对工具选择的黑匣子文本攻击 cs.CR
 
@@ -291,7 +321,7 @@ PiCo：通过$\textBF{Pi}$ctorial $\textBF{Co}$de上下文化破解多模式大�
 
 
 
-## **21. Are You Getting What You Pay For? Auditing Model Substitution in LLM APIs**
+## **23. Are You Getting What You Pay For? Auditing Model Substitution in LLM APIs**
 
 你得到了你所付出的代价吗？LLM API中的审计模型替代 cs.CL
 
@@ -305,7 +335,7 @@ PiCo：通过$\textBF{Pi}$ctorial $\textBF{Co}$de上下文化破解多模式大�
 
 
 
-## **22. Safeguarding Vision-Language Models: Mitigating Vulnerabilities to Gaussian Noise in Perturbation-based Attacks**
+## **24. Safeguarding Vision-Language Models: Mitigating Vulnerabilities to Gaussian Noise in Perturbation-based Attacks**
 
 保护视觉语言模型：缓解基于扰动的攻击中高斯噪音的脆弱性 cs.CV
 
@@ -319,7 +349,7 @@ PiCo：通过$\textBF{Pi}$ctorial $\textBF{Co}$de上下文化破解多模式大�
 
 
 
-## **23. Privacy in Fine-tuning Large Language Models: Attacks, Defenses, and Future Directions**
+## **25. Privacy in Fine-tuning Large Language Models: Attacks, Defenses, and Future Directions**
 
 微调大型语言模型中的隐私：攻击、防御和未来方向 cs.AI
 
@@ -335,7 +365,7 @@ accepted by PAKDD2025
 
 
 
-## **24. CyberLLMInstruct: A New Dataset for Analysing Safety of Fine-Tuned LLMs Using Cyber Security Data**
+## **26. CyberLLMInstruct: A New Dataset for Analysing Safety of Fine-Tuned LLMs Using Cyber Security Data**
 
 CyberLLMDirecct：使用网络安全数据分析精调LLM安全性的新数据集 cs.CR
 
@@ -349,7 +379,7 @@ CyberLLMDirecct：使用网络安全数据分析精调LLM安全性的新数据�
 
 
 
-## **25. AttackLLM: LLM-based Attack Pattern Generation for an Industrial Control System**
+## **27. AttackLLM: LLM-based Attack Pattern Generation for an Industrial Control System**
 
 AttackLLM：基于LLM的工业控制系统攻击模式生成 cs.CR
 
@@ -363,7 +393,7 @@ AttackLLM：基于LLM的工业控制系统攻击模式生成 cs.CR
 
 
 
-## **26. Practical Poisoning Attacks against Retrieval-Augmented Generation**
+## **28. Practical Poisoning Attacks against Retrieval-Augmented Generation**
 
 对检索增广生成算法的实用中毒攻击 cs.CR
 
@@ -377,7 +407,7 @@ AttackLLM：基于LLM的工业控制系统攻击模式生成 cs.CR
 
 
 
-## **27. sudo rm -rf agentic_security**
+## **29. sudo rm -rf agentic_security**
 
 sudo rm -ref agentic_secure cs.CL
 
@@ -391,7 +421,7 @@ sudo rm -ref agentic_secure cs.CL
 
 
 
-## **28. Les Dissonances: Cross-Tool Harvesting and Polluting in Multi-Tool Empowered LLM Agents**
+## **30. Les Dissonances: Cross-Tool Harvesting and Polluting in Multi-Tool Empowered LLM Agents**
 
 Les Dissonance：多工具授权的LLM代理中的跨工具收获和污染 cs.CR
 
@@ -405,7 +435,7 @@ Les Dissonance：多工具授权的LLM代理中的跨工具收获和污染 cs.CR
 
 
 
-## **29. PROMPTFUZZ: Harnessing Fuzzing Techniques for Robust Testing of Prompt Injection in LLMs**
+## **31. PROMPTFUZZ: Harnessing Fuzzing Techniques for Robust Testing of Prompt Injection in LLMs**
 
 PROMPTFUZZ：利用模糊技术对LLM中的即时注射进行稳健测试 cs.CR
 
@@ -419,7 +449,7 @@ PROMPTFUZZ：利用模糊技术对LLM中的即时注射进行稳健测试 cs.CR
 
 
 
-## **30. ERPO: Advancing Safety Alignment via Ex-Ante Reasoning Preference Optimization**
+## **32. ERPO: Advancing Safety Alignment via Ex-Ante Reasoning Preference Optimization**
 
 ERPO：通过前推理偏好优化推进安全一致 cs.CL
 
@@ -435,7 +465,7 @@ ERPO：通过前推理偏好优化推进安全一致 cs.CL
 
 
 
-## **31. No Free Lunch with Guardrails**
+## **33. No Free Lunch with Guardrails**
 
 没有带护栏的免费午餐 cs.CR
 
@@ -449,7 +479,7 @@ ERPO：通过前推理偏好优化推进安全一致 cs.CL
 
 
 
-## **32. Retrieval-Augmented Purifier for Robust LLM-Empowered Recommendation**
+## **34. Retrieval-Augmented Purifier for Robust LLM-Empowered Recommendation**
 
 用于强大的LLM授权推荐的检索增强净化器 cs.IR
 
@@ -463,7 +493,7 @@ ERPO：通过前推理偏好优化推进安全一致 cs.CL
 
 
 
-## **33. ToxicSQL: Migrating SQL Injection Threats into Text-to-SQL Models via Backdoor Attack**
+## **35. ToxicSQL: Migrating SQL Injection Threats into Text-to-SQL Models via Backdoor Attack**
 
 ToxicSQL：通过后门攻击将SQL注入威胁迁移到文本到SQL模型 cs.CR
 
@@ -477,7 +507,7 @@ ToxicSQL：通过后门攻击将SQL注入威胁迁移到文本到SQL模型 cs.CR
 
 
 
-## **34. Evolving from Single-modal to Multi-modal Facial Deepfake Detection: Progress and Challenges**
+## **36. Evolving from Single-modal to Multi-modal Facial Deepfake Detection: Progress and Challenges**
 
 从单模式进化到多模式面部Deepfake检测：进展与挑战 cs.CV
 
@@ -493,7 +523,7 @@ P. Liu is with the Department of Computer Science and Engineering,  University o
 
 
 
-## **35. More is Less: The Pitfalls of Multi-Model Synthetic Preference Data in DPO Safety Alignment**
+## **37. More is Less: The Pitfalls of Multi-Model Synthetic Preference Data in DPO Safety Alignment**
 
 多即少：DPO安全调整中多模型合成偏好数据的陷阱 cs.AI
 
@@ -507,7 +537,7 @@ P. Liu is with the Department of Computer Science and Engineering,  University o
 
 
 
-## **36. Defending Large Language Models Against Attacks With Residual Stream Activation Analysis**
+## **38. Defending Large Language Models Against Attacks With Residual Stream Activation Analysis**
 
 利用剩余流激活分析防御大型语言模型免受攻击 cs.CR
 
@@ -523,21 +553,7 @@ Included in Proceedings of the Conference on Applied Machine Learning  in Inform
 
 
 
-## **37. MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits**
-
-HCP安全审计：具有模型上下文协议的LLM允许重大安全漏洞 cs.CR
-
-**SubmitDate**: 2025-04-02    [abs](http://arxiv.org/abs/2504.03767v1) [paper-pdf](http://arxiv.org/pdf/2504.03767v1)
-
-**Authors**: Brandon Radosevich, John Halloran
-
-**Abstract**: To reduce development overhead and enable seamless integration between potential components comprising any given generative AI application, the Model Context Protocol (MCP) (Anthropic, 2024) has recently been released and subsequently widely adopted. The MCP is an open protocol that standardizes API calls to large language models (LLMs), data sources, and agentic tools. By connecting multiple MCP servers, each defined with a set of tools, resources, and prompts, users are able to define automated workflows fully driven by LLMs. However, we show that the current MCP design carries a wide range of security risks for end users. In particular, we demonstrate that industry-leading LLMs may be coerced into using MCP tools to compromise an AI developer's system through various attacks, such as malicious code execution, remote access control, and credential theft. To proactively mitigate these and related attacks, we introduce a safety auditing tool, MCPSafetyScanner, the first agentic tool to assess the security of an arbitrary MCP server. MCPScanner uses several agents to (a) automatically determine adversarial samples given an MCP server's tools and resources; (b) search for related vulnerabilities and remediations based on those samples; and (c) generate a security report detailing all findings. Our work highlights serious security issues with general-purpose agentic workflows while also providing a proactive tool to audit MCP server safety and address detected vulnerabilities before deployment.   The described MCP server auditing tool, MCPSafetyScanner, is freely available at: https://github.com/leidosinc/McpSafetyScanner
-
-摘要: 为了减少开发费用并实现构成任何给定生成式人工智能应用程序的潜在组件之间的无缝集成，模型上下文协议（HCP）（Anthropic，2024）最近发布并随后广泛采用。HCP是一种开放协议，可同步化对大型语言模型（LLM）、数据源和代理工具的API调用。通过连接多个HCP服务器（每个服务器都定义了一组工具、资源和提示），用户能够定义完全由LLM驱动的自动化工作流程。然而，我们表明当前的LCP设计对最终用户来说存在广泛的安全风险。特别是，我们证明了行业领先的LLM可能会被迫使用LCP工具通过各种攻击（例如恶意代码执行、远程访问控制和凭证盗窃）来危害人工智能开发人员的系统。为了主动缓解这些攻击和相关攻击，我们引入了安全审计工具MCPSafetyScanner，这是第一个评估任意LCP服务器安全性的代理工具。MCPScanner使用多个代理来（a）在给定HCP服务器的工具和资源的情况下自动确定对抗样本;（b）根据这些样本搜索相关漏洞和补救措施;以及（c）生成详细说明所有发现结果的安全报告。我们的工作强调了通用代理工作流程的严重安全问题，同时还提供了一种主动工具来审计LCP服务器的安全性并在部署之前解决检测到的漏洞。   所描述的LCP服务器审计工具MCPSafetyScanner可在以下网址免费获取：https://github.com/leidosinc/McpSafetyScanner
-
-
-
-## **38. One Pic is All it Takes: Poisoning Visual Document Retrieval Augmented Generation with a Single Image**
+## **39. One Pic is All it Takes: Poisoning Visual Document Retrieval Augmented Generation with a Single Image**
 
 一张图片就是一切：用一张图片毒害视觉文档检索增强生成 cs.CL
 
@@ -553,7 +569,7 @@ HCP安全审计：具有模型上下文协议的LLM允许重大安全漏洞 cs.C
 
 
 
-## **39. Evolving Security in LLMs: A Study of Jailbreak Attacks and Defenses**
+## **40. Evolving Security in LLMs: A Study of Jailbreak Attacks and Defenses**
 
 LLC中不断发展的安全性：越狱攻击和防御的研究 cs.CR
 
@@ -567,7 +583,7 @@ LLC中不断发展的安全性：越狱攻击和防御的研究 cs.CR
 
 
 
-## **40. AdPO: Enhancing the Adversarial Robustness of Large Vision-Language Models with Preference Optimization**
+## **41. AdPO: Enhancing the Adversarial Robustness of Large Vision-Language Models with Preference Optimization**
 
 AdPO：通过偏好优化增强大型视觉语言模型的对抗鲁棒性 cs.CV
 
@@ -581,7 +597,7 @@ AdPO：通过偏好优化增强大型视觉语言模型的对抗鲁棒性 cs.CV
 
 
 
-## **41. Representation Bending for Large Language Model Safety**
+## **42. Representation Bending for Large Language Model Safety**
 
 大型语言模型安全性的弯曲表示 cs.LG
 
@@ -595,7 +611,7 @@ AdPO：通过偏好优化增强大型视觉语言模型的对抗鲁棒性 cs.CV
 
 
 
-## **42. LightDefense: A Lightweight Uncertainty-Driven Defense against Jailbreaks via Shifted Token Distribution**
+## **43. LightDefense: A Lightweight Uncertainty-Driven Defense against Jailbreaks via Shifted Token Distribution**
 
 LightDefense：通过转移代币分发针对越狱的轻量级不确定性驱动防御 cs.CR
 
@@ -609,7 +625,7 @@ LightDefense：通过转移代币分发针对越狱的轻量级不确定性驱�
 
 
 
-## **43. Emerging Cyber Attack Risks of Medical AI Agents**
+## **44. Emerging Cyber Attack Risks of Medical AI Agents**
 
 医疗人工智能代理的新网络攻击风险 cs.CR
 
@@ -623,7 +639,7 @@ LightDefense：通过转移代币分发针对越狱的轻量级不确定性驱�
 
 
 
-## **44. Strategize Globally, Adapt Locally: A Multi-Turn Red Teaming Agent with Dual-Level Learning**
+## **45. Strategize Globally, Adapt Locally: A Multi-Turn Red Teaming Agent with Dual-Level Learning**
 
 全球战略，本地适应：具有双重学习的多轮红色团队代理 cs.AI
 
@@ -637,7 +653,7 @@ LightDefense：通过转移代币分发针对越狱的轻量级不确定性驱�
 
 
 
-## **45. Towards Resilient Federated Learning in CyberEdge Networks: Recent Advances and Future Trends**
+## **46. Towards Resilient Federated Learning in CyberEdge Networks: Recent Advances and Future Trends**
 
 在CyberEdge网络中实现弹性联邦学习：最近的进展和未来的趋势 cs.CR
 
@@ -653,7 +669,7 @@ LightDefense：通过转移代币分发针对越狱的轻量级不确定性驱�
 
 
 
-## **46. Multilingual and Multi-Accent Jailbreaking of Audio LLMs**
+## **47. Multilingual and Multi-Accent Jailbreaking of Audio LLMs**
 
 多语言和多口音音频LL越狱 cs.SD
 
@@ -669,7 +685,7 @@ LightDefense：通过转移代币分发针对越狱的轻量级不确定性驱�
 
 
 
-## **47. The Illusionist's Prompt: Exposing the Factual Vulnerabilities of Large Language Models with Linguistic Nuances**
+## **48. The Illusionist's Prompt: Exposing the Factual Vulnerabilities of Large Language Models with Linguistic Nuances**
 
 魔术师的提示：用语言细微差别揭露大型语言模型的事实弱点 cs.CL
 
@@ -685,7 +701,7 @@ work in progress
 
 
 
-## **48. Exposing the Ghost in the Transformer: Abnormal Detection for Large Language Models via Hidden State Forensics**
+## **49. Exposing the Ghost in the Transformer: Abnormal Detection for Large Language Models via Hidden State Forensics**
 
 揭露Transformer中的幽灵：通过隐藏状态取证对大型语言模型进行异常检测 cs.CR
 
@@ -699,7 +715,7 @@ work in progress
 
 
 
-## **49. Unleashing the Power of Pre-trained Encoders for Universal Adversarial Attack Detection**
+## **50. Unleashing the Power of Pre-trained Encoders for Universal Adversarial Attack Detection**
 
 释放预培训编码器的力量进行通用对抗攻击检测 cs.CV
 
@@ -710,20 +726,6 @@ work in progress
 **Abstract**: Adversarial attacks pose a critical security threat to real-world AI systems by injecting human-imperceptible perturbations into benign samples to induce misclassification in deep learning models. While existing detection methods, such as Bayesian uncertainty estimation and activation pattern analysis, have achieved progress through feature engineering, their reliance on handcrafted feature design and prior knowledge of attack patterns limits generalization capabilities and incurs high engineering costs. To address these limitations, this paper proposes a lightweight adversarial detection framework based on the large-scale pre-trained vision-language model CLIP. Departing from conventional adversarial feature characterization paradigms, we innovatively adopt an anomaly detection perspective. By jointly fine-tuning CLIP's dual visual-text encoders with trainable adapter networks and learnable prompts, we construct a compact representation space tailored for natural images. Notably, our detection architecture achieves substantial improvements in generalization capability across both known and unknown attack patterns compared to traditional methods, while significantly reducing training overhead. This study provides a novel technical pathway for establishing a parameter-efficient and attack-agnostic defense paradigm, markedly enhancing the robustness of vision systems against evolving adversarial threats.
 
 摘要: 对抗性攻击通过将人类难以感知的扰动注入良性样本中，从而在深度学习模型中引发错误分类，对现实世界的人工智能系统构成了严重的安全威胁。虽然现有的检测方法，例如Bayesian不确定性估计和激活模式分析，已经通过特征工程取得了进展，但它们对手工特征设计和攻击模式的先验知识的依赖限制了概括能力并产生了高昂的工程成本。为了解决这些局限性，本文提出了一种基于大规模预训练视觉语言模型CLIP的轻量级对抗检测框架。与传统的对抗性特征描述范式不同，我们创新性地采用异常检测视角。通过将CLIP的双视觉文本编码器与可训练的适配器网络和可学习的提示联合微调，我们构建了一个专为自然图像量身定制的紧凑表示空间。值得注意的是，与传统方法相比，我们的检测架构在已知和未知攻击模式的概括能力方面实现了大幅提高，同时显着减少了训练负担。这项研究为建立参数高效且攻击不可知的防御范式提供了一种新颖的技术途径，显着增强视觉系统针对不断变化的对抗威胁的稳健性。
-
-
-
-## **50. Understanding the Effectiveness of Coverage Criteria for Large Language Models: A Special Angle from Jailbreak Attacks**
-
-了解大型语言模型覆盖标准的有效性：越狱攻击的特殊角度 cs.SE
-
-**SubmitDate**: 2025-04-01    [abs](http://arxiv.org/abs/2408.15207v3) [paper-pdf](http://arxiv.org/pdf/2408.15207v3)
-
-**Authors**: Shide Zhou, Tianlin Li, Kailong Wang, Yihao Huang, Ling Shi, Yang Liu, Haoyu Wang
-
-**Abstract**: Large language models (LLMs) have revolutionized artificial intelligence, but their increasing deployment across critical domains has raised concerns about their abnormal behaviors when faced with malicious attacks. Such vulnerability alerts the widespread inadequacy of pre-release testing. In this paper, we conduct a comprehensive empirical study to evaluate the effectiveness of traditional coverage criteria in identifying such inadequacies, exemplified by the significant security concern of jailbreak attacks. Our study begins with a clustering analysis of the hidden states of LLMs, revealing that the embedded characteristics effectively distinguish between different query types. We then systematically evaluate the performance of these criteria across three key dimensions: criterion level, layer level, and token level. Our research uncovers significant differences in neuron coverage when LLMs process normal versus jailbreak queries, aligning with our clustering experiments. Leveraging these findings, we propose three practical applications of coverage criteria in the context of LLM security testing. Specifically, we develop a real-time jailbreak detection mechanism that achieves high accuracy (93.61% on average) in classifying queries as normal or jailbreak. Furthermore, we explore the use of coverage levels to prioritize test cases, improving testing efficiency by focusing on high-risk interactions and removing redundant tests. Lastly, we introduce a coverage-guided approach for generating jailbreak attack examples, enabling systematic refinement of prompts to uncover vulnerabilities. This study improves our understanding of LLM security testing, enhances their safety, and provides a foundation for developing more robust AI applications.
-
-摘要: 大型语言模型（LLM）已经彻底改变了人工智能，但它们在关键领域的部署越来越多，这引起了人们对它们在面临恶意攻击时异常行为的担忧。这种脆弱性警示了普遍存在的发布前测试不足。在本文中，我们进行了一个全面的实证研究，以评估传统的覆盖标准在识别这些不足之处的有效性，例如越狱攻击的重大安全问题。我们的研究开始于LLM的隐藏状态的聚类分析，揭示了嵌入的特征有效地区分不同的查询类型。然后，我们系统地评估这些标准在三个关键维度上的性能：标准级别、层级别和代币级别。我们的研究发现，当LLM处理正常查询与越狱查询时，神经元覆盖率存在显着差异，这与我们的集群实验保持一致。利用这些发现，我们提出了LLM安全测试背景下覆盖标准的三种实际应用。具体来说，我们开发了一种实时越狱检测机制，可以将查询分类为正常或越狱时实现高准确率（平均93.61%）。此外，我们探索使用覆盖级别来确定测试用例的优先级，通过关注高风险交互和删除冗余测试来提高测试效率。最后，我们引入了一种覆盖引导的方法来生成越狱攻击示例，从而能够系统地细化提示以发现漏洞。这项研究提高了我们对LLM安全测试的理解，增强了其安全性，并为开发更强大的人工智能应用程序提供了基础。
 
 
 
