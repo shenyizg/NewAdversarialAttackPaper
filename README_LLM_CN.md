@@ -1,9 +1,53 @@
 # Latest Large Language Model Attack Papers
-**update at 2025-05-10 15:06:33**
+**update at 2025-05-12 14:19:38**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Towards the Worst-case Robustness of Large Language Models**
+## **1. AgentXploit: End-to-End Redteaming of Black-Box AI Agents**
+
+AgentXploit：黑匣子人工智能代理的端到端红色团队 cs.CR
+
+**SubmitDate**: 2025-05-09    [abs](http://arxiv.org/abs/2505.05849v1) [paper-pdf](http://arxiv.org/pdf/2505.05849v1)
+
+**Authors**: Zhun Wang, Vincent Siu, Zhe Ye, Tianneng Shi, Yuzhou Nie, Xuandong Zhao, Chenguang Wang, Wenbo Guo, Dawn Song
+
+**Abstract**: The strong planning and reasoning capabilities of Large Language Models (LLMs) have fostered the development of agent-based systems capable of leveraging external tools and interacting with increasingly complex environments. However, these powerful features also introduce a critical security risk: indirect prompt injection, a sophisticated attack vector that compromises the core of these agents, the LLM, by manipulating contextual information rather than direct user prompts. In this work, we propose a generic black-box fuzzing framework, AgentXploit, designed to automatically discover and exploit indirect prompt injection vulnerabilities across diverse LLM agents. Our approach starts by constructing a high-quality initial seed corpus, then employs a seed selection algorithm based on Monte Carlo Tree Search (MCTS) to iteratively refine inputs, thereby maximizing the likelihood of uncovering agent weaknesses. We evaluate AgentXploit on two public benchmarks, AgentDojo and VWA-adv, where it achieves 71% and 70% success rates against agents based on o3-mini and GPT-4o, respectively, nearly doubling the performance of baseline attacks. Moreover, AgentXploit exhibits strong transferability across unseen tasks and internal LLMs, as well as promising results against defenses. Beyond benchmark evaluations, we apply our attacks in real-world environments, successfully misleading agents to navigate to arbitrary URLs, including malicious sites.
+
+摘要: 大型语言模型（LLM）强大的规划和推理能力促进了基于代理的系统的开发，这些系统能够利用外部工具并与日益复杂的环境进行交互。然而，这些强大的功能也引入了一个严重的安全风险：间接提示注入，这是一种复杂的攻击载体，通过操纵上下文信息而不是直接用户提示来损害这些代理的核心LLM。在这项工作中，我们提出了一个通用的黑匣子模糊框架AgentXploit，旨在自动发现和利用不同LLM代理之间的间接提示注入漏洞。我们的方法首先构建高质量的初始种子库，然后采用基于蒙特卡洛树搜索（MCTS）的种子选择算法来迭代细化输入，从而最大化发现代理弱点的可能性。我们在AgentDojo和VWA-adv这两个公共基准上评估了AgentXploit，它分别对基于o3-mini和GPT-4 o的代理实现了71%和70%的成功率，几乎是基线攻击性能的两倍。此外，AgentXploit在看不见的任务和内部LLM之间具有很强的可移植性，以及对抗防御的有希望的结果。除了基准评估之外，我们还将我们的攻击应用于现实环境中，成功地误导代理导航到任意URL，包括恶意网站。
+
+
+
+## **2. Unified Attacks to Large Language Model Watermarks: Spoofing and Scrubbing in Unauthorized Knowledge Distillation**
+
+对大型语言模型水印的统一攻击：未经授权的知识提炼中的欺骗和擦除 cs.CL
+
+**SubmitDate**: 2025-05-09    [abs](http://arxiv.org/abs/2504.17480v3) [paper-pdf](http://arxiv.org/pdf/2504.17480v3)
+
+**Authors**: Xin Yi, Yue Li, Shunfan Zheng, Linlin Wang, Xiaoling Wang, Liang He
+
+**Abstract**: Watermarking has emerged as a critical technique for combating misinformation and protecting intellectual property in large language models (LLMs). A recent discovery, termed watermark radioactivity, reveals that watermarks embedded in teacher models can be inherited by student models through knowledge distillation. On the positive side, this inheritance allows for the detection of unauthorized knowledge distillation by identifying watermark traces in student models. However, the robustness of watermarks against scrubbing attacks and their unforgeability in the face of spoofing attacks under unauthorized knowledge distillation remain largely unexplored. Existing watermark attack methods either assume access to model internals or fail to simultaneously support both scrubbing and spoofing attacks. In this work, we propose Contrastive Decoding-Guided Knowledge Distillation (CDG-KD), a unified framework that enables bidirectional attacks under unauthorized knowledge distillation. Our approach employs contrastive decoding to extract corrupted or amplified watermark texts via comparing outputs from the student model and weakly watermarked references, followed by bidirectional distillation to train new student models capable of watermark removal and watermark forgery, respectively. Extensive experiments show that CDG-KD effectively performs attacks while preserving the general performance of the distilled model. Our findings underscore critical need for developing watermarking schemes that are robust and unforgeable.
+
+摘要: 水印已成为打击错误信息和保护大型语言模型（LLM）知识产权的关键技术。最近的一项发现称为水印放射性，揭示了教师模型中嵌入的水印可以通过知识蒸馏被学生模型继承。从积极的方面来说，这种继承允许通过识别学生模型中的水印痕迹来检测未经授权的知识提炼。然而，水印对擦洗攻击的鲁棒性及其在未经授权的知识提炼下面对欺骗攻击时的不可伪造性在很大程度上仍然没有被探索。现有的水印攻击方法要么假设访问模型内部，要么不能同时支持擦洗和欺骗攻击。在这项工作中，我们提出了对比解码引导的知识蒸馏（CDG-KD），一个统一的框架，使未经授权的知识蒸馏下的双向攻击。我们的方法采用对比解码提取损坏或放大的水印文本，通过比较输出的学生模型和弱水印的参考，然后通过双向蒸馏训练新的学生模型能够水印去除和水印伪造，分别。大量的实验表明，CDG-KD有效地执行攻击，同时保持蒸馏模型的一般性能。我们的研究结果强调了开发稳健且不可伪造的水印方案的迫切需要。
+
+
+
+## **3. LiteLMGuard: Seamless and Lightweight On-Device Prompt Filtering for Safeguarding Small Language Models against Quantization-induced Risks and Vulnerabilities**
+
+LiteLMGGuard：无缝且轻量级的设备上提示过滤，用于保护小语言模型免受量化引发的风险和漏洞的影响 cs.CR
+
+14 pages, 18 figures, and 4 tables
+
+**SubmitDate**: 2025-05-08    [abs](http://arxiv.org/abs/2505.05619v1) [paper-pdf](http://arxiv.org/pdf/2505.05619v1)
+
+**Authors**: Kalyan Nakka, Jimmy Dani, Ausmit Mondal, Nitesh Saxena
+
+**Abstract**: The growing adoption of Large Language Models (LLMs) has influenced the development of their lighter counterparts-Small Language Models (SLMs)-to enable on-device deployment across smartphones and edge devices. These SLMs offer enhanced privacy, reduced latency, server-free functionality, and improved user experience. However, due to resource constraints of on-device environment, SLMs undergo size optimization through compression techniques like quantization, which can inadvertently introduce fairness, ethical and privacy risks. Critically, quantized SLMs may respond to harmful queries directly, without requiring adversarial manipulation, raising significant safety and trust concerns.   To address this, we propose LiteLMGuard (LLMG), an on-device prompt guard that provides real-time, prompt-level defense for quantized SLMs. Additionally, our prompt guard is designed to be model-agnostic such that it can be seamlessly integrated with any SLM, operating independently of underlying architectures. Our LLMG formalizes prompt filtering as a deep learning (DL)-based prompt answerability classification task, leveraging semantic understanding to determine whether a query should be answered by any SLM. Using our curated dataset, Answerable-or-Not, we trained and fine-tuned several DL models and selected ELECTRA as the candidate, with 97.75% answerability classification accuracy.   Our safety effectiveness evaluations demonstrate that LLMG defends against over 87% of harmful prompts, including both direct instruction and jailbreak attack strategies. We further showcase its ability to mitigate the Open Knowledge Attacks, where compromised SLMs provide unsafe responses without adversarial prompting. In terms of prompt filtering effectiveness, LLMG achieves near state-of-the-art filtering accuracy of 94%, with an average latency of 135 ms, incurring negligible overhead for users.
+
+摘要: 大型语言模型（LLM）的日益采用影响了其更轻的同类产品--小型语言模型（SLM）--的发展，以实现跨智能手机和边缘设备的设备上部署。这些STM提供增强的隐私、减少的延迟、无服务器功能和改善的用户体验。然而，由于设备上环境的资源限制，STM通过量化等压缩技术进行尺寸优化，这可能会无意中引入公平性、道德和隐私风险。至关重要的是，量化的SLC可以直接响应有害查询，而不需要对抗性操纵，从而引发重大的安全和信任问题。   为了解决这个问题，我们提出了LiteLMGard（LLMG），这是一种设备上提示保护，为量化的STM提供实时、预算级防御。此外，我们的提示卫士设计为模型不可知，因此它可以与任何SPL无缝集成，独立于底层架构运行。我们的LLMG将提示过滤形式化为基于深度学习（DL）的提示可回答性分类任务，利用语义理解来确定查询是否应该由任何SPL回答。使用我们精心策划的数据集“可供选择”，我们训练和微调了几个DL模型，并选择ELECTRA作为候选模型，其回答性分类准确率为97.75%。   我们的安全有效性评估表明，LLMG可以抵御超过87%的有害提示，包括直接指令和越狱攻击策略。我们进一步展示了其缓解开放知识攻击的能力，其中受攻击的STM在没有对抗提示的情况下提供不安全的响应。在即时过滤有效性方面，LLMG实现了94%的接近最先进的过滤准确率，平均延迟为135 ms，为用户带来的负担可以忽略不计。
+
+
+
+## **4. Towards the Worst-case Robustness of Large Language Models**
 
 走向大型语言模型的最坏情况稳健性 cs.LG
 
@@ -17,7 +61,7 @@
 
 
 
-## **2. Jailbreaking and Mitigation of Vulnerabilities in Large Language Models**
+## **5. Jailbreaking and Mitigation of Vulnerabilities in Large Language Models**
 
 大型语言模型中的漏洞越狱和缓解 cs.CR
 
@@ -31,7 +75,7 @@
 
 
 
-## **3. Stealthy LLM-Driven Data Poisoning Attacks Against Embedding-Based Retrieval-Augmented Recommender Systems**
+## **6. Stealthy LLM-Driven Data Poisoning Attacks Against Embedding-Based Retrieval-Augmented Recommender Systems**
 
 针对基于嵌入的检索增强推荐系统的隐形LLM驱动的数据中毒攻击 cs.IR
 
@@ -45,7 +89,7 @@
 
 
 
-## **4. Revealing Weaknesses in Text Watermarking Through Self-Information Rewrite Attacks**
+## **7. Revealing Weaknesses in Text Watermarking Through Self-Information Rewrite Attacks**
 
 通过自信息重写攻击揭示文本水印的弱点 cs.LG
 
@@ -61,7 +105,23 @@ ICML 2025 Accpeted
 
 
 
-## **5. Reliably Bounding False Positives: A Zero-Shot Machine-Generated Text Detection Framework via Multiscaled Conformal Prediction**
+## **8. X-Transfer Attacks: Towards Super Transferable Adversarial Attacks on CLIP**
+
+X-Transfer攻击：CLIP上的超级可转移对抗攻击 cs.CV
+
+ICML 2025
+
+**SubmitDate**: 2025-05-08    [abs](http://arxiv.org/abs/2505.05528v1) [paper-pdf](http://arxiv.org/pdf/2505.05528v1)
+
+**Authors**: Hanxun Huang, Sarah Erfani, Yige Li, Xingjun Ma, James Bailey
+
+**Abstract**: As Contrastive Language-Image Pre-training (CLIP) models are increasingly adopted for diverse downstream tasks and integrated into large vision-language models (VLMs), their susceptibility to adversarial perturbations has emerged as a critical concern. In this work, we introduce \textbf{X-Transfer}, a novel attack method that exposes a universal adversarial vulnerability in CLIP. X-Transfer generates a Universal Adversarial Perturbation (UAP) capable of deceiving various CLIP encoders and downstream VLMs across different samples, tasks, and domains. We refer to this property as \textbf{super transferability}--a single perturbation achieving cross-data, cross-domain, cross-model, and cross-task adversarial transferability simultaneously. This is achieved through \textbf{surrogate scaling}, a key innovation of our approach. Unlike existing methods that rely on fixed surrogate models, which are computationally intensive to scale, X-Transfer employs an efficient surrogate scaling strategy that dynamically selects a small subset of suitable surrogates from a large search space. Extensive evaluations demonstrate that X-Transfer significantly outperforms previous state-of-the-art UAP methods, establishing a new benchmark for adversarial transferability across CLIP models. The code is publicly available in our \href{https://github.com/HanxunH/XTransferBench}{GitHub repository}.
+
+摘要: 随着对比图像预训练（CLIP）模型越来越多地被用于各种下游任务并集成到大型视觉语言模型（VLM）中，它们对对抗性扰动的敏感性已成为一个关键问题。在这项工作中，我们介绍了\textbf {X-Transfer}，一种新的攻击方法，暴露了CLIP中的一个普遍的对抗性漏洞。X-Transfer生成一个通用对抗扰动（Universal Adversarial Perturbation，UAP），能够欺骗不同样本、任务和域中的各种CLIP编码器和下游VLM。我们将此属性称为\textbf {super transferability}--一个同时实现跨数据、跨域、跨模型和跨任务对抗性可转移性的单一扰动。这是通过\textBF {代理缩放}来实现的，这是我们方法的一个关键创新。与依赖于固定代理模型（扩展计算密集型）的现有方法不同，X-Transfer采用高效的代理扩展策略，可以从大搜索空间中动态选择合适代理的一小子集。广泛的评估表明，X-Transfer的性能显着优于之前最先进的UAP方法，为跨CLIP模型的对抗性可移植性建立了新的基准。该代码可在我们的\href {https：//github.com/HanxunH/XTransferBench}{GitHub存储库}中公开获取。
+
+
+
+## **9. Reliably Bounding False Positives: A Zero-Shot Machine-Generated Text Detection Framework via Multiscaled Conformal Prediction**
 
 可靠地限制假阳性：通过多尺度保形预测的零镜头机器生成文本检测框架 cs.CL
 
@@ -75,21 +135,7 @@ ICML 2025 Accpeted
 
 
 
-## **6. Unified Attacks to Large Language Model Watermarks: Spoofing and Scrubbing in Unauthorized Knowledge Distillation**
-
-对大型语言模型水印的统一攻击：未经授权的知识提炼中的欺骗和擦除 cs.CL
-
-**SubmitDate**: 2025-05-08    [abs](http://arxiv.org/abs/2504.17480v2) [paper-pdf](http://arxiv.org/pdf/2504.17480v2)
-
-**Authors**: Xin Yi, Shunfan Zheng, Linlin Wang, Xiaoling Wang, Liang He
-
-**Abstract**: Watermarking has emerged as a critical technique for combating misinformation and protecting intellectual property in large language models (LLMs). A recent discovery, termed watermark radioactivity, reveals that watermarks embedded in teacher models can be inherited by student models through knowledge distillation. On the positive side, this inheritance allows for the detection of unauthorized knowledge distillation by identifying watermark traces in student models. However, the robustness of watermarks against scrubbing attacks and their unforgeability in the face of spoofing attacks under unauthorized knowledge distillation remain largely unexplored. Existing watermark attack methods either assume access to model internals or fail to simultaneously support both scrubbing and spoofing attacks. In this work, we propose Contrastive Decoding-Guided Knowledge Distillation (CDG-KD), a unified framework that enables bidirectional attacks under unauthorized knowledge distillation. Our approach employs contrastive decoding to extract corrupted or amplified watermark texts via comparing outputs from the student model and weakly watermarked references, followed by bidirectional distillation to train new student models capable of watermark removal and watermark forgery, respectively. Extensive experiments show that CDG-KD effectively performs attacks while preserving the general performance of the distilled model. Our findings underscore critical need for developing watermarking schemes that are robust and unforgeable.
-
-摘要: 水印已成为打击错误信息和保护大型语言模型（LLM）知识产权的关键技术。最近的一项发现称为水印放射性，揭示了教师模型中嵌入的水印可以通过知识蒸馏被学生模型继承。从积极的方面来说，这种继承允许通过识别学生模型中的水印痕迹来检测未经授权的知识提炼。然而，水印对擦洗攻击的鲁棒性及其在未经授权的知识提炼下面对欺骗攻击时的不可伪造性在很大程度上仍然没有被探索。现有的水印攻击方法要么假设访问模型内部，要么不能同时支持擦洗和欺骗攻击。在这项工作中，我们提出了对比解码引导的知识蒸馏（CDG-KD），一个统一的框架，使未经授权的知识蒸馏下的双向攻击。我们的方法采用对比解码提取损坏或放大的水印文本，通过比较输出的学生模型和弱水印的参考，然后通过双向蒸馏训练新的学生模型能够水印去除和水印伪造，分别。大量的实验表明，CDG-KD有效地执行攻击，同时保持蒸馏模型的一般性能。我们的研究结果强调了开发稳健且不可伪造的水印方案的迫切需要。
-
-
-
-## **7. Red Teaming the Mind of the Machine: A Systematic Evaluation of Prompt Injection and Jailbreak Vulnerabilities in LLMs**
+## **10. Red Teaming the Mind of the Machine: A Systematic Evaluation of Prompt Injection and Jailbreak Vulnerabilities in LLMs**
 
 Red联手机器思维：LLM中即时注射和越狱漏洞的系统评估 cs.CR
 
@@ -105,7 +151,7 @@ Red联手机器思维：LLM中即时注射和越狱漏洞的系统评估 cs.CR
 
 
 
-## **8. Safeguard-by-Development: A Privacy-Enhanced Development Paradigm for Multi-Agent Collaboration Systems**
+## **11. Safeguard-by-Development: A Privacy-Enhanced Development Paradigm for Multi-Agent Collaboration Systems**
 
 开发保障：多代理协作系统的隐私增强开发范式 cs.CR
 
@@ -119,7 +165,7 @@ Red联手机器思维：LLM中即时注射和越狱漏洞的系统评估 cs.CR
 
 
 
-## **9. A Proposal for Evaluating the Operational Risk for ChatBots based on Large Language Models**
+## **12. A Proposal for Evaluating the Operational Risk for ChatBots based on Large Language Models**
 
 基于大型语言模型评估ChatBots运营风险的提案 cs.CR
 
@@ -135,7 +181,7 @@ Red联手机器思维：LLM中即时注射和越狱漏洞的系统评估 cs.CR
 
 
 
-## **10. ACE: A Security Architecture for LLM-Integrated App Systems**
+## **13. ACE: A Security Architecture for LLM-Integrated App Systems**
 
 ACE：LLM集成应用程序系统的安全架构 cs.CR
 
@@ -151,7 +197,7 @@ ACE：LLM集成应用程序系统的安全架构 cs.CR
 
 
 
-## **11. Fight Fire with Fire: Defending Against Malicious RL Fine-Tuning via Reward Neutralization**
+## **14. Fight Fire with Fire: Defending Against Malicious RL Fine-Tuning via Reward Neutralization**
 
 以毒攻毒：通过奖励中和防御恶意RL微调 cs.LG
 
@@ -165,7 +211,7 @@ ACE：LLM集成应用程序系统的安全架构 cs.CR
 
 
 
-## **12. An LLM-based Self-Evolving Security Framework for 6G Space-Air-Ground Integrated Networks**
+## **15. An LLM-based Self-Evolving Security Framework for 6G Space-Air-Ground Integrated Networks**
 
 基于LLM的6G空地综合网络自进化安全框架 cs.CR
 
@@ -181,7 +227,7 @@ Accepted by IEEE Communications Magazine
 
 
 
-## **13. OBLIVIATE: Robust and Practical Machine Unlearning for Large Language Models**
+## **16. OBLIVIATE: Robust and Practical Machine Unlearning for Large Language Models**
 
 Obliviate：针对大型语言模型的稳健且实用的机器去学习 cs.CL
 
@@ -197,7 +243,7 @@ Obliviate：针对大型语言模型的稳健且实用的机器去学习 cs.CL
 
 
 
-## **14. The Aloe Family Recipe for Open and Specialized Healthcare LLMs**
+## **17. The Aloe Family Recipe for Open and Specialized Healthcare LLMs**
 
 面向开放和专业医疗LL的Aloe家族食谱 cs.CL
 
@@ -213,7 +259,7 @@ arXiv admin note: substantial text overlap with arXiv:2405.01886
 
 
 
-## **15. REVEAL: Multi-turn Evaluation of Image-Input Harms for Vision LLM**
+## **18. REVEAL: Multi-turn Evaluation of Image-Input Harms for Vision LLM**
 
 REVEAL：Vision LLM图像输入危害的多回合评估 cs.CL
 
@@ -229,7 +275,7 @@ REVEAL：Vision LLM图像输入危害的多回合评估 cs.CL
 
 
 
-## **16. ExpShield: Safeguarding Web Text from Unauthorized Crawling and Language Modeling Exploitation**
+## **19. ExpShield: Safeguarding Web Text from Unauthorized Crawling and Language Modeling Exploitation**
 
 ExpShield：保护Web文本免受未经授权的抓取和语言建模利用 cs.CR
 
@@ -245,7 +291,7 @@ ExpShield：保护Web文本免受未经授权的抓取和语言建模利用 cs.C
 
 
 
-## **17. Towards Universal and Black-Box Query-Response Only Attack on LLMs with QROA**
+## **20. Towards Universal and Black-Box Query-Response Only Attack on LLMs with QROA**
 
 采用QROA对LLM进行通用和黑匣子仅查询响应攻击 cs.CL
 
@@ -259,7 +305,7 @@ ExpShield：保护Web文本免受未经授权的抓取和语言建模利用 cs.C
 
 
 
-## **18. HAIR: Hardness-Aware Inverse Reinforcement Learning with Introspective Reasoning for LLM Alignment**
+## **21. HAIR: Hardness-Aware Inverse Reinforcement Learning with Introspective Reasoning for LLM Alignment**
 
 HAIR：具有内省推理的硬感知反向强化学习，用于LLM对齐 cs.CL
 
@@ -275,7 +321,7 @@ The three authors contributed equally to this work
 
 
 
-## **19. BadLingual: A Novel Lingual-Backdoor Attack against Large Language Models**
+## **22. BadLingual: A Novel Lingual-Backdoor Attack against Large Language Models**
 
 BadLingual：针对大型语言模型的新型语言后门攻击 cs.CR
 
@@ -289,7 +335,7 @@ BadLingual：针对大型语言模型的新型语言后门攻击 cs.CR
 
 
 
-## **20. Automatic Calibration for Membership Inference Attack on Large Language Models**
+## **23. Automatic Calibration for Membership Inference Attack on Large Language Models**
 
 大型语言模型隶属度推理攻击的自动校准 cs.LG
 
@@ -303,7 +349,7 @@ BadLingual：针对大型语言模型的新型语言后门攻击 cs.CR
 
 
 
-## **21. Using Mechanistic Interpretability to Craft Adversarial Attacks against Large Language Models**
+## **24. Using Mechanistic Interpretability to Craft Adversarial Attacks against Large Language Models**
 
 使用机械可解释性来应对大型语言模型的对抗攻击 cs.LG
 
@@ -317,7 +363,7 @@ BadLingual：针对大型语言模型的新型语言后门攻击 cs.CR
 
 
 
-## **22. A Trustworthy Multi-LLM Network: Challenges,Solutions, and A Use Case**
+## **25. A Trustworthy Multi-LLM Network: Challenges,Solutions, and A Use Case**
 
 值得信赖的多元LLM网络：挑战、解决方案和用例 cs.NI
 
@@ -331,7 +377,7 @@ BadLingual：针对大型语言模型的新型语言后门攻击 cs.CR
 
 
 
-## **23. Towards Effective Identification of Attack Techniques in Cyber Threat Intelligence Reports using Large Language Models**
+## **26. Towards Effective Identification of Attack Techniques in Cyber Threat Intelligence Reports using Large Language Models**
 
 使用大型语言模型有效识别网络威胁情报报告中的攻击技术 cs.CR
 
@@ -347,7 +393,7 @@ BadLingual：针对大型语言模型的新型语言后门攻击 cs.CR
 
 
 
-## **24. PEEK: Phishing Evolution Framework for Phishing Generation and Evolving Pattern Analysis using Large Language Models**
+## **27. PEEK: Phishing Evolution Framework for Phishing Generation and Evolving Pattern Analysis using Large Language Models**
 
 TEK：使用大型语言模型进行网络钓鱼生成和演变模式分析的网络钓鱼进化框架 cs.CR
 
@@ -361,7 +407,7 @@ TEK：使用大型语言模型进行网络钓鱼生成和演变模式分析的�
 
 
 
-## **25. Large Language Models as Robust Data Generators in Software Analytics: Are We There Yet?**
+## **28. Large Language Models as Robust Data Generators in Software Analytics: Are We There Yet?**
 
 大型语言模型作为软件分析中稳健的数据生成器：我们已经做到了吗？ cs.SE
 
@@ -377,7 +423,7 @@ Accepted to the AI Model/Data Track of the Evaluation and Assessment  in Softwar
 
 
 
-## **26. Large Language Models as Carriers of Hidden Messages**
+## **29. Large Language Models as Carriers of Hidden Messages**
 
 大型语言模型作为隐藏消息的载体 cs.CL
 
@@ -393,7 +439,7 @@ Accepted on SECRYPT 2025 Conference. Code is available at  https://github.com/j-
 
 
 
-## **27. Mapping the Italian Telegram Ecosystem: Communities, Toxicity, and Hate Speech**
+## **30. Mapping the Italian Telegram Ecosystem: Communities, Toxicity, and Hate Speech**
 
 绘制意大利电报生态系统：社区，毒性和仇恨言论 cs.SI
 
@@ -407,7 +453,7 @@ Accepted on SECRYPT 2025 Conference. Code is available at  https://github.com/j-
 
 
 
-## **28. A Survey on Privacy Risks and Protection in Large Language Models**
+## **31. A Survey on Privacy Risks and Protection in Large Language Models**
 
 大型语言模型中的隐私风险与保护调查 cs.CR
 
@@ -421,7 +467,7 @@ Accepted on SECRYPT 2025 Conference. Code is available at  https://github.com/j-
 
 
 
-## **29. Cannot See the Forest for the Trees: Invoking Heuristics and Biases to Elicit Irrational Choices of LLMs**
+## **32. Cannot See the Forest for the Trees: Invoking Heuristics and Biases to Elicit Irrational Choices of LLMs**
 
 只见树木不见森林：利用启发式和偏见来激发对LLM的非理性选择 cs.CL
 
@@ -435,7 +481,7 @@ Accepted on SECRYPT 2025 Conference. Code is available at  https://github.com/j-
 
 
 
-## **30. Parameterized Argumentation-based Reasoning Tasks for Benchmarking Generative Language Models**
+## **33. Parameterized Argumentation-based Reasoning Tasks for Benchmarking Generative Language Models**
 
 用于生成语言模型基准测试的参数化基于论证的推理任务 cs.AI
 
@@ -451,7 +497,7 @@ This manuscript has been accepted for presentation as a short paper  at the 20th
 
 
 
-## **31. Rubber Mallet: A Study of High Frequency Localized Bit Flips and Their Impact on Security**
+## **34. Rubber Mallet: A Study of High Frequency Localized Bit Flips and Their Impact on Security**
 
 橡皮锤：高频局部位翻转及其对安全性影响的研究 cs.CR
 
@@ -465,7 +511,7 @@ This manuscript has been accepted for presentation as a short paper  at the 20th
 
 
 
-## **32. LLM Security: Vulnerabilities, Attacks, Defenses, and Countermeasures**
+## **35. LLM Security: Vulnerabilities, Attacks, Defenses, and Countermeasures**
 
 LLM安全：漏洞、攻击、防御和对策 cs.CR
 
@@ -479,7 +525,7 @@ LLM安全：漏洞、攻击、防御和对策 cs.CR
 
 
 
-## **33. A Rusty Link in the AI Supply Chain: Detecting Evil Configurations in Model Repositories**
+## **36. A Rusty Link in the AI Supply Chain: Detecting Evil Configurations in Model Repositories**
 
 AI供应链中的生锈链接：检测模型库中的恶意行为 cs.CR
 
@@ -493,7 +539,7 @@ AI供应链中的生锈链接：检测模型库中的恶意行为 cs.CR
 
 
 
-## **34. Good News for Script Kiddies? Evaluating Large Language Models for Automated Exploit Generation**
+## **37. Good News for Script Kiddies? Evaluating Large Language Models for Automated Exploit Generation**
 
 好消息给孩子们。评估大型语言模型以自动生成漏洞 cs.CR
 
@@ -507,7 +553,7 @@ AI供应链中的生锈链接：检测模型库中的恶意行为 cs.CR
 
 
 
-## **35. Transferable Adversarial Attacks on Black-Box Vision-Language Models**
+## **38. Transferable Adversarial Attacks on Black-Box Vision-Language Models**
 
 黑匣子视觉语言模型的可转移对抗攻击 cs.CV
 
@@ -521,7 +567,7 @@ AI供应链中的生锈链接：检测模型库中的恶意行为 cs.CR
 
 
 
-## **36. Prompt Inversion Attack against Collaborative Inference of Large Language Models**
+## **39. Prompt Inversion Attack against Collaborative Inference of Large Language Models**
 
 针对大型语言模型协作推理的提示倒置攻击 cs.CR
 
@@ -537,7 +583,7 @@ To appear at IEEE Symposium on Security and Privacy 2025
 
 
 
-## **37. Attack and defense techniques in large language models: A survey and new perspectives**
+## **40. Attack and defense techniques in large language models: A survey and new perspectives**
 
 大型语言模型中的攻击和防御技术：概览和新观点 cs.CR
 
@@ -551,7 +597,7 @@ To appear at IEEE Symposium on Security and Privacy 2025
 
 
 
-## **38. Protocol-agnostic and Data-free Backdoor Attacks on Pre-trained Models in RF Fingerprinting**
+## **41. Protocol-agnostic and Data-free Backdoor Attacks on Pre-trained Models in RF Fingerprinting**
 
 对RF指纹识别中预训练模型的协议不可知且无数据后门攻击 cs.CR
 
@@ -567,7 +613,7 @@ To appear at IEEE Symposium on Security and Privacy 2025
 
 
 
-## **39. OET: Optimization-based prompt injection Evaluation Toolkit**
+## **42. OET: Optimization-based prompt injection Evaluation Toolkit**
 
 OET：基于优化的即时注入评估工具包 cs.CR
 
@@ -581,7 +627,7 @@ OET：基于优化的即时注入评估工具包 cs.CR
 
 
 
-## **40. Spill The Beans: Exploiting CPU Cache Side-Channels to Leak Tokens from Large Language Models**
+## **43. Spill The Beans: Exploiting CPU Cache Side-Channels to Leak Tokens from Large Language Models**
 
 溢出豆子：利用中央处理器缓存侧通道从大型语言模型中泄露令牌 cs.CR
 
@@ -595,7 +641,7 @@ OET：基于优化的即时注入评估工具包 cs.CR
 
 
 
-## **41. Can Differentially Private Fine-tuning LLMs Protect Against Privacy Attacks?**
+## **44. Can Differentially Private Fine-tuning LLMs Protect Against Privacy Attacks?**
 
 差异私有微调LLM可以防止隐私攻击吗？ cs.CR
 
@@ -611,7 +657,7 @@ accepted by DBSec25
 
 
 
-## **42. Stochastic Subspace Descent Accelerated via Bi-fidelity Line Search**
+## **45. Stochastic Subspace Descent Accelerated via Bi-fidelity Line Search**
 
 通过双保真线搜索加速随机子空间下降 cs.LG
 
@@ -625,7 +671,7 @@ accepted by DBSec25
 
 
 
-## **43. Can We Trust Embodied Agents? Exploring Backdoor Attacks against Embodied LLM-based Decision-Making Systems**
+## **46. Can We Trust Embodied Agents? Exploring Backdoor Attacks against Embodied LLM-based Decision-Making Systems**
 
 我们可以信任有保障的代理人吗？探索针对基于LLM的决策系统的后门攻击 cs.CR
 
@@ -641,7 +687,7 @@ Accepted paper at ICLR 2025, 31 pages, including main paper,  references, and ap
 
 
 
-## **44. XBreaking: Explainable Artificial Intelligence for Jailbreaking LLMs**
+## **47. XBreaking: Explainable Artificial Intelligence for Jailbreaking LLMs**
 
 XBreaking：用于越狱LLM的可解释人工智能 cs.CR
 
@@ -655,7 +701,7 @@ XBreaking：用于越狱LLM的可解释人工智能 cs.CR
 
 
 
-## **45. Hoist with His Own Petard: Inducing Guardrails to Facilitate Denial-of-Service Attacks on Retrieval-Augmented Generation of LLMs**
+## **48. Hoist with His Own Petard: Inducing Guardrails to Facilitate Denial-of-Service Attacks on Retrieval-Augmented Generation of LLMs**
 
 用自己的花瓣提升：引入护栏以促进对检索增强一代LLM的拒绝服务攻击 cs.CR
 
@@ -671,7 +717,7 @@ XBreaking：用于越狱LLM的可解释人工智能 cs.CR
 
 
 
-## **46. Traceback of Poisoning Attacks to Retrieval-Augmented Generation**
+## **49. Traceback of Poisoning Attacks to Retrieval-Augmented Generation**
 
 中毒攻击追溯到检索增强一代 cs.CR
 
@@ -687,7 +733,7 @@ Accepted by The Web Conference 2025
 
 
 
-## **47. Generative AI in Financial Institution: A Global Survey of Opportunities, Threats, and Regulation**
+## **50. Generative AI in Financial Institution: A Global Survey of Opportunities, Threats, and Regulation**
 
 金融机构中的生成人工智能：机会、威胁和监管的全球调查 cs.CR
 
@@ -698,50 +744,6 @@ Accepted by The Web Conference 2025
 **Abstract**: Generative Artificial Intelligence (GenAI) is rapidly reshaping the global financial landscape, offering unprecedented opportunities to enhance customer engagement, automate complex workflows, and extract actionable insights from vast financial data. This survey provides an overview of GenAI adoption across the financial ecosystem, examining how banks, insurers, asset managers, and fintech startups worldwide are integrating large language models and other generative tools into their operations. From AI-powered virtual assistants and personalized financial advisory to fraud detection and compliance automation, GenAI is driving innovation across functions. However, this transformation comes with significant cybersecurity and ethical risks. We discuss emerging threats such as AI-generated phishing, deepfake-enabled fraud, and adversarial attacks on AI systems, as well as concerns around bias, opacity, and data misuse. The evolving global regulatory landscape is explored in depth, including initiatives by major financial regulators and international efforts to develop risk-based AI governance. Finally, we propose best practices for secure and responsible adoption - including explainability techniques, adversarial testing, auditability, and human oversight. Drawing from academic literature, industry case studies, and policy frameworks, this chapter offers a perspective on how the financial sector can harness GenAI's transformative potential while navigating the complex risks it introduces.
 
 摘要: 生成式人工智能（GenAI）正在迅速重塑全球金融格局，为增强客户参与度、自动化复杂的工作流程以及从大量金融数据中提取可操作的见解提供了前所未有的机会。该调查概述了整个金融生态系统中GenAI的采用情况，研究了全球银行，保险公司，资产管理公司和金融科技初创公司如何将大型语言模型和其他生成工具集成到其运营中。从人工智能驱动的虚拟助理和个性化财务咨询到欺诈检测和合规自动化，GenAI正在推动跨职能的创新。然而，这种转变伴随着重大的网络安全和道德风险。我们讨论了人工智能生成的网络钓鱼、深度伪造的欺诈和对人工智能系统的对抗攻击等新兴威胁，以及对偏见、不透明和数据滥用的担忧。深入探讨了不断变化的全球监管格局，包括主要金融监管机构的举措以及国际上发展基于风险的人工智能治理的努力。最后，我们提出了安全且负责任的采用的最佳实践-包括可解释性技术、对抗性测试、可互换性和人类监督。本章借鉴学术文献、行业案例研究和政策框架，提供了金融部门如何利用GenAI的变革潜力，同时应对其带来的复杂风险的视角。
-
-
-
-## **48. Unlocking User-oriented Pages: Intention-driven Black-box Scanner for Real-world Web Applications**
-
-解锁面向用户的页面：真实世界Web应用程序的意图驱动黑盒扫描器 cs.CR
-
-**SubmitDate**: 2025-04-30    [abs](http://arxiv.org/abs/2504.20801v2) [paper-pdf](http://arxiv.org/pdf/2504.20801v2)
-
-**Authors**: Weizhe Wang, Yao Zhang, Kaitai Liang, Guangquan Xu, Hongpeng Bai, Qingyang Yan, Xi Zheng, Bin Wu
-
-**Abstract**: Black-box scanners have played a significant role in detecting vulnerabilities for web applications. A key focus in current black-box scanning is increasing test coverage (i.e., accessing more web pages). However, since many web applications are user-oriented, some deep pages can only be accessed through complex user interactions, which are difficult to reach by existing black-box scanners. To fill this gap, a key insight is that web pages contain a wealth of semantic information that can aid in understanding potential user intention. Based on this insight, we propose Hoyen, a black-box scanner that uses the Large Language Model to predict user intention and provide guidance for expanding the scanning scope. Hoyen has been rigorously evaluated on 12 popular open-source web applications and compared with 6 representative tools. The results demonstrate that Hoyen performs a comprehensive exploration of web applications, expanding the attack surface while achieving about 2x than the coverage of other scanners on average, with high request accuracy. Furthermore, Hoyen detected over 90% of its requests towards the core functionality of the application, detecting more vulnerabilities than other scanners, including unique vulnerabilities in well-known web applications. Our data/code is available at https://hoyen.tjunsl.com/
-
-摘要: 黑匣子扫描仪在检测Web应用程序漏洞方面发挥了重要作用。当前黑匣子扫描的一个关键焦点是增加测试覆盖范围（即，访问更多网页）。然而，由于许多Web应用程序都是面向用户的，因此一些深度页面只能通过复杂的用户交互来访问，而现有的黑匣子扫描仪很难到达这些交互。为了填补这一空白，一个关键的见解是，网页包含了丰富的语义信息，可以帮助理解潜在的用户意图。基于这一见解，我们提出了Hoyen，一个黑盒扫描器，使用大语言模型来预测用户的意图，并为扩大扫描范围提供指导。Hoyen在12个流行的开源Web应用程序上进行了严格的评估，并与6个代表性工具进行了比较。结果表明，Hoyen对Web应用程序进行了全面的探索，扩大了攻击面，同时平均达到了其他扫描器的2倍覆盖率，具有很高的请求准确性。此外，Hoyen检测到了超过90%的针对应用程序核心功能的请求，比其他扫描仪检测到更多的漏洞，包括知名Web应用程序中的独特漏洞。我们的数据/代码可访问https://hoyen.tjunsl.com/
-
-
-
-## **49. Round Trip Translation Defence against Large Language Model Jailbreaking Attacks**
-
-针对大型语言模型越狱攻击的往返翻译防御 cs.CL
-
-6 pages, 6 figures
-
-**SubmitDate**: 2025-04-30    [abs](http://arxiv.org/abs/2402.13517v2) [paper-pdf](http://arxiv.org/pdf/2402.13517v2)
-
-**Authors**: Canaan Yung, Hadi Mohaghegh Dolatabadi, Sarah Erfani, Christopher Leckie
-
-**Abstract**: Large language models (LLMs) are susceptible to social-engineered attacks that are human-interpretable but require a high level of comprehension for LLMs to counteract. Existing defensive measures can only mitigate less than half of these attacks at most. To address this issue, we propose the Round Trip Translation (RTT) method, the first algorithm specifically designed to defend against social-engineered attacks on LLMs. RTT paraphrases the adversarial prompt and generalizes the idea conveyed, making it easier for LLMs to detect induced harmful behavior. This method is versatile, lightweight, and transferrable to different LLMs. Our defense successfully mitigated over 70% of Prompt Automatic Iterative Refinement (PAIR) attacks, which is currently the most effective defense to the best of our knowledge. We are also the first to attempt mitigating the MathsAttack and reduced its attack success rate by almost 40%. Our code is publicly available at https://github.com/Cancanxxx/Round_Trip_Translation_Defence   This version of the article has been accepted for publication, after peer review (when applicable) but is not the Version of Record and does not reflect post-acceptance improvements, or any corrections. The Version of Record is available online at: https://doi.org/10.48550/arXiv.2402.13517 Use of this Accepted Version is subject to the publisher's Accepted Manuscript terms of use https://www.springernature.com/gp/open-research/policies/accepted-manuscript-terms
-
-摘要: 大型语言模型（LLM）很容易受到人类可解释的社会工程攻击，但LLM需要高水平的理解力才能对抗。现有的防御措施最多只能减轻不到一半的攻击。为了解决这个问题，我们提出了往返翻译（RTI）方法，这是第一个专门设计用于防御对LLM的社会工程攻击的算法。HRT解释了对抗提示并概括了所传达的想法，使LLM更容易检测诱导的有害行为。该方法通用、轻量级，并且可转移到不同的LLM。我们的防御成功缓解了超过70%的提示自动迭代细化（PAIR）攻击，据我们所知，这是目前最有效的防御。我们也是第一个尝试缓解MathsAttack的公司，并将其攻击成功率降低了近40%。我们的代码可在https://github.com/Cancanxxx/Round_Trip_Translation_Defence上公开获取   经过同行评审（如果适用）后，该版本的文章已被接受出版，但不是记录版本，并且不反映接受后的改进或任何更正。记录版本可在线获取：https://doi.org/10.48550/arXiv.2402.13517此接受版本的使用须遵守出版商的接受手稿使用条款https://www.springernature.com/gp/open-research/policies/accepted-manuscript-terms
-
-
-
-## **50. CachePrune: Neural-Based Attribution Defense Against Indirect Prompt Injection Attacks**
-
-Cache Prune：针对即时间接注入攻击的基于神经的归因防御 cs.CR
-
-**SubmitDate**: 2025-04-29    [abs](http://arxiv.org/abs/2504.21228v1) [paper-pdf](http://arxiv.org/pdf/2504.21228v1)
-
-**Authors**: Rui Wang, Junda Wu, Yu Xia, Tong Yu, Ruiyi Zhang, Ryan Rossi, Lina Yao, Julian McAuley
-
-**Abstract**: Large Language Models (LLMs) are identified as being susceptible to indirect prompt injection attack, where the model undesirably deviates from user-provided instructions by executing tasks injected in the prompt context. This vulnerability stems from LLMs' inability to distinguish between data and instructions within a prompt. In this paper, we propose CachePrune that defends against this attack by identifying and pruning task-triggering neurons from the KV cache of the input prompt context. By pruning such neurons, we encourage the LLM to treat the text spans of input prompt context as only pure data, instead of any indicator of instruction following. These neurons are identified via feature attribution with a loss function induced from an upperbound of the Direct Preference Optimization (DPO) objective. We show that such a loss function enables effective feature attribution with only a few samples. We further improve on the quality of feature attribution, by exploiting an observed triggering effect in instruction following. Our approach does not impose any formatting on the original prompt or introduce extra test-time LLM calls. Experiments show that CachePrune significantly reduces attack success rates without compromising the response quality. Note: This paper aims to defend against indirect prompt injection attacks, with the goal of developing more secure and robust AI systems.
-
-摘要: 大型语言模型（LLM）被认为容易受到间接提示注入攻击，其中模型通过执行在提示上下文中注入的任务而不希望地偏离用户提供的指令。此漏洞源于LLM无法区分提示内的数据和指令。本文中，我们提出了Cache Prune，它通过从输入提示上下文的KV缓存中识别和修剪任务触发神经元来抵御这种攻击。通过修剪此类神经元，我们鼓励LLM将输入提示上下文的文本跨度仅视为纯数据，而不是任何指令遵循的指示符。这些神经元是通过特征属性识别的，该特征属性具有直接偏好优化（DPO）目标的上界诱导的损失函数。我们表明，这样的损失函数只需少量样本即可实现有效的特征归因。我们通过利用在指令遵循中观察到的触发效应，进一步提高了特征归因的质量。我们的方法不会对原始提示强加任何格式，也不会引入额外的测试时LLM调用。实验表明，Cache Prune显着降低了攻击成功率，而不会影响响应质量。注：本文旨在防御间接即时注入攻击，目标是开发更安全、更强大的人工智能系统。
 
 
 
