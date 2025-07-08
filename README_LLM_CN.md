@@ -1,9 +1,139 @@
 # Latest Large Language Model Attack Papers
-**update at 2025-07-05 11:48:42**
+**update at 2025-07-08 10:02:46**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
-## **1. Visual Contextual Attack: Jailbreaking MLLMs with Image-Driven Context Injection**
+## **1. BackFed: An Efficient & Standardized Benchmark Suite for Backdoor Attacks in Federated Learning**
+
+BackFeed：一个高效且标准化的联邦学习后门攻击基准套件 cs.CR
+
+Under review at NeurIPS'25
+
+**SubmitDate**: 2025-07-07    [abs](http://arxiv.org/abs/2507.04903v1) [paper-pdf](http://arxiv.org/pdf/2507.04903v1)
+
+**Authors**: Thinh Dao, Dung Thuy Nguyen, Khoa D Doan, Kok-Seng Wong
+
+**Abstract**: Federated Learning (FL) systems are vulnerable to backdoor attacks, where adversaries train their local models on poisoned data and submit poisoned model updates to compromise the global model. Despite numerous proposed attacks and defenses, divergent experimental settings, implementation errors, and unrealistic assumptions hinder fair comparisons and valid conclusions about their effectiveness in real-world scenarios. To address this, we introduce BackFed - a comprehensive benchmark suite designed to standardize, streamline, and reliably evaluate backdoor attacks and defenses in FL, with a focus on practical constraints. Our benchmark offers key advantages through its multi-processing implementation that significantly accelerates experimentation and the modular design that enables seamless integration of new methods via well-defined APIs. With a standardized evaluation pipeline, we envision BackFed as a plug-and-play environment for researchers to comprehensively and reliably evaluate new attacks and defenses. Using BackFed, we conduct large-scale studies of representative backdoor attacks and defenses across both Computer Vision and Natural Language Processing tasks with diverse model architectures and experimental settings. Our experiments critically assess the performance of proposed attacks and defenses, revealing unknown limitations and modes of failures under practical conditions. These empirical insights provide valuable guidance for the development of new methods and for enhancing the security of FL systems. Our framework is openly available at https://github.com/thinh-dao/BackFed.
+
+摘要: 联邦学习（FL）系统很容易受到后门攻击，对手会根据有毒数据训练其本地模型并提交有毒模型更新以损害全局模型。尽管提出了许多攻击和防御，但不同的实验设置、实现错误和不切实际的假设阻碍了公平的比较和关于其在现实世界场景中有效性的有效性的有效结论。为了解决这个问题，我们引入了BackFed --一个全面的基准套件，旨在标准化、简化和可靠地评估FL中的后门攻击和防御，重点关注实际限制。我们的基准测试通过其多处理实施来提供关键优势，可以显着加速实验，并通过定义良好的API实现新方法的无缝集成。通过标准化的评估管道，我们将BackFeed设想为一个即插即用的环境，供研究人员全面可靠地评估新的攻击和防御。使用BackFeed，我们通过不同的模型架构和实验环境对计算机视觉和自然语言处理任务中的代表性后门攻击和防御进行了大规模研究。我们的实验批判性地评估了拟议攻击和防御的性能，揭示了实际条件下未知的限制和失败模式。这些经验见解为新方法的开发和增强FL系统的安全性提供了宝贵的指导。我们的框架可在https://github.com/thinh-dao/BackFed上公开获取。
+
+
+
+## **2. Who's the Mole? Modeling and Detecting Intention-Hiding Malicious Agents in LLM-Based Multi-Agent Systems**
+
+鼹鼠是谁？基于LLM的多Agent系统中意图隐藏恶意代理的建模和检测 cs.MA
+
+**SubmitDate**: 2025-07-07    [abs](http://arxiv.org/abs/2507.04724v1) [paper-pdf](http://arxiv.org/pdf/2507.04724v1)
+
+**Authors**: Yizhe Xie, Congcong Zhu, Xinyue Zhang, Minghao Wang, Chi Liu, Minglu Zhu, Tianqing Zhu
+
+**Abstract**: Multi-agent systems powered by Large Language Models (LLM-MAS) demonstrate remarkable capabilities in collaborative problem-solving. While LLM-MAS exhibit strong collaborative abilities, the security risks in their communication and coordination remain underexplored. We bridge this gap by systematically investigating intention-hiding threats in LLM-MAS, and design four representative attack paradigms that subtly disrupt task completion while maintaining high concealment. These attacks are evaluated in centralized, decentralized, and layered communication structures. Experiments conducted on six benchmark datasets, including MMLU, MMLU-Pro, HumanEval, GSM8K, arithmetic, and biographies, demonstrate that they exhibit strong disruptive capabilities. To identify these threats, we propose a psychology-based detection framework AgentXposed, which combines the HEXACO personality model with the Reid Technique, using progressive questionnaire inquiries and behavior-based monitoring. Experiments conducted on six types of attacks show that our detection framework effectively identifies all types of malicious behaviors. The detection rate for our intention-hiding attacks is slightly lower than that of the two baselines, Incorrect Fact Injection and Dark Traits Injection, demonstrating the effectiveness of intention concealment. Our findings reveal the structural and behavioral risks posed by intention-hiding attacks and offer valuable insights into securing LLM-based multi-agent systems through psychological perspectives, which contributes to a deeper understanding of multi-agent safety. The code and data are available at https://anonymous.4open.science/r/AgentXposed-F814.
+
+摘要: 由大型语言模型（LLM-MAS）支持的多智能体系统在协作解决问题方面表现出了非凡的能力。虽然LLM-MAS表现出强大的协作能力，但其沟通和协调中的安全风险仍然没有得到充分的研究。我们通过系统性调查LLM-MAS中的意图隐藏威胁来弥合这一差距，并设计四种代表性的攻击范式，这些攻击范式微妙地扰乱任务完成，同时保持高度隐蔽性。这些攻击在集中式、分散式和分层的通信结构中进行评估。对六个基准数据集（包括MMLU、MMLU-Pro、HumanEval、GSM 8 K、算术和传记）进行的实验表明，它们表现出强大的破坏能力。为了识别这些威胁，我们提出了一个基于心理的检测框架AgentXposed，它将HEXACO性格模型与Reid技术相结合，使用渐进式问卷调查和基于行为的监控。对六种类型的攻击进行的实验表明，我们的检测框架可以有效识别所有类型的恶意行为。我们的意图隐藏攻击的检测率略低于两个基线，错误事实注入和黑暗特征注入，证明了意图隐藏的有效性。我们的研究结果揭示了意图隐藏攻击带来的结构和行为风险，并为通过心理学角度保护基于LLM的多智能体系统提供了宝贵的见解，这有助于更深入地理解多智能体安全性。代码和数据可在https://anonymous.4open.science/r/AgentXposed-F814上获取。
+
+
+
+## **3. Model Inversion Attacks on Llama 3: Extracting PII from Large Language Models**
+
+对Lama 3的模型倒置攻击：从大型语言模型中提取PRI cs.LG
+
+**SubmitDate**: 2025-07-06    [abs](http://arxiv.org/abs/2507.04478v1) [paper-pdf](http://arxiv.org/pdf/2507.04478v1)
+
+**Authors**: Sathesh P. Sivashanmugam
+
+**Abstract**: Large language models (LLMs) have transformed natural language processing, but their ability to memorize training data poses significant privacy risks. This paper investigates model inversion attacks on the Llama 3.2 model, a multilingual LLM developed by Meta. By querying the model with carefully crafted prompts, we demonstrate the extraction of personally identifiable information (PII) such as passwords, email addresses, and account numbers. Our findings highlight the vulnerability of even smaller LLMs to privacy attacks and underscore the need for robust defenses. We discuss potential mitigation strategies, including differential privacy and data sanitization, and call for further research into privacy-preserving machine learning techniques.
+
+摘要: 大型语言模型（LLM）已经改变了自然语言处理，但它们记忆训练数据的能力带来了巨大的隐私风险。本文研究了对Llama 3.2模型的模型倒置攻击，Llama 3.2模型是Meta开发的多语言LLM。通过使用精心设计的提示来查询模型，我们演示了如何提取个人可识别信息（PRI），例如密码、电子邮件地址和帐户号码。我们的研究结果强调了更小的LLM容易受到隐私攻击，并强调了强大防御的必要性。我们讨论了潜在的缓解策略，包括差异隐私和数据清理，并呼吁对保护隐私的机器学习技术进行进一步研究。
+
+
+
+## **4. Tail-aware Adversarial Attacks: A Distributional Approach to Efficient LLM Jailbreaking**
+
+尾部感知对抗攻击：高效LLM越狱的分布式方法 cs.LG
+
+**SubmitDate**: 2025-07-06    [abs](http://arxiv.org/abs/2507.04446v1) [paper-pdf](http://arxiv.org/pdf/2507.04446v1)
+
+**Authors**: Tim Beyer, Yan Scholten, Stephan Günnemann, Leo Schwinn
+
+**Abstract**: To guarantee safe and robust deployment of large language models (LLMs) at scale, it is critical to accurately assess their adversarial robustness. Existing adversarial attacks typically target harmful responses in single-point, greedy generations, overlooking the inherently stochastic nature of LLMs. In this paper, we propose a novel framework for adversarial robustness evaluation that explicitly models the entire output distribution, including tail-risks, providing better estimates for model robustness at scale. By casting the attack process as a resource allocation problem between optimization and sampling, we determine compute-optimal tradeoffs and show that integrating sampling into existing attacks boosts ASR by up to 48% and improves efficiency by up to two orders of magnitude. Our framework also enables us to analyze how different attack algorithms affect output harm distributions. Surprisingly, we find that most optimization strategies have little effect on output harmfulness. Finally, we introduce a data-free proof-of-concept objective based on entropy-maximization to demonstrate how our tail-aware perspective enables new optimization targets. Overall, our findings highlight the importance of tail-aware attacks and evaluation protocols to accurately assess and strengthen LLM safety.
+
+摘要: 为了保证大规模安全、稳健地部署大型语言模型（LLM），准确评估其对抗稳健性至关重要。现有的对抗性攻击通常针对单点贪婪世代的有害响应，忽视了LLM固有的随机性。在本文中，我们提出了一种新颖的对抗稳健性评估框架，该框架对整个输出分布（包括尾部风险）进行显式建模，为模型大规模稳健性提供更好的估计。通过将攻击过程描述为优化和采样之间的资源分配问题，我们确定了计算最优权衡，并表明将采样集成到现有攻击中可将ASB提高高达48%，并将效率提高高达两个数量级。我们的框架还使我们能够分析不同的攻击算法如何影响输出伤害分布。令人惊讶的是，我们发现大多数优化策略对输出危害影响很小。最后，我们引入了一个基于熵最大化的无数据概念验证目标，以演示我们的尾部感知视角如何实现新的优化目标。总体而言，我们的研究结果强调了尾部感知攻击和评估协议对于准确评估和加强LLM安全性的重要性。
+
+
+
+## **5. Attention Slipping: A Mechanistic Understanding of Jailbreak Attacks and Defenses in LLMs**
+
+注意力流失：对LLM越狱攻击和防御的机械理解 cs.CR
+
+**SubmitDate**: 2025-07-06    [abs](http://arxiv.org/abs/2507.04365v1) [paper-pdf](http://arxiv.org/pdf/2507.04365v1)
+
+**Authors**: Xiaomeng Hu, Pin-Yu Chen, Tsung-Yi Ho
+
+**Abstract**: As large language models (LLMs) become more integral to society and technology, ensuring their safety becomes essential. Jailbreak attacks exploit vulnerabilities to bypass safety guardrails, posing a significant threat. However, the mechanisms enabling these attacks are not well understood. In this paper, we reveal a universal phenomenon that occurs during jailbreak attacks: Attention Slipping. During this phenomenon, the model gradually reduces the attention it allocates to unsafe requests in a user query during the attack process, ultimately causing a jailbreak. We show Attention Slipping is consistent across various jailbreak methods, including gradient-based token replacement, prompt-level template refinement, and in-context learning. Additionally, we evaluate two defenses based on query perturbation, Token Highlighter and SmoothLLM, and find they indirectly mitigate Attention Slipping, with their effectiveness positively correlated with the degree of mitigation achieved. Inspired by this finding, we propose Attention Sharpening, a new defense that directly counters Attention Slipping by sharpening the attention score distribution using temperature scaling. Experiments on four leading LLMs (Gemma2-9B-It, Llama3.1-8B-It, Qwen2.5-7B-It, Mistral-7B-It v0.2) show that our method effectively resists various jailbreak attacks while maintaining performance on benign tasks on AlpacaEval. Importantly, Attention Sharpening introduces no additional computational or memory overhead, making it an efficient and practical solution for real-world deployment.
+
+摘要: 随着大型语言模型（LLM）变得越来越重要，确保其安全性变得至关重要。越狱攻击利用漏洞绕过安全护栏，构成重大威胁。然而，导致这些攻击的机制还没有得到很好的了解。在本文中，我们揭示了越狱袭击期间发生的一种普遍现象：注意力流失。在这种现象期间，该模型在攻击过程中逐渐减少对用户查询中不安全请求的关注，最终导致越狱。我们表明，注意力滑动在各种越狱方法中是一致的，包括基于梯度的令牌替换、预算级模板细化和上下文学习。此外，我们评估了基于查询扰动的两种防御措施：Token Highlighter和SmoothLLM，发现它们间接缓解了注意力滑动，其有效性与所实现的缓解程度正相关。受这一发现的启发，我们提出了注意力尖锐化，这是一种新的防御方法，通过使用温度缩放来尖锐注意力分数分布来直接对抗注意力滑动。对四种领先的LLM（Gemma 2 - 9 B-It、Llama3.1-8B-It、Qwen 2.5 - 7 B-It、Mistral-7 B-It v0.2）的实验表明，我们的方法可以有效抵抗各种越狱攻击，同时保持AlpacaEval上良性任务的性能。重要的是，注意力尖锐不会引入额外的计算或内存负担，使其成为现实世界部署的高效实用解决方案。
+
+
+
+## **6. Hijacking JARVIS: Benchmarking Mobile GUI Agents against Unprivileged Third Parties**
+
+劫持JARRIS：针对无特权第三方对移动图形用户界面代理进行基准测试 cs.CR
+
+**SubmitDate**: 2025-07-06    [abs](http://arxiv.org/abs/2507.04227v1) [paper-pdf](http://arxiv.org/pdf/2507.04227v1)
+
+**Authors**: Guohong Liu, Jialei Ye, Jiacheng Liu, Yuanchun Li, Wei Liu, Pengzhi Gao, Jian Luan, Yunxin Liu
+
+**Abstract**: Mobile GUI agents are designed to autonomously execute diverse device-control tasks by interpreting and interacting with mobile screens. Despite notable advancements, their resilience in real-world scenarios where screen content may be partially manipulated by untrustworthy third parties remains largely unexplored. Owing to their black-box and autonomous nature, these agents are vulnerable to manipulations that could compromise user devices. In this work, we present the first systematic investigation into the vulnerabilities of mobile GUI agents. We introduce a scalable attack simulation framework AgentHazard, which enables flexible and targeted modifications of screen content within existing applications. Leveraging this framework, we develop a comprehensive benchmark suite comprising both a dynamic task execution environment and a static dataset of vision-language-action tuples, totaling over 3,000 attack scenarios. The dynamic environment encompasses 58 reproducible tasks in an emulator with various types of hazardous UI content, while the static dataset is constructed from 210 screenshots collected from 14 popular commercial apps. Importantly, our content modifications are designed to be feasible for unprivileged third parties. We evaluate 7 widely-used mobile GUI agents and 5 common backbone models using our benchmark. Our findings reveal that all examined agents are significantly influenced by misleading third-party content (with an average misleading rate of 28.8% in human-crafted attack scenarios) and that their vulnerabilities are closely linked to the employed perception modalities and backbone LLMs. Furthermore, we assess training-based mitigation strategies, highlighting both the challenges and opportunities for enhancing the robustness of mobile GUI agents. Our code and data will be released at https://agenthazard.github.io.
+
+摘要: 移动图形用户界面代理旨在通过解释移动屏幕和与移动屏幕交互来自主执行各种设备控制任务。尽管取得了显着的进步，但它们在屏幕内容可能被不值得信赖的第三方部分操纵的现实世界场景中的弹性在很大程度上仍然没有被探索。由于它们的黑匣子和自治性质，这些代理很容易受到可能危及用户设备的操纵。在这项工作中，我们对移动图形用户界面代理的漏洞进行了首次系统性调查。我们引入了一个可扩展的攻击模拟框架AgentHazard，它可以灵活且有针对性地修改现有应用程序中的屏幕内容。利用这个框架，我们开发了一个全面的基准测试套件，其中包括动态任务执行环境和视觉-语言-动作二元组的静态数据集，总共超过3，000种攻击场景。动态环境包含具有各种类型危险UI内容的模拟器中的58个可重复任务，而静态数据集是根据从14个流行商业应用程序收集的210个屏幕截图构建的。重要的是，我们的内容修改旨在对无特权的第三方可行。我们评估7广泛使用的移动GUI代理和5个常见的骨干模型，使用我们的基准。我们的研究结果表明，所有受检查的代理都受到误导性第三方内容的显著影响（在人为攻击场景中，平均误导率为28.8%），并且他们的漏洞与所采用的感知模式和骨干LLM密切相关。此外，我们评估基于培训的缓解策略，突出的挑战和机遇，以提高移动GUI代理的鲁棒性。我们的代码和数据将在https://agenthazard.github.io上发布。
+
+
+
+## **7. Can Large Language Models Automate the Refinement of Cellular Network Specifications?**
+
+大型语言模型能否自动细化蜂窝网络规范？ cs.CR
+
+**SubmitDate**: 2025-07-06    [abs](http://arxiv.org/abs/2507.04214v1) [paper-pdf](http://arxiv.org/pdf/2507.04214v1)
+
+**Authors**: Jianshuo Dong, Tianyi Zhang, Feng Yan, Yuanjie Li, Hewu Li, Han Qiu
+
+**Abstract**: Cellular networks serve billions of users globally, yet concerns about reliability and security persist due to weaknesses in 3GPP standards. However, traditional analysis methods, including manual inspection and automated tools, struggle with increasingly expanding cellular network specifications. This paper investigates the feasibility of Large Language Models (LLMs) for automated cellular network specification refinement. To advance it, we leverage 200,000+ approved 3GPP Change Requests (CRs) that document specification revisions, constructing a valuable dataset for domain tasks. We introduce CR-eval, a principled evaluation framework, and benchmark 16 state-of-the-art LLMs, demonstrating that top models can discover security-related weaknesses in over 127 out of 200 test cases within five trials. To bridge potential gaps, we explore LLM specialization techniques, including fine-tuning an 8B model to match or surpass advanced LLMs like GPT-4o and DeepSeek-R1. Evaluations on 30 cellular attacks identify open challenges for achieving full automation. These findings confirm that LLMs can automate the refinement of cellular network specifications and provide valuable insights to guide future research in this direction.
+
+摘要: 蜂窝网络为全球数十亿用户提供服务，但由于3GPP标准的弱点，人们对可靠性和安全性的担忧仍然存在。然而，包括手动检查和自动化工具在内的传统分析方法难以应对日益扩大的蜂窝网络规范。本文研究了大型语言模型（LLM）用于自动蜂窝网络规范细化的可行性。为了推进这一进程，我们利用了200，000多个已批准的3GPP变更请求（CR），这些请求记录了规范修订，为领域任务构建了有价值的数据集。我们介绍了CR-eval，一个原则性的评估框架，并对16个最先进的LLM进行了基准测试，证明顶级模型可以在五次试验中发现200个测试用例中的127个与安全相关的弱点。为了弥合潜在的差距，我们探索LLM专业化技术，包括微调8B模型以匹配或超越GPT-4 o和DeepSeek-R1等高级LLM。对30种蜂窝攻击的评估确定了实现完全自动化的挑战。这些发现证实了LLM可以自动细化蜂窝网络规范，并提供有价值的见解，以指导未来在这一方向的研究。
+
+
+
+## **8. Probing Latent Subspaces in LLM for AI Security: Identifying and Manipulating Adversarial States**
+
+探索LLM中的潜在子空间以实现人工智能安全：识别和操纵敌对状态 cs.LG
+
+4 figures
+
+**SubmitDate**: 2025-07-04    [abs](http://arxiv.org/abs/2503.09066v2) [paper-pdf](http://arxiv.org/pdf/2503.09066v2)
+
+**Authors**: Xin Wei Chia, Swee Liang Wong, Jonathan Pan
+
+**Abstract**: Large Language Models (LLMs) have demonstrated remarkable capabilities across various tasks, yet they remain vulnerable to adversarial manipulations such as jailbreaking via prompt injection attacks. These attacks bypass safety mechanisms to generate restricted or harmful content. In this study, we investigated the underlying latent subspaces of safe and jailbroken states by extracting hidden activations from a LLM. Inspired by attractor dynamics in neuroscience, we hypothesized that LLM activations settle into semi stable states that can be identified and perturbed to induce state transitions. Using dimensionality reduction techniques, we projected activations from safe and jailbroken responses to reveal latent subspaces in lower dimensional spaces. We then derived a perturbation vector that when applied to safe representations, shifted the model towards a jailbreak state. Our results demonstrate that this causal intervention results in statistically significant jailbreak responses in a subset of prompts. Next, we probed how these perturbations propagate through the model's layers, testing whether the induced state change remains localized or cascades throughout the network. Our findings indicate that targeted perturbations induced distinct shifts in activations and model responses. Our approach paves the way for potential proactive defenses, shifting from traditional guardrail based methods to preemptive, model agnostic techniques that neutralize adversarial states at the representation level.
+
+摘要: 大型语言模型（LLM）在各种任务中表现出了非凡的能力，但它们仍然容易受到对抗操纵的影响，例如通过提示注入攻击进行越狱。这些攻击绕过安全机制来生成受限制或有害内容。在这项研究中，我们通过从LLM中提取隐藏激活来研究安全和越狱状态的潜在子空间。受神经科学中吸引子动力学的启发，我们假设LLM激活会进入半稳定状态，可以识别和扰动这些状态以引发状态转变。使用降维技术，我们预测安全和越狱反应的激活，以揭示低维空间中的潜在子空间。然后，我们推导出一个扰动载体，当将其应用于安全表示时，会将模型转向越狱状态。我们的结果表明，这种因果干预会在提示子集中导致具有统计学意义的越狱反应。接下来，我们探讨了这些扰动如何在模型的层中传播，测试诱导的状态变化是保持局部化还是在整个网络中级联。我们的研究结果表明，有针对性的扰动会导致激活和模型响应的明显变化。我们的方法为潜在的主动防御铺平了道路，从传统的基于护栏的方法转向先发制人的、模型不可知的技术，可以在表示层面中和对抗状态。
+
+
+
+## **9. Blackbox Dataset Inference for LLM**
+
+LLM的黑匣子数据集推理 cs.CR
+
+**SubmitDate**: 2025-07-04    [abs](http://arxiv.org/abs/2507.03619v1) [paper-pdf](http://arxiv.org/pdf/2507.03619v1)
+
+**Authors**: Ruikai Zhou, Kang Yang, Xun Chen, Wendy Hui Wang, Guanhong Tao, Jun Xu
+
+**Abstract**: Today, the training of large language models (LLMs) can involve personally identifiable information and copyrighted material, incurring dataset misuse. To mitigate the problem of dataset misuse, this paper explores \textit{dataset inference}, which aims to detect if a suspect model $\mathcal{M}$ used a victim dataset $\mathcal{D}$ in training. Previous research tackles dataset inference by aggregating results of membership inference attacks (MIAs) -- methods to determine whether individual samples are a part of the training dataset. However, restricted by the low accuracy of MIAs, previous research mandates grey-box access to $\mathcal{M}$ to get intermediate outputs (probabilities, loss, perplexity, etc.) for obtaining satisfactory results. This leads to reduced practicality, as LLMs, especially those deployed for profits, have limited incentives to return the intermediate outputs.   In this paper, we propose a new method of dataset inference with only black-box access to the target model (i.e., assuming only the text-based responses of the target model are available). Our method is enabled by two sets of locally built reference models, one set involving $\mathcal{D}$ in training and the other not. By measuring which set of reference model $\mathcal{M}$ is closer to, we determine if $\mathcal{M}$ used $\mathcal{D}$ for training. Evaluations of real-world LLMs in the wild show that our method offers high accuracy in all settings and presents robustness against bypassing attempts.
+
+摘要: 如今，大型语言模型（LLM）的训练可能涉及个人可识别信息和受版权保护的材料，从而导致数据集滥用。为了缓解数据集滥用的问题，本文探讨了\textit{dataset initiation}，其目的是检测可疑模型$\mathCal{M}$是否在训练中使用了受害者数据集$\mathCal{D}$。之前的研究通过聚集隶属度推理攻击（MIA）的结果来解决数据集推理--MIA是确定单个样本是否是训练数据集一部分的方法。然而，受MIA准确性低的限制，之前的研究要求灰箱访问$\mathCal{M}$以获得中间输出（概率、损失、困惑度等）以获得满意的结果。这导致实用性降低，因为LLM，尤其是那些为利润而部署的LLM，返回中间产出的动力有限。   在本文中，我们提出了一种新的数据集推理方法，仅通过黑匣子访问目标模型（即，假设只有目标模型的基于文本的响应可用）。我们的方法由两组本地构建的参考模型来支持，一组在训练中涉及$\mathCal{D}$，另一组不涉及。通过测量$\mathCal{M}$更接近哪一组参考模型，我们确定$\mathCal{M}$是否使用$\mathCal{D}$进行训练。对现实世界LLM的野外评估表明，我们的方法在所有设置中都提供了高准确性，并且具有针对绕过尝试的鲁棒性。
+
+
+
+## **10. Visual Contextual Attack: Jailbreaking MLLMs with Image-Driven Context Injection**
 
 视觉上下文攻击：利用图像驱动上下文注入越狱MLLM cs.CV
 
@@ -19,7 +149,7 @@
 
 
 
-## **2. Is Reasoning All You Need? Probing Bias in the Age of Reasoning Language Models**
+## **11. Is Reasoning All You Need? Probing Bias in the Age of Reasoning Language Models**
 
 你需要的就是推理吗？探索推理语言模型时代的偏见 cs.CL
 
@@ -33,7 +163,7 @@
 
 
 
-## **3. StructTransform: A Scalable Attack Surface for Safety-Aligned Large Language Models**
+## **12. StructTransform: A Scalable Attack Surface for Safety-Aligned Large Language Models**
 
 StructChange：安全一致的大型语言模型的可扩展攻击表面 cs.LG
 
@@ -47,7 +177,7 @@ StructChange：安全一致的大型语言模型的可扩展攻击表面 cs.LG
 
 
 
-## **4. Evaluating Language Models For Threat Detection in IoT Security Logs**
+## **13. Evaluating Language Models For Threat Detection in IoT Security Logs**
 
 评估语言模型用于物联网安全威胁检测 cs.CR
 
@@ -61,7 +191,7 @@ StructChange：安全一致的大型语言模型的可扩展攻击表面 cs.LG
 
 
 
-## **5. SecAlign: Defending Against Prompt Injection with Preference Optimization**
+## **14. SecAlign: Defending Against Prompt Injection with Preference Optimization**
 
 SecAlign：通过偏好优化抵御提示注入 cs.CR
 
@@ -77,7 +207,7 @@ ACM CCS 2025. Key words: prompt injection defense, LLM security,  LLM-integrated
 
 
 
-## **6. MGC: A Compiler Framework Exploiting Compositional Blindness in Aligned LLMs for Malware Generation**
+## **15. MGC: A Compiler Framework Exploiting Compositional Blindness in Aligned LLMs for Malware Generation**
 
 MCR：一个更简单的框架，利用对齐的LLM中的合成盲度来生成恶意软件 cs.CR
 
@@ -91,7 +221,7 @@ MCR：一个更简单的框架，利用对齐的LLM中的合成盲度来生成�
 
 
 
-## **7. Tuning without Peeking: Provable Privacy and Generalization Bounds for LLM Post-Training**
+## **16. Tuning without Peeking: Provable Privacy and Generalization Bounds for LLM Post-Training**
 
 没有偷看的调整：LLM后培训的可证明隐私和泛化边界 cs.LG
 
@@ -105,7 +235,7 @@ MCR：一个更简单的框架，利用对齐的LLM中的合成盲度来生成�
 
 
 
-## **8. Graph Representation-based Model Poisoning on Federated LLMs in CyberEdge Networks**
+## **17. Graph Representation-based Model Poisoning on Federated LLMs in CyberEdge Networks**
 
 CyberEdge网络中联邦LLM上基于图表示的模型中毒 cs.CR
 
@@ -121,7 +251,7 @@ CyberEdge网络中联邦LLM上基于图表示的模型中毒 cs.CR
 
 
 
-## **9. SafePTR: Token-Level Jailbreak Defense in Multimodal LLMs via Prune-then-Restore Mechanism**
+## **18. SafePTR: Token-Level Jailbreak Defense in Multimodal LLMs via Prune-then-Restore Mechanism**
 
 SafeTLR：通过删除然后恢复机制在多模式LLM中进行令牌级越狱防御 cs.CR
 
@@ -135,7 +265,7 @@ SafeTLR：通过删除然后恢复机制在多模式LLM中进行令牌级越狱�
 
 
 
-## **10. Don't Say No: Jailbreaking LLM by Suppressing Refusal**
+## **19. Don't Say No: Jailbreaking LLM by Suppressing Refusal**
 
 不要说不：通过压制拒绝来越狱法学硕士 cs.CL
 
@@ -151,7 +281,7 @@ Accepted by ACL 2025 Findings
 
 
 
-## **11. ICLShield: Exploring and Mitigating In-Context Learning Backdoor Attacks**
+## **20. ICLShield: Exploring and Mitigating In-Context Learning Backdoor Attacks**
 
 ICLShield：探索和缓解上下文学习后门攻击 cs.LG
 
@@ -167,7 +297,7 @@ ICML 2025
 
 
 
-## **12. GenBFA: An Evolutionary Optimization Approach to Bit-Flip Attacks on LLMs**
+## **21. GenBFA: An Evolutionary Optimization Approach to Bit-Flip Attacks on LLMs**
 
 GenBFA：对LLM进行位翻转攻击的进化优化方法 cs.CR
 
@@ -181,7 +311,7 @@ GenBFA：对LLM进行位翻转攻击的进化优化方法 cs.CR
 
 
 
-## **13. Defensive Adversarial CAPTCHA: A Semantics-Driven Framework for Natural Adversarial Example Generation**
+## **22. Defensive Adversarial CAPTCHA: A Semantics-Driven Framework for Natural Adversarial Example Generation**
 
 防御性对抗验证码：用于自然对抗示例生成的语义驱动框架 cs.CV
 
@@ -197,7 +327,7 @@ GenBFA：对LLM进行位翻转攻击的进化优化方法 cs.CR
 
 
 
-## **14. SafeMobile: Chain-level Jailbreak Detection and Automated Evaluation for Multimodal Mobile Agents**
+## **23. SafeMobile: Chain-level Jailbreak Detection and Automated Evaluation for Multimodal Mobile Agents**
 
 SafeMobile：多模式移动代理的连锁级越狱检测和自动评估 cs.AI
 
@@ -213,7 +343,7 @@ SafeMobile：多模式移动代理的连锁级越狱检测和自动评估 cs.AI
 
 
 
-## **15. CAVALRY-V: A Large-Scale Generator Framework for Adversarial Attacks on Video MLLMs**
+## **24. CAVALRY-V: A Large-Scale Generator Framework for Adversarial Attacks on Video MLLMs**
 
 CAWLRY-V：一个用于视频MLLM对抗性攻击的大规模生成器框架 cs.CV
 
@@ -227,7 +357,7 @@ CAWLRY-V：一个用于视频MLLM对抗性攻击的大规模生成器框架 cs.C
 
 
 
-## **16. Impact of Fine-Tuning Methods on Memorization in Large Language Models**
+## **25. Impact of Fine-Tuning Methods on Memorization in Large Language Models**
 
 微调方法对大型语言模型中精简化的影响 cs.CL
 
@@ -241,7 +371,7 @@ CAWLRY-V：一个用于视频MLLM对抗性攻击的大规模生成器框架 cs.C
 
 
 
-## **17. Trust & Safety of LLMs and LLMs in Trust & Safety**
+## **26. Trust & Safety of LLMs and LLMs in Trust & Safety**
 
 LLM的信任与安全以及LLM的信任与安全 cs.AI
 
@@ -257,7 +387,7 @@ LLM的信任与安全以及LLM的信任与安全 cs.AI
 
 
 
-## **18. Logit-Gap Steering: Efficient Short-Suffix Jailbreaks for Aligned Large Language Models**
+## **27. Logit-Gap Steering: Efficient Short-Suffix Jailbreaks for Aligned Large Language Models**
 
 Logit-Gap Steering：Aligned Large Language Models的高效短后缀越狱 cs.CR
 
@@ -271,7 +401,7 @@ Logit-Gap Steering：Aligned Large Language Models的高效短后缀越狱 cs.CR
 
 
 
-## **19. Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation**
+## **28. Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation**
 
 谜语我！检索增强一代的隐形会员推断 cs.CR
 
@@ -287,7 +417,7 @@ This is the full version (27 pages) of the paper 'Riddle Me This!  Stealthy Memb
 
 
 
-## **20. SoK: Semantic Privacy in Large Language Models**
+## **29. SoK: Semantic Privacy in Large Language Models**
 
 SoK：大型语言模型中的语义隐私 cs.CR
 
@@ -301,7 +431,7 @@ SoK：大型语言模型中的语义隐私 cs.CR
 
 
 
-## **21. Evaluating Multi-Agent Defences Against Jailbreaking Attacks on Large Language Models**
+## **30. Evaluating Multi-Agent Defences Against Jailbreaking Attacks on Large Language Models**
 
 评估针对大型语言模型越狱攻击的多智能体防御 cs.AI
 
@@ -317,7 +447,7 @@ SoK：大型语言模型中的语义隐私 cs.CR
 
 
 
-## **22. TuCo: Measuring the Contribution of Fine-Tuning to Individual Responses of LLMs**
+## **31. TuCo: Measuring the Contribution of Fine-Tuning to Individual Responses of LLMs**
 
 TuCo：衡量微调对LLM个人响应的贡献 cs.CL
 
@@ -333,7 +463,7 @@ ICML 2025
 
 
 
-## **23. Automating Adjudication of Cardiovascular Events Using Large Language Models**
+## **32. Automating Adjudication of Cardiovascular Events Using Large Language Models**
 
 使用大型语言模型自动判定心血管事件 cs.CL
 
@@ -347,7 +477,7 @@ ICML 2025
 
 
 
-## **24. Scaling Laws for Black box Adversarial Attacks**
+## **33. Scaling Laws for Black box Adversarial Attacks**
 
 黑匣子对抗攻击的缩放定律 cs.LG
 
@@ -361,7 +491,7 @@ ICML 2025
 
 
 
-## **25. From Prompt Injections to Protocol Exploits: Threats in LLM-Powered AI Agents Workflows**
+## **34. From Prompt Injections to Protocol Exploits: Threats in LLM-Powered AI Agents Workflows**
 
 从即时注入到协议漏洞：LLM支持的人工智能代理工作流程中的威胁 cs.CR
 
@@ -377,7 +507,7 @@ ICML 2025
 
 
 
-## **26. Guiding AI to Fix Its Own Flaws: An Empirical Study on LLM-Driven Secure Code Generation**
+## **35. Guiding AI to Fix Its Own Flaws: An Empirical Study on LLM-Driven Secure Code Generation**
 
 引导人工智能修复自身缺陷：LLM驱动的安全代码生成的实证研究 cs.SE
 
@@ -391,7 +521,7 @@ ICML 2025
 
 
 
-## **27. Revisiting CroPA: A Reproducibility Study and Enhancements for Cross-Prompt Adversarial Transferability in Vision-Language Models**
+## **36. Revisiting CroPA: A Reproducibility Study and Enhancements for Cross-Prompt Adversarial Transferability in Vision-Language Models**
 
 重温CroPA：视觉语言模型中交叉提示对抗可移植性的再现性研究和增强 cs.CV
 
@@ -407,7 +537,7 @@ Accepted to MLRC 2025
 
 
 
-## **28. Enhancing the Capability and Robustness of Large Language Models through Reinforcement Learning-Driven Query Refinement**
+## **37. Enhancing the Capability and Robustness of Large Language Models through Reinforcement Learning-Driven Query Refinement**
 
 通过强化学习驱动的查询细化增强大型语言模型的能力和鲁棒性 cs.CL
 
@@ -421,7 +551,7 @@ Accepted to MLRC 2025
 
 
 
-## **29. Smaller = Weaker? Benchmarking Robustness of Quantized LLMs in Code Generation**
+## **38. Smaller = Weaker? Benchmarking Robustness of Quantized LLMs in Code Generation**
 
 更小=更弱？量化LLM在代码生成中的基准测试鲁棒性 cs.SE
 
@@ -437,7 +567,7 @@ Accepted to MLRC 2025
 
 
 
-## **30. MetaCipher: A General and Extensible Reinforcement Learning Framework for Obfuscation-Based Jailbreak Attacks on Black-Box LLMs**
+## **39. MetaCipher: A General and Extensible Reinforcement Learning Framework for Obfuscation-Based Jailbreak Attacks on Black-Box LLMs**
 
 MetaCipher：一个通用且可扩展的强化学习框架，用于对黑匣子LLM进行基于模糊的越狱攻击 cs.CR
 
@@ -451,7 +581,7 @@ MetaCipher：一个通用且可扩展的强化学习框架，用于对黑匣子L
 
 
 
-## **31. Design Patterns for Securing LLM Agents against Prompt Injections**
+## **40. Design Patterns for Securing LLM Agents against Prompt Injections**
 
 保护LLM代理免受即时注射的设计模式 cs.LG
 
@@ -465,7 +595,7 @@ MetaCipher：一个通用且可扩展的强化学习框架，用于对黑匣子L
 
 
 
-## **32. Jailbreaking Multimodal Large Language Models via Shuffle Inconsistency**
+## **41. Jailbreaking Multimodal Large Language Models via Shuffle Inconsistency**
 
 通过洗牌不一致性破解多模式大型语言模型 cs.CR
 
@@ -481,7 +611,7 @@ ICCV2025
 
 
 
-## **33. Cannot See the Forest for the Trees: Invoking Heuristics and Biases to Elicit Irrational Choices of LLMs**
+## **42. Cannot See the Forest for the Trees: Invoking Heuristics and Biases to Elicit Irrational Choices of LLMs**
 
 只见树木不见森林：利用启发式和偏见来激发对LLM的非理性选择 cs.CL
 
@@ -495,7 +625,7 @@ ICCV2025
 
 
 
-## **34. STAIR: Improving Safety Alignment with Introspective Reasoning**
+## **43. STAIR: Improving Safety Alignment with Introspective Reasoning**
 
 楼梯：通过内省推理改善安全性 cs.CL
 
@@ -511,7 +641,7 @@ ICCV2025
 
 
 
-## **35. Advancing Jailbreak Strategies: A Hybrid Approach to Exploiting LLM Vulnerabilities and Bypassing Modern Defenses**
+## **44. Advancing Jailbreak Strategies: A Hybrid Approach to Exploiting LLM Vulnerabilities and Bypassing Modern Defenses**
 
 推进越狱策略：利用LLM漏洞和扩展现代防御的混合方法 cs.CL
 
@@ -525,7 +655,7 @@ ICCV2025
 
 
 
-## **36. Exploring Task-Solving Paradigm for Generalized Cross-Domain Face Anti-Spoofing via Reinforcement Fine-Tuning**
+## **45. Exploring Task-Solving Paradigm for Generalized Cross-Domain Face Anti-Spoofing via Reinforcement Fine-Tuning**
 
 通过强化微调探索广义跨域人脸反欺骗的任务求解范式 cs.CV
 
@@ -539,7 +669,7 @@ ICCV2025
 
 
 
-## **37. $C^3$-Bench: The Things Real Disturbing LLM based Agent in Multi-Tasking**
+## **46. $C^3$-Bench: The Things Real Disturbing LLM based Agent in Multi-Tasking**
 
 $C ' 3 $-Bench：多任务中令人不安的LLM代理人真正不安的事情 cs.AI
 
@@ -553,7 +683,7 @@ $C ' 3 $-Bench：多任务中令人不安的LLM代理人真正不安的事情 cs
 
 
 
-## **38. On the Feasibility of Poisoning Text-to-Image AI Models via Adversarial Mislabeling**
+## **47. On the Feasibility of Poisoning Text-to-Image AI Models via Adversarial Mislabeling**
 
 论通过对抗性错误标签毒害文本到图像人工智能模型的可行性 cs.CR
 
@@ -569,7 +699,7 @@ ACM Conference on Computer and Communications Security 2025
 
 
 
-## **39. A Survey on Model Extraction Attacks and Defenses for Large Language Models**
+## **48. A Survey on Model Extraction Attacks and Defenses for Large Language Models**
 
 大型语言模型的模型提取攻击和防御综述 cs.CR
 
@@ -583,7 +713,7 @@ ACM Conference on Computer and Communications Security 2025
 
 
 
-## **40. Domain Knowledge-Enhanced LLMs for Fraud and Concept Drift Detection**
+## **49. Domain Knowledge-Enhanced LLMs for Fraud and Concept Drift Detection**
 
 用于欺诈和概念漂移检测的领域知识增强型LLM cs.CL
 
@@ -597,7 +727,7 @@ ACM Conference on Computer and Communications Security 2025
 
 
 
-## **41. TracLLM: A Generic Framework for Attributing Long Context LLMs**
+## **50. TracLLM: A Generic Framework for Attributing Long Context LLMs**
 
 TracLLM：用于赋予长上下文LLM属性的通用框架 cs.CR
 
@@ -610,140 +740,6 @@ To appear in USENIX Security Symposium 2025. The code and data are  at: https://
 **Abstract**: Long context large language models (LLMs) are deployed in many real-world applications such as RAG, agent, and broad LLM-integrated applications. Given an instruction and a long context (e.g., documents, PDF files, webpages), a long context LLM can generate an output grounded in the provided context, aiming to provide more accurate, up-to-date, and verifiable outputs while reducing hallucinations and unsupported claims. This raises a research question: how to pinpoint the texts (e.g., sentences, passages, or paragraphs) in the context that contribute most to or are responsible for the generated output by an LLM? This process, which we call context traceback, has various real-world applications, such as 1) debugging LLM-based systems, 2) conducting post-attack forensic analysis for attacks (e.g., prompt injection attack, knowledge corruption attacks) to an LLM, and 3) highlighting knowledge sources to enhance the trust of users towards outputs generated by LLMs. When applied to context traceback for long context LLMs, existing feature attribution methods such as Shapley have sub-optimal performance and/or incur a large computational cost. In this work, we develop TracLLM, the first generic context traceback framework tailored to long context LLMs. Our framework can improve the effectiveness and efficiency of existing feature attribution methods. To improve the efficiency, we develop an informed search based algorithm in TracLLM. We also develop contribution score ensemble/denoising techniques to improve the accuracy of TracLLM. Our evaluation results show TracLLM can effectively identify texts in a long context that lead to the output of an LLM. Our code and data are at: https://github.com/Wang-Yanting/TracLLM.
 
 摘要: 长上下文大型语言模型（LLM）部署在许多现实世界的应用程序中，例如RAG、代理和广泛的LLM集成应用程序。给定指令和长上下文（例如，文档、PDF文件、网页）、长上下文LLM可以基于所提供的上下文生成输出，旨在提供更准确、最新和可验证的输出，同时减少幻觉和不支持的主张。这提出了一个研究问题：如何确定文本（例如，句子、段落或段落）在对LLM生成的输出做出最大贡献或负责的上下文中？这个过程（我们称之为上下文追溯）具有各种现实世界的应用程序，例如1）调试基于LLM的系统，2）对攻击进行攻击后取证分析（例如，即时注入攻击、知识腐败攻击）对LLM，以及3）强调知识源以增强用户对LLM生成的输出的信任。当应用于长上下文LLM的上下文追溯时，现有的特征属性方法（例如Shapley）的性能不佳和/或会产生很大的计算成本。在这项工作中，我们开发了TracLLM，这是第一个针对长上下文LLM量身定制的通用上下文追溯框架。我们的框架可以提高现有特征归因方法的有效性和效率。为了提高效率，我们在TracLLM中开发了一种基于明智搜索的算法。我们还开发贡献分数集成/去噪技术来提高TracLLM的准确性。我们的评估结果表明TracLLM可以有效地识别导致LLM输出的长期上下文中的文本。我们的代码和数据位于：https://github.com/Wang-Yanting/TracLLM。
-
-
-
-## **42. A Troublemaker with Contagious Jailbreak Makes Chaos in Honest Towns**
-
-具有传染性的越狱麻烦制造者扰乱诚实城镇 cs.CL
-
-ACL 2025 Main
-
-**SubmitDate**: 2025-06-26    [abs](http://arxiv.org/abs/2410.16155v2) [paper-pdf](http://arxiv.org/pdf/2410.16155v2)
-
-**Authors**: Tianyi Men, Pengfei Cao, Zhuoran Jin, Yubo Chen, Kang Liu, Jun Zhao
-
-**Abstract**: With the development of large language models, they are widely used as agents in various fields. A key component of agents is memory, which stores vital information but is susceptible to jailbreak attacks. Existing research mainly focuses on single-agent attacks and shared memory attacks. However, real-world scenarios often involve independent memory. In this paper, we propose the Troublemaker Makes Chaos in Honest Town (TMCHT) task, a large-scale, multi-agent, multi-topology text-based attack evaluation framework. TMCHT involves one attacker agent attempting to mislead an entire society of agents. We identify two major challenges in multi-agent attacks: (1) Non-complete graph structure, (2) Large-scale systems. We attribute these challenges to a phenomenon we term toxicity disappearing. To address these issues, we propose an Adversarial Replication Contagious Jailbreak (ARCJ) method, which optimizes the retrieval suffix to make poisoned samples more easily retrieved and optimizes the replication suffix to make poisoned samples have contagious ability. We demonstrate the superiority of our approach in TMCHT, with 23.51%, 18.95%, and 52.93% improvements in line topology, star topology, and 100-agent settings. Encourage community attention to the security of multi-agent systems.
-
-摘要: 随着大型语言模型的发展，它们被广泛用作各个领域的代理。代理的一个关键组成部分是内存，它存储重要信息，但容易受到越狱攻击。现有的研究主要集中在单代理攻击和共享内存攻击上。然而，现实世界的场景通常涉及独立记忆。在本文中，我们提出了Troubblemaker Makes Chaos in Honest Town（TMCHT）任务，这是一个大规模、多代理、多基于文本的攻击评估框架。TMCHT涉及一名攻击者特工试图误导整个特工社会。我们确定了多代理攻击中的两个主要挑战：（1）不完整的图结构，（2）大规模系统。我们将这些挑战归因于我们称之为毒性消失的现象。为了解决这些问题，我们提出了一种对抗复制传染越狱（ASCJ）方法，该方法优化检索后缀以使中毒样本更容易检索，并优化复制后缀以使中毒样本具有传染能力。我们在TMCHT中证明了我们的方法的优越性，线路布局、星型布局和100个代理设置分别提高了23.51%、18.95%和52.93%。鼓励社区关注多代理系统的安全性。
-
-
-
-## **43. In-context learning for the classification of manipulation techniques in phishing emails**
-
-用于网络钓鱼电子邮件操纵技术分类的上下文学习 cs.CR
-
-**SubmitDate**: 2025-06-26    [abs](http://arxiv.org/abs/2506.22515v1) [paper-pdf](http://arxiv.org/pdf/2506.22515v1)
-
-**Authors**: Antony Dalmiere, Guillaume Auriol, Vincent Nicomette, Pascal Marchand
-
-**Abstract**: Traditional phishing detection often overlooks psychological manipulation. This study investigates using Large Language Model (LLM) In-Context Learning (ICL) for fine-grained classification of phishing emails based on a taxonomy of 40 manipulation techniques. Using few-shot examples with GPT-4o-mini on real-world French phishing emails (SignalSpam), we evaluated performance against a human-annotated test set (100 emails). The approach effectively identifies prevalent techniques (e.g., Baiting, Curiosity Appeal, Request For Minor Favor) with a promising accuracy of 0.76. This work demonstrates ICL's potential for nuanced phishing analysis and provides insights into attacker strategies.
-
-摘要: 传统的网络钓鱼检测常常忽视心理操纵。本研究调查了使用大型语言模型（LLM）内上下文学习（ICL）基于40种操纵技术的分类法对网络钓鱼电子邮件进行细粒度分类。使用GPT-4 o-mini对现实世界的法语网络钓鱼电子邮件（SignalSpam）进行了几个示例，我们针对人类注释的测试集（100封电子邮件）评估了性能。该方法有效地识别流行技术（例如，诱饵、好奇心呼吁、请求小恩惠），准确率为0.76。这项工作展示了ICL进行细致入微的网络钓鱼分析的潜力，并提供了对攻击者策略的见解。
-
-
-
-## **44. Doppelganger Method: Breaking Role Consistency in LLM Agent via Prompt-based Transferable Adversarial Attack**
-
-分身方法：通过基于预算的可转移对抗攻击打破LLM代理中的角色一致性 cs.AI
-
-**SubmitDate**: 2025-06-26    [abs](http://arxiv.org/abs/2506.14539v2) [paper-pdf](http://arxiv.org/pdf/2506.14539v2)
-
-**Authors**: Daewon Kang, YeongHwan Shin, Doyeon Kim, Kyu-Hwan Jung, Meong Hi Son
-
-**Abstract**: Since the advent of large language models, prompt engineering now enables the rapid, low-effort creation of diverse autonomous agents that are already in widespread use. Yet this convenience raises urgent concerns about the safety, robustness, and behavioral consistency of the underlying prompts, along with the pressing challenge of preventing those prompts from being exposed to user's attempts. In this paper, we propose the ''Doppelganger method'' to demonstrate the risk of an agent being hijacked, thereby exposing system instructions and internal information. Next, we define the ''Prompt Alignment Collapse under Adversarial Transfer (PACAT)'' level to evaluate the vulnerability to this adversarial transfer attack. We also propose a ''Caution for Adversarial Transfer (CAT)'' prompt to counter the Doppelganger method. The experimental results demonstrate that the Doppelganger method can compromise the agent's consistency and expose its internal information. In contrast, CAT prompts enable effective defense against this adversarial attack.
-
-摘要: 自从大型语言模型的出现以来，即时工程现在可以快速、低努力地创建已经广泛使用的各种自治代理。然而，这种便利性引发了人们对底层提示的安全性、稳健性和行为一致性的紧迫担忧，以及防止这些提示暴露于用户尝试的紧迫挑战。在本文中，我们提出了“Doppelganger方法”来演示代理被劫持从而暴露系统指令和内部信息的风险。接下来，我们定义“对抗性转移下的提示对齐崩溃（PACAT RST）”级别来评估这种对抗性转移攻击的脆弱性。我们还提出了“对抗性转移的警告（CAT）”提示来对抗Doppelganger方法。实验结果表明，Doppelganger方法会损害代理的一致性并暴露其内部信息。相比之下，CAT提示可以有效防御这种对抗性攻击。
-
-
-
-## **45. WiS Platform: Enhancing Evaluation of LLM-Based Multi-Agent Systems Through Game-Based Analysis**
-
-WiS平台：通过基于游戏的分析增强对基于LLM的多智能体系统的评估 cs.AI
-
-**SubmitDate**: 2025-06-26    [abs](http://arxiv.org/abs/2412.03359v2) [paper-pdf](http://arxiv.org/pdf/2412.03359v2)
-
-**Authors**: Chengwei Hu, Jianhui Zheng, Yancheng He, Hangyu Guo, Junguang Jiang, Han Zhu, Kai Sun, Yuning Jiang, Wenbo Su, Bo Zheng
-
-**Abstract**: Recent advancements in autonomous multi-agent systems (MAS) based on large language models (LLMs) have enhanced the application scenarios and improved the capability of LLMs to handle complex tasks. Despite demonstrating effectiveness, existing studies still evidently struggle to evaluate, analysis, and reproducibility of LLM-based MAS. In this paper, to facilitate the research on LLM-based MAS, we introduce an open, scalable, and real-time updated platform for accessing and analyzing the LLM-based MAS based on the games Who is Spy?" (WiS). Our platform is featured with three main worths: (1) a unified model evaluate interface that supports models available on Hugging Face; (2) real-time updated leaderboard for model evaluation; (3) a comprehensive evaluation covering game-winning rates, attacking, defense strategies, and reasoning of LLMs. To rigorously test WiS, we conduct extensive experiments coverage of various open- and closed-source LLMs, we find that different agents exhibit distinct and intriguing behaviors in the game. The experimental results demonstrate the effectiveness and efficiency of our platform in evaluating LLM-based MAS. Our platform and its documentation are publicly available at https://whoisspy.ai/.
-
-摘要: 基于大型语言模型（LLM）的自治多智能体系统（MAS）的最新进展增强了应用场景并提高了LLM处理复杂任务的能力。尽管证明了有效性，但现有的研究显然仍然难以评估、分析基于LLM的MAS的可重复性。本文为了促进基于LLM的MAS的研究，我们引入了一个开放的、可扩展的、实时更新的平台，用于访问和分析基于LLM的MAS基于游戏《谁是间谍？》”（WiS）。我们的平台具有三个主要功能：（1）统一的模型评估界面，支持Hugging Face上可用的模型;（2）实时更新的模型评估排行榜;（3）涵盖游戏获胜率、攻击、防御策略和LLM推理的全面评估。为了严格测试WiS，我们对各种开源和开源LLM进行了广泛的实验，我们发现不同的代理在游戏中表现出不同且有趣的行为。实验结果证明了我们的平台在评估基于LLM的MAS方面的有效性和效率。我们的平台及其文档可在https://whoisspy.ai/上公开获取。
-
-
-
-## **46. AgentStealth: Reinforcing Large Language Model for Anonymizing User-generated Text**
-
-AgentStealth：加强大型语言模型以简化用户生成的文本 cs.CL
-
-This work has been submitted to NeurIPS 2025. Under review
-
-**SubmitDate**: 2025-06-26    [abs](http://arxiv.org/abs/2506.22508v1) [paper-pdf](http://arxiv.org/pdf/2506.22508v1)
-
-**Authors**: Chenyang Shao, Tianxing Li, Chenhao Pu, Fengli Xu, Yong Li
-
-**Abstract**: In today's digital world, casual user-generated content often contains subtle cues that may inadvertently expose sensitive personal attributes. Such risks underscore the growing importance of effective text anonymization to safeguard individual privacy. However, existing methods either rely on rigid replacements that damage utility or cloud-based LLMs that are costly and pose privacy risks. To address these issues, we explore the use of locally deployed smaller-scale language models (SLMs) for anonymization. Yet training effective SLMs remains challenging due to limited high-quality supervision. To address the challenge, we propose AgentStealth, a self-reinforcing LLM anonymization framework.First, we introduce an adversarial anonymization workflow enhanced by In-context Contrastive Learning and Adaptive Utility-Aware Control. Second, we perform supervised adaptation of SLMs using high-quality data collected from the workflow, which includes both anonymization and attack signals. Finally, we apply online reinforcement learning where the model leverages its internal adversarial feedback to iteratively improve anonymization performance. Experiments on two datasets show that our method outperforms baselines in both anonymization effectiveness (+12.3%) and utility (+6.8%). Our lightweight design supports direct deployment on edge devices, avoiding cloud reliance and communication-based privacy risks. Our code is open-source at https://github.com/tsinghua-fib-lab/AgentStealth.
-
-摘要: 在当今的数字世界中，用户生成的随意内容通常包含微妙的线索，这些线索可能会无意中暴露敏感的个人属性。此类风险凸显了有效的文本匿名化对于保护个人隐私的重要性。然而，现有方法要么依赖于损害公用事业的严格替代品，要么依赖于成本高昂并构成隐私风险的基于云的LLM。为了解决这些问题，我们探索使用本地部署的较小规模语言模型（SLC）进行匿名化。然而，由于高质量的监督有限，培训有效的CRM仍然具有挑战性。为了应对这一挑战，我们提出了AgentStealth，这是一个自我增强的LLM匿名化框架。首先，我们引入了一种由上下文内对比学习和自适应实用性感知控制增强的对抗性匿名化工作流程。其次，我们使用从工作流程中收集的高质量数据（包括匿名化和攻击信号）对CRM进行监督调整。最后，我们应用在线强化学习，其中模型利用其内部对抗反馈来迭代改进匿名化性能。对两个数据集的实验表明，我们的方法在匿名有效性（+12.3%）和实用性（+6.8%）方面都优于基线。我们的轻量级设计支持在边缘设备上直接部署，避免云依赖和基于通信的隐私风险。我们的代码是开源的，网址是https://github.com/tsinghua-fib-lab/AgentStealth。
-
-
-
-## **47. E-FreeM2: Efficient Training-Free Multi-Scale and Cross-Modal News Verification via MLLMs**
-
-E-FreeM 2：通过MLLM进行高效的免培训多规模和跨模式新闻验证 cs.MM
-
-Accepted to AsiaCCS 2025 @ SCID
-
-**SubmitDate**: 2025-06-26    [abs](http://arxiv.org/abs/2506.20944v1) [paper-pdf](http://arxiv.org/pdf/2506.20944v1)
-
-**Authors**: Van-Hoang Phan, Long-Khanh Pham, Dang Vu, Anh-Duy Tran, Minh-Son Dao
-
-**Abstract**: The rapid spread of misinformation in mobile and wireless networks presents critical security challenges. This study introduces a training-free, retrieval-based multimodal fact verification system that leverages pretrained vision-language models and large language models for credibility assessment. By dynamically retrieving and cross-referencing trusted data sources, our approach mitigates vulnerabilities of traditional training-based models, such as adversarial attacks and data poisoning. Additionally, its lightweight design enables seamless edge device integration without extensive on-device processing. Experiments on two fact-checking benchmarks achieve SOTA results, confirming its effectiveness in misinformation detection and its robustness against various attack vectors, highlighting its potential to enhance security in mobile and wireless communication environments.
-
-摘要: 移动和无线网络中错误信息的迅速传播带来了严峻的安全挑战。本研究引入了一种免训练、基于检索的多模式事实验证系统，该系统利用预先训练的视觉语言模型和大型语言模型进行可信度评估。通过动态检索和交叉引用可信数据源，我们的方法减轻了传统基于训练的模型的漏洞，例如对抗性攻击和数据中毒。此外，其轻量级设计可以实现无缝边缘设备集成，无需进行大量的设备上处理。在两个事实检查基准上进行的实验获得了SOTA结果，证实了其在错误信息检测方面的有效性及其对各种攻击载体的鲁棒性，凸显了其增强移动和无线通信环境安全性的潜力。
-
-
-
-## **48. SABRE-FL: Selective and Accurate Backdoor Rejection for Federated Prompt Learning**
-
-SABRE-FL：针对联邦即时学习的选择性、准确的后门拒绝 cs.CR
-
-**SubmitDate**: 2025-06-25    [abs](http://arxiv.org/abs/2506.22506v1) [paper-pdf](http://arxiv.org/pdf/2506.22506v1)
-
-**Authors**: Momin Ahmad Khan, Yasra Chandio, Fatima Muhammad Anwar
-
-**Abstract**: Federated Prompt Learning has emerged as a communication-efficient and privacy-preserving paradigm for adapting large vision-language models like CLIP across decentralized clients. However, the security implications of this setup remain underexplored. In this work, we present the first study of backdoor attacks in Federated Prompt Learning. We show that when malicious clients inject visually imperceptible, learnable noise triggers into input images, the global prompt learner becomes vulnerable to targeted misclassification while still maintaining high accuracy on clean inputs. Motivated by this vulnerability, we propose SABRE-FL, a lightweight, modular defense that filters poisoned prompt updates using an embedding-space anomaly detector trained offline on out-of-distribution data. SABRE-FL requires no access to raw client data or labels and generalizes across diverse datasets. We show, both theoretically and empirically, that malicious clients can be reliably identified and filtered using an embedding-based detector. Across five diverse datasets and four baseline defenses, SABRE-FL outperforms all baselines by significantly reducing backdoor accuracy while preserving clean accuracy, demonstrating strong empirical performance and underscoring the need for robust prompt learning in future federated systems.
-
-摘要: 联合提示学习已成为一种高效通信和保护隐私的范式，用于在去中心化客户端之间适应CLIP等大型视觉语言模型。然而，这种设置的安全影响仍然没有得到充分的研究。在这项工作中，我们首次介绍了联邦提示学习中后门攻击的研究。我们表明，当恶意客户端将视觉上不可感知的、可学习的噪音触发器注入输入图像时，全局提示学习器变得容易受到有针对性的错误分类的影响，同时仍然保持干净输入的高准确性。受此漏洞的启发，我们提出了SABRE-FL，这是一种轻量级的模块化防御，它使用对非分布数据进行离线训练的嵌入空间异常检测器来过滤有毒的提示更新。SABRE-FL不需要访问原始客户数据或标签，并在不同的数据集中进行概括。我们从理论上和经验上表明，可以使用基于嵌入的检测器可靠地识别和过滤恶意客户端。在五个不同的数据集和四种基线防御中，SABRE-FL通过显着降低后门准确性同时保持清晰的准确性来优于所有基线，展示了强大的经验性能并强调了未来联邦系统对稳健即时学习的需求。
-
-
-
-## **49. Leaner Training, Lower Leakage: Revisiting Memorization in LLM Fine-Tuning with LoRA**
-
-更精简的训练，更低的泄漏：重新审视LLM微调与LoRA cs.LG
-
-**SubmitDate**: 2025-06-25    [abs](http://arxiv.org/abs/2506.20856v1) [paper-pdf](http://arxiv.org/pdf/2506.20856v1)
-
-**Authors**: Fei Wang, Baochun Li
-
-**Abstract**: Memorization in large language models (LLMs) makes them vulnerable to data extraction attacks. While pre-training memorization has been extensively studied, fewer works have explored its impact in fine-tuning, particularly for LoRA fine-tuning, a widely adopted parameter-efficient method.   In this work, we re-examine memorization in fine-tuning and uncover a surprising divergence from prior findings across different fine-tuning strategies. Factors such as model scale and data duplication, which strongly influence memorization in pre-training and full fine-tuning, do not follow the same trend in LoRA fine-tuning. Using a more relaxed similarity-based memorization metric, we demonstrate that LoRA significantly reduces memorization risks compared to full fine-tuning, while still maintaining strong task performance.
-
-摘要: 大型语言模型（LLM）中的并行化使它们容易受到数据提取攻击。虽然训练前记忆已经得到了广泛的研究，但很少有作品探索其对微调的影响，特别是对于LoRA微调（一种广泛采用的参数高效方法）。   在这项工作中，我们重新检查了微调中的记忆，并发现了不同微调策略与先前发现的令人惊讶的差异。模型规模和数据重复等因素强烈影响预训练和完全微调中的记忆，但在LoRA微调中并不遵循相同的趋势。使用更宽松的基于相似性的记忆指标，我们证明与完全微调相比，LoRA显着降低了记忆风险，同时仍然保持强劲的任务性能。
-
-
-
-## **50. Poster: Enhancing GNN Robustness for Network Intrusion Detection via Agent-based Analysis**
-
-海报：通过基于代理的分析增强GNN网络入侵检测的鲁棒性 cs.CR
-
-Poster accepted at the 10th IEEE European Symposium on Security and  Privacy (Euro S&P 2025)
-
-**SubmitDate**: 2025-06-25    [abs](http://arxiv.org/abs/2506.20806v1) [paper-pdf](http://arxiv.org/pdf/2506.20806v1)
-
-**Authors**: Zhonghao Zhan, Huichi Zhou, Hamed Haddadi
-
-**Abstract**: Graph Neural Networks (GNNs) show great promise for Network Intrusion Detection Systems (NIDS), particularly in IoT environments, but suffer performance degradation due to distribution drift and lack robustness against realistic adversarial attacks. Current robustness evaluations often rely on unrealistic synthetic perturbations and lack demonstrations on systematic analysis of different kinds of adversarial attack, which encompass both black-box and white-box scenarios. This work proposes a novel approach to enhance GNN robustness and generalization by employing Large Language Models (LLMs) in an agentic pipeline as simulated cybersecurity expert agents. These agents scrutinize graph structures derived from network flow data, identifying and potentially mitigating suspicious or adversarially perturbed elements before GNN processing. Our experiments, using a framework designed for realistic evaluation and testing with a variety of adversarial attacks including a dataset collected from physical testbed experiments, demonstrate that integrating LLM analysis can significantly improve the resilience of GNN-based NIDS against challenges, showcasing the potential of LLM agent as a complementary layer in intrusion detection architectures.
-
-摘要: 图形神经网络（GNN）在网络入侵检测系统（NIDS）方面表现出了巨大的前景，特别是在物联网环境中，但由于分布漂移而导致性能下降，并且缺乏针对现实对抗攻击的鲁棒性。当前的稳健性评估通常依赖于不切实际的合成扰动，并且缺乏对不同类型对抗攻击（包括黑匣子和白盒场景）的系统分析的演示。这项工作提出了一种新颖的方法，通过在代理管道中使用大型语言模型（LLM）作为模拟的网络安全专家代理来增强GNN的鲁棒性和概括性。这些代理检查从网络流数据派生的图结构，在GNN处理之前识别并可能减轻可疑或敌对干扰的元素。我们的实验使用了一个框架，该框架设计用于对各种对抗性攻击进行现实评估和测试，包括从物理测试台实验中收集的数据集，证明了集成LLM分析可以显着提高基于GNN的NIDS对挑战的弹性，展示了LLM代理作为入侵检测体系结构中补充层的潜力。
 
 
 
