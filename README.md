@@ -1,11 +1,79 @@
 # Latest Adversarial Attack Papers
-**update at 2025-07-26 11:30:45**
+**update at 2025-07-28 19:14:16**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_CN.md)
 
 [Attacks and Defenses in Large language Models](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM.md)
 
-## **1. Optimal Transport Regularized Divergences: Application to Adversarial Robustness**
+## **1. Pulse-Level Simulation of Crosstalk Attacks on Superconducting Quantum Hardware**
+
+quant-ph
+
+This paper has been accepted to the Security, Privacy, and Resilience  Workshop at IEEE Quantum Week (QCE 2025) and will appear in the workshop  proceedings
+
+**SubmitDate**: 2025-07-25    [abs](http://arxiv.org/abs/2507.16181v2) [paper-pdf](http://arxiv.org/pdf/2507.16181v2)
+
+**Authors**: Syed Emad Uddin Shubha, Tasnuva Farheen
+
+**Abstract**: Hardware crosstalk in multi-tenant superconducting quantum computers poses a severe security threat, allowing adversaries to induce targeted errors across tenant boundaries by injecting carefully engineered pulses. We present a simulation-based study of active crosstalk attacks at the pulse level, analyzing how adversarial control of pulse timing, shape, amplitude, and coupling can disrupt a victim's computation. Our framework models the time-dependent dynamics of a three-qubit system in the rotating frame, capturing both always-on couplings and injected drive pulses. We examine two attack strategies: attacker-first (pulse before victim operation) and victim-first (pulse after), and systematically identify the pulse and coupling configurations that cause the largest logical errors. Protocol-level experiments on quantum coin flip and XOR classification circuits show that some protocols are highly vulnerable to these attacks, while others remain robust. Based on these findings, we discuss practical methods for detection and mitigation to improve security in quantum cloud platforms.
+
+
+
+## **2. Blind Spot Navigation: Evolutionary Discovery of Sensitive Semantic Concepts for LVLMs**
+
+cs.CV
+
+The paper needs major revisions, so it is being withdrawn
+
+**SubmitDate**: 2025-07-25    [abs](http://arxiv.org/abs/2505.15265v2) [paper-pdf](http://arxiv.org/pdf/2505.15265v2)
+
+**Authors**: Zihao Pan, Yu Tong, Weibin Wu, Jingyi Wang, Lifeng Chen, Zhe Zhao, Jiajia Wei, Yitong Qiao, Zibin Zheng
+
+**Abstract**: Adversarial attacks aim to generate malicious inputs that mislead deep models, but beyond causing model failure, they cannot provide certain interpretable information such as ``\textit{What content in inputs make models more likely to fail?}'' However, this information is crucial for researchers to specifically improve model robustness. Recent research suggests that models may be particularly sensitive to certain semantics in visual inputs (such as ``wet,'' ``foggy''), making them prone to errors. Inspired by this, in this paper we conducted the first exploration on large vision-language models (LVLMs) and found that LVLMs indeed are susceptible to hallucinations and various errors when facing specific semantic concepts in images. To efficiently search for these sensitive concepts, we integrated large language models (LLMs) and text-to-image (T2I) models to propose a novel semantic evolution framework. Randomly initialized semantic concepts undergo LLM-based crossover and mutation operations to form image descriptions, which are then converted by T2I models into visual inputs for LVLMs. The task-specific performance of LVLMs on each input is quantified as fitness scores for the involved semantics and serves as reward signals to further guide LLMs in exploring concepts that induce LVLMs. Extensive experiments on seven mainstream LVLMs and two multimodal tasks demonstrate the effectiveness of our method. Additionally, we provide interesting findings about the sensitive semantics of LVLMs, aiming to inspire further in-depth research.
+
+
+
+## **3. Kill two birds with one stone: generalized and robust AI-generated text detection via dynamic perturbations**
+
+cs.CL
+
+Accepted by NAACL 2025 main conference
+
+**SubmitDate**: 2025-07-25    [abs](http://arxiv.org/abs/2504.21019v2) [paper-pdf](http://arxiv.org/pdf/2504.21019v2)
+
+**Authors**: Yinghan Zhou, Juan Wen, Wanli Peng, Yiming Xue, Ziwei Zhang, Zhengxian Wu
+
+**Abstract**: The growing popularity of large language models has raised concerns regarding the potential to misuse AI-generated text (AIGT). It becomes increasingly critical to establish an excellent AIGT detection method with high generalization and robustness. However, existing methods either focus on model generalization or concentrate on robustness. The unified mechanism, to simultaneously address the challenges of generalization and robustness, is less explored. In this paper, we argue that robustness can be view as a specific form of domain shift, and empirically reveal an intrinsic mechanism for model generalization of AIGT detection task. Then, we proposed a novel AIGT detection method (DP-Net) via dynamic perturbations introduced by a reinforcement learning with elaborated reward and action. Experimentally, extensive results show that the proposed DP-Net significantly outperforms some state-of-the-art AIGT detection methods for generalization capacity in three cross-domain scenarios. Meanwhile, the DP-Net achieves best robustness under two text adversarial attacks. The code is publicly available at https://github.com/CAU-ISS-Lab/AIGT-Detection-Evade-Detection/tree/main/DP-Net.
+
+
+
+## **4. CLIP-Guided Backdoor Defense through Entropy-Based Poisoned Dataset Separation**
+
+cs.MM
+
+15 pages, 9 figures, 15 tables. To appear in the Proceedings of the  32nd ACM International Conference on Multimedia (MM '25)
+
+**SubmitDate**: 2025-07-25    [abs](http://arxiv.org/abs/2507.05113v2) [paper-pdf](http://arxiv.org/pdf/2507.05113v2)
+
+**Authors**: Binyan Xu, Fan Yang, Xilin Dai, Di Tang, Kehuan Zhang
+
+**Abstract**: Deep Neural Networks (DNNs) are susceptible to backdoor attacks, where adversaries poison training data to implant backdoor into the victim model. Current backdoor defenses on poisoned data often suffer from high computational costs or low effectiveness against advanced attacks like clean-label and clean-image backdoors. To address them, we introduce CLIP-Guided backdoor Defense (CGD), an efficient and effective method that mitigates various backdoor attacks. CGD utilizes a publicly accessible CLIP model to identify inputs that are likely to be clean or poisoned. It then retrains the model with these inputs, using CLIP's logits as a guidance to effectively neutralize the backdoor. Experiments on 4 datasets and 11 attack types demonstrate that CGD reduces attack success rates (ASRs) to below 1% while maintaining clean accuracy (CA) with a maximum drop of only 0.3%, outperforming existing defenses. Additionally, we show that clean-data-based defenses can be adapted to poisoned data using CGD. Also, CGD exhibits strong robustness, maintaining low ASRs even when employing a weaker CLIP model or when CLIP itself is compromised by a backdoor. These findings underscore CGD's exceptional efficiency, effectiveness, and applicability for real-world backdoor defense scenarios. Code: https://github.com/binyxu/CGD.
+
+
+
+## **5. Transferable and Undefendable Point Cloud Attacks via Medial Axis Transform**
+
+cs.CV
+
+**SubmitDate**: 2025-07-25    [abs](http://arxiv.org/abs/2507.18870v1) [paper-pdf](http://arxiv.org/pdf/2507.18870v1)
+
+**Authors**: Keke Tang, Yuze Gao, Weilong Peng, Xiaofei Wang, Meie Fang, Peican Zhu
+
+**Abstract**: Studying adversarial attacks on point clouds is essential for evaluating and improving the robustness of 3D deep learning models. However, most existing attack methods are developed under ideal white-box settings and often suffer from limited transferability to unseen models and insufficient robustness against common defense mechanisms. In this paper, we propose MAT-Adv, a novel adversarial attack framework that enhances both transferability and undefendability by explicitly perturbing the medial axis transform (MAT) representations, in order to induce inherent adversarialness in the resulting point clouds. Specifically, we employ an autoencoder to project input point clouds into compact MAT representations that capture the intrinsic geometric structure of point clouds. By perturbing these intrinsic representations, MAT-Adv introduces structural-level adversarial characteristics that remain effective across diverse models and defense strategies. To mitigate overfitting and prevent perturbation collapse, we incorporate a dropout strategy into the optimization of MAT perturbations, further improving transferability and undefendability. Extensive experiments demonstrate that MAT-Adv significantly outperforms existing state-of-the-art methods in both transferability and undefendability. Codes will be made public upon paper acceptance.
+
+
+
+## **6. Optimal Transport Regularized Divergences: Application to Adversarial Robustness**
 
 cs.LG
 
@@ -19,7 +87,7 @@ cs.LG
 
 
 
-## **2. GCC-Spam: Spam Detection via GAN, Contrastive Learning, and Character Similarity Networks**
+## **7. GCC-Spam: Spam Detection via GAN, Contrastive Learning, and Character Similarity Networks**
 
 cs.LG
 
@@ -31,7 +99,7 @@ cs.LG
 
 
 
-## **3. Reinforced Embodied Active Defense: Exploiting Adaptive Interaction for Robust Visual Perception in Adversarial 3D Environments**
+## **8. Reinforced Embodied Active Defense: Exploiting Adaptive Interaction for Robust Visual Perception in Adversarial 3D Environments**
 
 cs.CV
 
@@ -45,7 +113,7 @@ arXiv admin note: text overlap with arXiv:2404.00540
 
 
 
-## **4. Revisiting Physically Realizable Adversarial Object Attack against LiDAR-based Detection: Clarifying Problem Formulation and Experimental Protocols**
+## **9. Revisiting Physically Realizable Adversarial Object Attack against LiDAR-based Detection: Clarifying Problem Formulation and Experimental Protocols**
 
 cs.CV
 
@@ -57,7 +125,7 @@ cs.CV
 
 
 
-## **5. On Reconstructing Training Data From Bayesian Posteriors and Trained Models**
+## **10. On Reconstructing Training Data From Bayesian Posteriors and Trained Models**
 
 stat.ML
 
@@ -69,7 +137,7 @@ stat.ML
 
 
 
-## **6. Data Transmission over a Bosonic Arbitrarily Varying Quantum Channel**
+## **11. Data Transmission over a Bosonic Arbitrarily Varying Quantum Channel**
 
 quant-ph
 
@@ -83,7 +151,7 @@ quant-ph
 
 
 
-## **7. Safeguarding RAG Pipelines with GMTP: A Gradient-based Masked Token Probability Method for Poisoned Document Detection**
+## **12. Safeguarding RAG Pipelines with GMTP: A Gradient-based Masked Token Probability Method for Poisoned Document Detection**
 
 cs.CL
 
@@ -97,7 +165,7 @@ cs.CL
 
 
 
-## **8. Policy Disruption in Reinforcement Learning:Adversarial Attack with Large Language Models and Critical State Identification**
+## **13. Policy Disruption in Reinforcement Learning:Adversarial Attack with Large Language Models and Critical State Identification**
 
 cs.LG
 
@@ -109,7 +177,7 @@ cs.LG
 
 
 
-## **9. RECALLED: An Unbounded Resource Consumption Attack on Large Vision-Language Models**
+## **14. RECALLED: An Unbounded Resource Consumption Attack on Large Vision-Language Models**
 
 cs.CR
 
@@ -121,7 +189,7 @@ cs.CR
 
 
 
-## **10. Your ATs to Ts: MITRE ATT&CK Attack Technique to P-SSCRM Task Mapping**
+## **15. Your ATs to Ts: MITRE ATT&CK Attack Technique to P-SSCRM Task Mapping**
 
 cs.SE
 
@@ -135,7 +203,7 @@ Mapping generated from: arXiv:2503.12192
 
 
 
-## **11. Evaluating the Performance of AI Text Detectors, Few-Shot and Chain-of-Thought Prompting Using DeepSeek Generated Text**
+## **16. Evaluating the Performance of AI Text Detectors, Few-Shot and Chain-of-Thought Prompting Using DeepSeek Generated Text**
 
 cs.CL
 
@@ -147,7 +215,7 @@ cs.CL
 
 
 
-## **12. Bob's Confetti: Phonetic Memorization Attacks in Music and Video Generation**
+## **17. Bob's Confetti: Phonetic Memorization Attacks in Music and Video Generation**
 
 cs.SD
 
@@ -159,7 +227,7 @@ cs.SD
 
 
 
-## **13. From Seed to Harvest: Augmenting Human Creativity with AI for Red-teaming Text-to-Image Models**
+## **18. From Seed to Harvest: Augmenting Human Creativity with AI for Red-teaming Text-to-Image Models**
 
 cs.LG
 
@@ -171,7 +239,7 @@ cs.LG
 
 
 
-## **14. Trusted Data Fusion, Multi-Agent Autonomy, Autonomous Vehicles**
+## **19. Trusted Data Fusion, Multi-Agent Autonomy, Autonomous Vehicles**
 
 eess.SY
 
@@ -183,7 +251,7 @@ eess.SY
 
 
 
-## **15. Weak-to-Strong Jailbreaking on Large Language Models**
+## **20. Weak-to-Strong Jailbreaking on Large Language Models**
 
 cs.CL
 
@@ -197,7 +265,7 @@ ICML 2025
 
 
 
-## **16. Constructing Optimal Noise Channels for Enhanced Robustness in Quantum Machine Learning**
+## **21. Constructing Optimal Noise Channels for Enhanced Robustness in Quantum Machine Learning**
 
 quant-ph
 
@@ -211,7 +279,7 @@ QML technical track at IEEE QCE 2025
 
 
 
-## **17. Boosting Ray Search Procedure of Hard-label Attacks with Transfer-based Priors**
+## **22. Boosting Ray Search Procedure of Hard-label Attacks with Transfer-based Priors**
 
 cs.CV
 
@@ -225,7 +293,7 @@ Published at ICLR 2025 (Spotlight paper)
 
 
 
-## **18. An h-space Based Adversarial Attack for Protection Against Few-shot Personalization**
+## **23. An h-space Based Adversarial Attack for Protection Against Few-shot Personalization**
 
 cs.CV
 
@@ -239,7 +307,7 @@ cs.CV
 
 
 
-## **19. MEF: A Capability-Aware Multi-Encryption Framework for Evaluating Vulnerabilities in Black-Box Large Language Models**
+## **24. MEF: A Capability-Aware Multi-Encryption Framework for Evaluating Vulnerabilities in Black-Box Large Language Models**
 
 cs.CL
 
@@ -251,7 +319,7 @@ cs.CL
 
 
 
-## **20. Explicit Vulnerability Generation with LLMs: An Investigation Beyond Adversarial Attacks**
+## **25. Explicit Vulnerability Generation with LLMs: An Investigation Beyond Adversarial Attacks**
 
 cs.SE
 
@@ -265,7 +333,7 @@ Accepted to ICSME 2025
 
 
 
-## **21. Optimizing Privacy-Utility Trade-off in Decentralized Learning with Generalized Correlated Noise**
+## **26. Optimizing Privacy-Utility Trade-off in Decentralized Learning with Generalized Correlated Noise**
 
 cs.LG
 
@@ -279,7 +347,7 @@ cs.LG
 
 
 
-## **22. Restricted Boltzmann machine as a probabilistic Enigma**
+## **27. Restricted Boltzmann machine as a probabilistic Enigma**
 
 cond-mat.stat-mech
 
@@ -293,7 +361,7 @@ cond-mat.stat-mech
 
 
 
-## **23. Gungnir: Exploiting Stylistic Features in Images for Backdoor Attacks on Diffusion Models**
+## **28. Gungnir: Exploiting Stylistic Features in Images for Backdoor Attacks on Diffusion Models**
 
 cs.CV
 
@@ -305,7 +373,7 @@ cs.CV
 
 
 
-## **24. Advancing Robustness in Deep Reinforcement Learning with an Ensemble Defense Approach**
+## **29. Advancing Robustness in Deep Reinforcement Learning with an Ensemble Defense Approach**
 
 cs.LG
 
@@ -319,7 +387,7 @@ cs.LG
 
 
 
-## **25. When LLMs Copy to Think: Uncovering Copy-Guided Attacks in Reasoning LLMs**
+## **30. When LLMs Copy to Think: Uncovering Copy-Guided Attacks in Reasoning LLMs**
 
 cs.CR
 
@@ -331,7 +399,7 @@ cs.CR
 
 
 
-## **26. ShadowCode: Towards (Automatic) External Prompt Injection Attack against Code LLMs**
+## **31. ShadowCode: Towards (Automatic) External Prompt Injection Attack against Code LLMs**
 
 cs.CR
 
@@ -343,7 +411,7 @@ cs.CR
 
 
 
-## **27. The Cost of Compression: Tight Quadratic Black-Box Attacks on Sketches for $\ell_2$ Norm Estimation**
+## **32. The Cost of Compression: Tight Quadratic Black-Box Attacks on Sketches for $\ell_2$ Norm Estimation**
 
 cs.LG
 
@@ -355,7 +423,7 @@ cs.LG
 
 
 
-## **28. Talking Like a Phisher: LLM-Based Attacks on Voice Phishing Classifiers**
+## **33. Talking Like a Phisher: LLM-Based Attacks on Voice Phishing Classifiers**
 
 cs.CR
 
@@ -369,7 +437,7 @@ Accepted by EAI ICDF2C 2025
 
 
 
-## **29. Ownership Verification of DNN Models Using White-Box Adversarial Attacks with Specified Probability Manipulation**
+## **34. Ownership Verification of DNN Models Using White-Box Adversarial Attacks with Specified Probability Manipulation**
 
 cs.LG
 
@@ -383,7 +451,7 @@ Accepted to EUSIPCO 2025
 
 
 
-## **30. Pulling Back the Curtain: Unsupervised Adversarial Detection via Contrastive Auxiliary Networks**
+## **35. Pulling Back the Curtain: Unsupervised Adversarial Detection via Contrastive Auxiliary Networks**
 
 cs.CV
 
@@ -397,7 +465,7 @@ Accepted at SafeMM-AI @ ICCV 2025
 
 
 
-## **31. Quality Text, Robust Vision: The Role of Language in Enhancing Visual Robustness of Vision-Language Models**
+## **36. Quality Text, Robust Vision: The Role of Language in Enhancing Visual Robustness of Vision-Language Models**
 
 cs.CV
 
@@ -411,21 +479,7 @@ ACMMM 2025 Accepted
 
 
 
-## **32. Pulse-Level Simulation of Crosstalk Attacks on Superconducting Quantum Hardware**
-
-quant-ph
-
-This paper has been accepted to the Security, Privacy, and Resilience  Workshop at IEEE Quantum Week (QCE 2025) and will appear in the workshop  proceedings
-
-**SubmitDate**: 2025-07-22    [abs](http://arxiv.org/abs/2507.16181v1) [paper-pdf](http://arxiv.org/pdf/2507.16181v1)
-
-**Authors**: Syed Emad Uddin Shubha, Tasnuva Farheen
-
-**Abstract**: Hardware crosstalk in multi-tenant superconducting quantum computers poses a severe security threat, allowing adversaries to induce targeted errors across tenant boundaries by injecting carefully engineered pulses. We present a simulation-based study of active crosstalk attacks at the pulse level, analyzing how adversarial control of pulse timing, shape, amplitude, and coupling can disrupt a victim's computation. Our framework models the time-dependent dynamics of a three-qubit system in the rotating frame, capturing both always-on couplings and injected drive pulses. We examine two attack strategies: attacker-first (pulse before victim operation) and victim-first (pulse after), and systematically identify the pulse and coupling configurations that cause the largest logical errors. Protocol-level experiments on quantum coin flip and XOR classification circuits show that some protocols are highly vulnerable to these attacks, while others remain robust. Based on these findings, we discuss practical methods for detection and mitigation to improve security in quantum cloud platforms.
-
-
-
-## **33. Attacking interpretable NLP systems**
+## **37. Attacking interpretable NLP systems**
 
 cs.CR
 
@@ -437,7 +491,7 @@ cs.CR
 
 
 
-## **34. DP2Guard: A Lightweight and Byzantine-Robust Privacy-Preserving Federated Learning Scheme for Industrial IoT**
+## **38. DP2Guard: A Lightweight and Byzantine-Robust Privacy-Preserving Federated Learning Scheme for Industrial IoT**
 
 cs.CR
 
@@ -449,7 +503,7 @@ cs.CR
 
 
 
-## **35. DP-TLDM: Differentially Private Tabular Latent Diffusion Model**
+## **39. DP-TLDM: Differentially Private Tabular Latent Diffusion Model**
 
 cs.LG
 
@@ -461,7 +515,7 @@ cs.LG
 
 
 
-## **36. Erasing Conceptual Knowledge from Language Models**
+## **40. Erasing Conceptual Knowledge from Language Models**
 
 cs.CL
 
@@ -475,7 +529,7 @@ Project Page: https://elm.baulab.info
 
 
 
-## **37. Disrupting Semantic and Abstract Features for Better Adversarial Transferability**
+## **41. Disrupting Semantic and Abstract Features for Better Adversarial Transferability**
 
 cs.CV
 
@@ -487,7 +541,7 @@ cs.CV
 
 
 
-## **38. Does More Inference-Time Compute Really Help Robustness?**
+## **42. Does More Inference-Time Compute Really Help Robustness?**
 
 cs.AI
 
@@ -501,7 +555,7 @@ Preprint
 
 
 
-## **39. Hedge Funds on a Swamp: Analyzing Patterns, Vulnerabilities, and Defense Measures in Blockchain Bridges**
+## **43. Hedge Funds on a Swamp: Analyzing Patterns, Vulnerabilities, and Defense Measures in Blockchain Bridges**
 
 cs.ET
 
@@ -513,7 +567,7 @@ cs.ET
 
 
 
-## **40. Sparsification Under Siege: Defending Against Poisoning Attacks in Communication-Efficient Federated Learning**
+## **44. Sparsification Under Siege: Defending Against Poisoning Attacks in Communication-Efficient Federated Learning**
 
 cs.CR
 
@@ -525,7 +579,7 @@ cs.CR
 
 
 
-## **41. Multi-Stage Prompt Inference Attacks on Enterprise LLM Systems**
+## **45. Multi-Stage Prompt Inference Attacks on Enterprise LLM Systems**
 
 cs.CR
 
@@ -539,7 +593,7 @@ cs.CR
 
 
 
-## **42. Derivative-Free Diffusion Manifold-Constrained Gradient for Unified XAI**
+## **46. Derivative-Free Diffusion Manifold-Constrained Gradient for Unified XAI**
 
 cs.CV
 
@@ -553,7 +607,7 @@ CVPR 2025 (poster), 19 pages, 5 figures
 
 
 
-## **43. Transfer Attack for Bad and Good: Explain and Boost Adversarial Transferability across Multimodal Large Language Models**
+## **47. Transfer Attack for Bad and Good: Explain and Boost Adversarial Transferability across Multimodal Large Language Models**
 
 cs.CV
 
@@ -567,7 +621,7 @@ This paper is accepted by ACM MM 2025
 
 
 
-## **44. Scaling Decentralized Learning with FLock**
+## **48. Scaling Decentralized Learning with FLock**
 
 cs.LG
 
@@ -579,7 +633,7 @@ cs.LG
 
 
 
-## **45. Cats Confuse Reasoning LLM: Query Agnostic Adversarial Triggers for Reasoning Models**
+## **49. Cats Confuse Reasoning LLM: Query Agnostic Adversarial Triggers for Reasoning Models**
 
 cs.CL
 
@@ -593,7 +647,7 @@ Accepted to CoLM 2025
 
 
 
-## **46. Defective Convolutional Networks**
+## **50. Defective Convolutional Networks**
 
 cs.CV
 
@@ -602,60 +656,6 @@ cs.CV
 **Authors**: Tiange Luo, Tianle Cai, Mengxiao Zhang, Siyu Chen, Di He, Liwei Wang
 
 **Abstract**: Robustness of convolutional neural networks (CNNs) has gained in importance on account of adversarial examples, i.e., inputs added as well-designed perturbations that are imperceptible to humans but can cause the model to predict incorrectly. Recent research suggests that the noises in adversarial examples break the textural structure, which eventually leads to wrong predictions. To mitigate the threat of such adversarial attacks, we propose defective convolutional networks that make predictions relying less on textural information but more on shape information by properly integrating defective convolutional layers into standard CNNs. The defective convolutional layers contain defective neurons whose activations are set to be a constant function. As defective neurons contain no information and are far different from standard neurons in its spatial neighborhood, the textural features cannot be accurately extracted, and so the model has to seek other features for classification, such as the shape. We show extensive evidence to justify our proposal and demonstrate that defective CNNs can defense against black-box attacks better than standard CNNs. In particular, they achieve state-of-the-art performance against transfer-based attacks without any adversarial training being applied.
-
-
-
-## **47. ROBAD: Robust Adversary-aware Local-Global Attended Bad Actor Detection Sequential Model**
-
-cs.LG
-
-15 pages, 12 tables
-
-**SubmitDate**: 2025-07-20    [abs](http://arxiv.org/abs/2507.15067v1) [paper-pdf](http://arxiv.org/pdf/2507.15067v1)
-
-**Authors**: Bing He, Mustaque Ahamad, Srijan Kumar
-
-**Abstract**: Detecting bad actors is critical to ensure the safety and integrity of internet platforms. Several deep learning-based models have been developed to identify such users. These models should not only accurately detect bad actors, but also be robust against adversarial attacks that aim to evade detection. However, past deep learning-based detection models do not meet the robustness requirement because they are sensitive to even minor changes in the input sequence. To address this issue, we focus on (1) improving the model understanding capability and (2) enhancing the model knowledge such that the model can recognize potential input modifications when making predictions. To achieve these goals, we create a novel transformer-based classification model, called ROBAD (RObust adversary-aware local-global attended Bad Actor Detection model), which uses the sequence of user posts to generate user embedding to detect bad actors. Particularly, ROBAD first leverages the transformer encoder block to encode each post bidirectionally, thus building a post embedding to capture the local information at the post level. Next, it adopts the transformer decoder block to model the sequential pattern in the post embeddings by using the attention mechanism, which generates the sequence embedding to obtain the global information at the sequence level. Finally, to enrich the knowledge of the model, embeddings of modified sequences by mimicked attackers are fed into a contrastive-learning-enhanced classification layer for sequence prediction. In essence, by capturing the local and global information (i.e., the post and sequence information) and leveraging the mimicked behaviors of bad actors in training, ROBAD can be robust to adversarial attacks. Extensive experiments on Yelp and Wikipedia datasets show that ROBAD can effectively detect bad actors when under state-of-the-art adversarial attacks.
-
-
-
-## **48. DeRAG: Black-box Adversarial Attacks on Multiple Retrieval-Augmented Generation Applications via Prompt Injection**
-
-cs.AI
-
-Accepted by KDD Workshop on Prompt Optimization 2025
-
-**SubmitDate**: 2025-07-20    [abs](http://arxiv.org/abs/2507.15042v1) [paper-pdf](http://arxiv.org/pdf/2507.15042v1)
-
-**Authors**: Jerry Wang, Fang Yu
-
-**Abstract**: Adversarial prompt attacks can significantly alter the reliability of Retrieval-Augmented Generation (RAG) systems by re-ranking them to produce incorrect outputs. In this paper, we present a novel method that applies Differential Evolution (DE) to optimize adversarial prompt suffixes for RAG-based question answering. Our approach is gradient-free, treating the RAG pipeline as a black box and evolving a population of candidate suffixes to maximize the retrieval rank of a targeted incorrect document to be closer to real world scenarios. We conducted experiments on the BEIR QA datasets to evaluate attack success at certain retrieval rank thresholds under multiple retrieving applications. Our results demonstrate that DE-based prompt optimization attains competitive (and in some cases higher) success rates compared to GGPP to dense retrievers and PRADA to sparse retrievers, while using only a small number of tokens (<=5 tokens) in the adversarial suffix. Furthermore, we introduce a readability-aware suffix construction strategy, validated by a statistically significant reduction in MLM negative log-likelihood with Welch's t-test. Through evaluations with a BERT-based adversarial suffix detector, we show that DE-generated suffixes evade detection, yielding near-chance detection accuracy.
-
-
-
-## **49. Adversarial Destabilization Attacks to Direct Data-Driven Control**
-
-eess.SY
-
-15 pages
-
-**SubmitDate**: 2025-07-20    [abs](http://arxiv.org/abs/2507.14863v1) [paper-pdf](http://arxiv.org/pdf/2507.14863v1)
-
-**Authors**: Hampei Sasahara
-
-**Abstract**: This study investigates the vulnerability of direct data-driven control methods, specifically for the linear quadratic regulator problem, to adversarial perturbations in collected data used for controller synthesis. We consider stealthy attacks that subtly manipulate offline-collected data to destabilize the resulting closed-loop system while evading detection. To generate such perturbations, we propose the Directed Gradient Sign Method (DGSM) and its iterative variant (I-DGSM), adaptations of the fast gradient sign method originally developed for neural networks, which align perturbations with the gradient of the spectral radius of the closed-loop matrix to reduce stability. A key contribution is an efficient gradient computation technique based on implicit differentiation through the Karush-Kuhn-Tucker conditions of the underlying semidefinite program, enabling scalable and exact gradient evaluation without repeated optimization computations. To defend against these attacks, we propose two defense strategies: a regularization-based approach that enhances robustness by suppressing controller sensitivity to data perturbations and a robust data-driven control approach that guarantees closed-loop stability within bounded perturbation sets. Extensive numerical experiments on benchmark systems show that adversarial perturbations with magnitudes up to ten times smaller than random noise can destabilize controllers trained on corrupted data and that the proposed defense strategies effectively mitigate attack success rates while maintaining control performance. Additionally, we evaluate attack transferability under partial knowledge scenarios, highlighting the practical importance of protecting training data confidentiality.
-
-
-
-## **50. Data-Plane Telemetry to Mitigate Long-Distance BGP Hijacks**
-
-cs.NI
-
-**SubmitDate**: 2025-07-20    [abs](http://arxiv.org/abs/2507.14842v1) [paper-pdf](http://arxiv.org/pdf/2507.14842v1)
-
-**Authors**: Satadal Sengupta, Hyojoon Kim, Daniel Jubas, Maria Apostolaki, Jennifer Rexford
-
-**Abstract**: Poor security of Internet routing enables adversaries to divert user data through unintended infrastructures (hijack). Of particular concern -- and the focus of this paper -- are cases where attackers reroute domestic traffic through foreign countries, exposing it to surveillance, bypassing legal privacy protections, and posing national security threats. Efforts to detect and mitigate such attacks have focused primarily on the control plane while data-plane signals remain largely overlooked. In particular, change in propagation delay caused by rerouting offers a promising signal: the change is unavoidable and the increased propagation delay is directly observable from the affected networks. In this paper, we explore the practicality of using delay variations for hijack detection, addressing two key questions: (1) What coverage can this provide, given its heavy dependence on the geolocations of the sender, receiver, and adversary? and (2) Can an always-on latency-based detection system be deployed without disrupting normal network operations? We observe that for 86% of victim-attacker country pairs in the world, mid-attack delays exceed pre-attack delays by at least 25% in real deployments, making delay-based hijack detection promising. To demonstrate practicality, we design HiDe, which reliably detects delay surges from long-distance hijacks at line rate. We measure HiDe's accuracy and false-positive rate on real-world data and validate it with ethically conducted hijacks.
 
 
 
