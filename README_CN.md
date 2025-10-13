@@ -1,5 +1,5 @@
 # Latest Adversarial Attack Papers
-**update at 2025-10-11 09:51:27**
+**update at 2025-10-13 08:57:51**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
@@ -127,7 +127,7 @@ NeurIPS 2025 Spotlight
 
 更少的权重，更多的问题：对LLM修剪的实用攻击 cs.LG
 
-**SubmitDate**: 2025-10-09    [abs](http://arxiv.org/abs/2510.07985v1) [paper-pdf](http://arxiv.org/pdf/2510.07985v1)
+**SubmitDate**: 2025-10-10    [abs](http://arxiv.org/abs/2510.07985v2) [paper-pdf](http://arxiv.org/pdf/2510.07985v2)
 
 **Authors**: Kazuki Egashira, Robin Staab, Thibaud Gloaguen, Mark Vero, Martin Vechev
 
@@ -139,7 +139,7 @@ NeurIPS 2025 Spotlight
 
 ## **10. Safe-Control: A Safety Patch for Mitigating Unsafe Content in Text-to-Image Generation Models**
 
-Safe-Control：用于缓解文本到图像生成模型中不安全内容的安全补丁 cs.CV
+Safe-Control：一个用于缓解文本到图像生成模型中不安全内容的安全补丁 cs.CV
 
 **SubmitDate**: 2025-10-09    [abs](http://arxiv.org/abs/2508.21099v2) [paper-pdf](http://arxiv.org/pdf/2508.21099v2)
 
@@ -427,7 +427,7 @@ GreedyPixel：通过贪婪算法进行细粒度黑匣子对抗攻击 cs.CV
 
 **Abstract**: Deep neural networks are highly vulnerable to adversarial examples that inputs with small, carefully crafted perturbations that cause misclassification, making adversarial attacks an essential tool for robustness evaluation. Existing black-box attacks fall into three categories: query-only, transfer-only, and query-and-transfer, and vary in perturbation pattern and optimization strategy. However, no prior method jointly achieves query-and-transfer guidance, pixel-wise sparsity, and training-free direct optimization, leaving a gap between black-box flexibility and white-box precision. We present GreedyPixel, a new attack framework that fills this gap by combining a surrogate-derived pixel priority map with greedy, per-pixel optimization refined by query feedback. This design reduces the exponential brute-force search space to a tractable linear procedure, guarantees monotonic loss decrease and convergence to a coordinate-wise optimum, and concentrates perturbations on robust, semantically meaningful pixels to improve perceptual quality. Extensive experiments on CIFAR-10 and ImageNet under both white-box and black-box settings demonstrate that GreedyPixel achieves state-of-the-art attack success rates and produces visually imperceptible perturbations. Our results show that GreedyPixel bridges the precision gap between white-box and black-box attacks and provides a practical framework for fine-grained robustness evaluation. The implementation is available at https://github.com/azrealwang/greedypixel.
 
-摘要: 深度神经网络非常容易受到对抗性示例的影响，这些示例输入的是微小的、精心设计的扰动，从而导致错误分类，使对抗性攻击成为稳健性评估的重要工具。现有的黑匣子攻击分为三类：仅查询、仅传输和查询并传输，并且其扰动模式和优化策略各不相同。然而，没有任何现有方法能够共同实现查询和传输引导、像素稀疏性和免训练直接优化，从而在黑匣子灵活性和白盒精确性之间留下了差距。我们提出了GreedyPixel，这是一种新的攻击框架，它通过将代理衍生的像素优先级地图与由查询反馈改进的贪婪的每像素优化相结合来填补这一空白。该设计将指数暴力搜索空间简化为易于处理的线性过程，保证单调损失减少并收敛到坐标最优值，并将扰动集中在稳健、语义有意义的像素上，以提高感知质量。在白盒和黑匣子设置下对CIFAR-10和ImageNet进行的大量实验表明，GreedyPixel实现了最先进的攻击成功率，并产生视觉上难以感知的扰动。我们的结果表明，GreedyPixel弥合了白盒攻击和黑盒攻击之间的精度差距，并为细粒度稳健性评估提供了实用的框架。该实现可在www.example.com上获取。
+摘要: 深度神经网络非常容易受到对抗性示例的影响，这些示例输入的是微小的、精心设计的扰动，从而导致错误分类，使对抗性攻击成为稳健性评估的重要工具。现有的黑匣子攻击分为三类：仅查询、仅传输和查询并传输，并且其扰动模式和优化策略各不相同。然而，没有任何现有方法能够共同实现查询和传输引导、像素稀疏性和免训练直接优化，从而在黑匣子灵活性和白盒精确性之间留下了差距。我们提出了GreedyPixel，这是一种新的攻击框架，它通过将代理衍生的像素优先级地图与由查询反馈改进的贪婪的每像素优化相结合来填补这一空白。该设计将指数暴力搜索空间简化为易于处理的线性过程，保证单调损失减少并收敛到坐标最优值，并将扰动集中在稳健、语义有意义的像素上，以提高感知质量。在白盒和黑匣子设置下对CIFAR-10和ImageNet进行的大量实验表明，GreedyPixel实现了最先进的攻击成功率，并产生视觉上难以感知的扰动。我们的结果表明，GreedyPixel弥合了白盒攻击和黑盒攻击之间的精度差距，并为细粒度稳健性评估提供了实用的框架。该实现可在https://github.com/azrealwang/greedypixel上获取。
 
 
 
@@ -525,7 +525,7 @@ Accepted by ACM CCS 2025
 
 LLM的内层是否揭示了越狱检测的模式？ cs.CL
 
-**SubmitDate**: 2025-10-08    [abs](http://arxiv.org/abs/2510.06594v1) [paper-pdf](http://arxiv.org/pdf/2510.06594v1)
+**SubmitDate**: 2025-10-09    [abs](http://arxiv.org/abs/2510.06594v2) [paper-pdf](http://arxiv.org/pdf/2510.06594v2)
 
 **Authors**: Sri Durga Sai Sowmya Kadali, Evangelos E. Papalexakis
 

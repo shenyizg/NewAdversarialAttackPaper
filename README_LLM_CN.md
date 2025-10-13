@@ -1,5 +1,5 @@
 # Latest Large Language Model Attack Papers
-**update at 2025-10-11 09:49:51**
+**update at 2025-10-13 08:56:16**
 
 翻译来自 https://cloud.tencent.com/document/product/551/15619
 
@@ -141,7 +141,7 @@ NeurIPS 2025 Spotlight
 
 更少的权重，更多的问题：对LLM修剪的实用攻击 cs.LG
 
-**SubmitDate**: 2025-10-09    [abs](http://arxiv.org/abs/2510.07985v1) [paper-pdf](http://arxiv.org/pdf/2510.07985v1)
+**SubmitDate**: 2025-10-10    [abs](http://arxiv.org/abs/2510.07985v2) [paper-pdf](http://arxiv.org/pdf/2510.07985v2)
 
 **Authors**: Kazuki Egashira, Robin Staab, Thibaud Gloaguen, Mark Vero, Martin Vechev
 
@@ -495,7 +495,7 @@ Technical report. Code is available at  https://github.com/SaFoLab-WISC/AutoDAN-
 
 代码代理可以成为端到端系统黑客：对计算机使用代理的现实世界威胁进行基准测试 cs.CR
 
-**SubmitDate**: 2025-10-08    [abs](http://arxiv.org/abs/2510.06607v1) [paper-pdf](http://arxiv.org/pdf/2510.06607v1)
+**SubmitDate**: 2025-10-09    [abs](http://arxiv.org/abs/2510.06607v2) [paper-pdf](http://arxiv.org/pdf/2510.06607v2)
 
 **Authors**: Weidi Luo, Qiming Zhang, Tianyu Lu, Xiaogeng Liu, Bin Hu, Hung-Chun Chiu, Siyuan Ma, Yizhe Zhang, Xusheng Xiao, Yinzhi Cao, Zhen Xiang, Chaowei Xiao
 
@@ -509,7 +509,7 @@ Technical report. Code is available at  https://github.com/SaFoLab-WISC/AutoDAN-
 
 LLM的内层是否揭示了越狱检测的模式？ cs.CL
 
-**SubmitDate**: 2025-10-08    [abs](http://arxiv.org/abs/2510.06594v1) [paper-pdf](http://arxiv.org/pdf/2510.06594v1)
+**SubmitDate**: 2025-10-09    [abs](http://arxiv.org/abs/2510.06594v2) [paper-pdf](http://arxiv.org/pdf/2510.06594v2)
 
 **Authors**: Sri Durga Sai Sowmya Kadali, Evangelos E. Papalexakis
 

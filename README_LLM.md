@@ -1,5 +1,5 @@
 # Latest Large Language Model Attack Papers
-**update at 2025-10-11 09:49:51**
+**update at 2025-10-13 08:56:16**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
@@ -123,7 +123,7 @@ cs.LG
 
 cs.LG
 
-**SubmitDate**: 2025-10-09    [abs](http://arxiv.org/abs/2510.07985v1) [paper-pdf](http://arxiv.org/pdf/2510.07985v1)
+**SubmitDate**: 2025-10-10    [abs](http://arxiv.org/abs/2510.07985v2) [paper-pdf](http://arxiv.org/pdf/2510.07985v2)
 
 **Authors**: Kazuki Egashira, Robin Staab, Thibaud Gloaguen, Mark Vero, Martin Vechev
 
@@ -429,7 +429,7 @@ cs.LG
 
 cs.CR
 
-**SubmitDate**: 2025-10-08    [abs](http://arxiv.org/abs/2510.06607v1) [paper-pdf](http://arxiv.org/pdf/2510.06607v1)
+**SubmitDate**: 2025-10-09    [abs](http://arxiv.org/abs/2510.06607v2) [paper-pdf](http://arxiv.org/pdf/2510.06607v2)
 
 **Authors**: Weidi Luo, Qiming Zhang, Tianyu Lu, Xiaogeng Liu, Bin Hu, Hung-Chun Chiu, Siyuan Ma, Yizhe Zhang, Xusheng Xiao, Yinzhi Cao, Zhen Xiang, Chaowei Xiao
 
@@ -441,7 +441,7 @@ cs.CR
 
 cs.CL
 
-**SubmitDate**: 2025-10-08    [abs](http://arxiv.org/abs/2510.06594v1) [paper-pdf](http://arxiv.org/pdf/2510.06594v1)
+**SubmitDate**: 2025-10-09    [abs](http://arxiv.org/abs/2510.06594v2) [paper-pdf](http://arxiv.org/pdf/2510.06594v2)
 
 **Authors**: Sri Durga Sai Sowmya Kadali, Evangelos E. Papalexakis
 
