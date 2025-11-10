@@ -1,9 +1,63 @@
 # Latest Large Language Model Attack Papers
-**update at 2025-11-07 11:06:50**
+**update at 2025-11-10 21:02:35**
 
 [中英双语版本](https://github.com/daksim/NewAdversarialAttackPaper/blob/main/README_LLM_CN.md)
 
-## **1. Large Language Models for Cyber Security**
+## **1. A Metamorphic Testing Perspective on Knowledge Distillation for Language Models of Code: Does the Student Deeply Mimic the Teacher?**
+
+cs.SE
+
+The paper is currently under review at a peer-reviewed journal
+
+**SubmitDate**: 2025-11-07    [abs](http://arxiv.org/abs/2511.05476v1) [paper-pdf](http://arxiv.org/pdf/2511.05476v1)
+
+**Authors**: Md. Abdul Awal, Mrigank Rochan, Chanchal K. Roy
+
+**Abstract**: Transformer-based language models of code have achieved state-of-the-art performance across a wide range of software analytics tasks, but their practical deployment remains limited due to high computational costs, slow inference speeds, and significant environmental impact. To address these challenges, recent research has increasingly explored knowledge distillation as a method for compressing a large language model of code (the teacher) into a smaller model (the student) while maintaining performance. However, the degree to which a student model deeply mimics the predictive behavior and internal representations of its teacher remains largely unexplored, as current accuracy-based evaluation provides only a surface-level view of model quality and often fails to capture more profound discrepancies in behavioral fidelity between the teacher and student models. To address this gap, we empirically show that the student model often fails to deeply mimic the teacher model, resulting in up to 285% greater performance drop under adversarial attacks, which is not captured by traditional accuracy-based evaluation. Therefore, we propose MetaCompress, a metamorphic testing framework that systematically evaluates behavioral fidelity by comparing the outputs of teacher and student models under a set of behavior-preserving metamorphic relations. We evaluate MetaCompress on two widely studied tasks, using compressed versions of popular language models of code, obtained via three different knowledge distillation techniques: Compressor, AVATAR, and MORPH. The results show that MetaCompress identifies up to 62% behavioral discrepancies in student models, underscoring the need for behavioral fidelity evaluation within the knowledge distillation pipeline and establishing MetaCompress as a practical framework for testing compressed language models of code derived through knowledge distillation.
+
+
+
+## **2. XBreaking: Understanding how LLMs security alignment can be broken**
+
+cs.CR
+
+**SubmitDate**: 2025-11-07    [abs](http://arxiv.org/abs/2504.21700v3) [paper-pdf](http://arxiv.org/pdf/2504.21700v3)
+
+**Authors**: Marco Arazzi, Vignesh Kumar Kembu, Antonino Nocera, Vinod P
+
+**Abstract**: Large Language Models are fundamental actors in the modern IT landscape dominated by AI solutions. However, security threats associated with them might prevent their reliable adoption in critical application scenarios such as government organizations and medical institutions. For this reason, commercial LLMs typically undergo a sophisticated censoring mechanism to eliminate any harmful output they could possibly produce. These mechanisms maintain the integrity of LLM alignment by guaranteeing that the models respond safely and ethically. In response to this, attacks on LLMs are a significant threat to such protections, and many previous approaches have already demonstrated their effectiveness across diverse domains. Existing LLM attacks mostly adopt a generate-and-test strategy to craft malicious input. To improve the comprehension of censoring mechanisms and design a targeted attack, we propose an Explainable-AI solution that comparatively analyzes the behavior of censored and uncensored models to derive unique exploitable alignment patterns. Then, we propose XBreaking, a novel approach that exploits these unique patterns to break the security and alignment constraints of LLMs by targeted noise injection. Our thorough experimental campaign returns important insights about the censoring mechanisms and demonstrates the effectiveness and performance of our approach.
+
+
+
+## **3. TAMAS: Benchmarking Adversarial Risks in Multi-Agent LLM Systems**
+
+cs.MA
+
+Accepted at ICML 2025 MAS Workshop. This version includes additional  experiments and analysis
+
+**SubmitDate**: 2025-11-07    [abs](http://arxiv.org/abs/2511.05269v1) [paper-pdf](http://arxiv.org/pdf/2511.05269v1)
+
+**Authors**: Ishan Kavathekar, Hemang Jain, Ameya Rathod, Ponnurangam Kumaraguru, Tanuja Ganu
+
+**Abstract**: Large Language Models (LLMs) have demonstrated strong capabilities as autonomous agents through tool use, planning, and decision-making abilities, leading to their widespread adoption across diverse tasks. As task complexity grows, multi-agent LLM systems are increasingly used to solve problems collaboratively. However, safety and security of these systems remains largely under-explored. Existing benchmarks and datasets predominantly focus on single-agent settings, failing to capture the unique vulnerabilities of multi-agent dynamics and co-ordination. To address this gap, we introduce $\textbf{T}$hreats and $\textbf{A}$ttacks in $\textbf{M}$ulti-$\textbf{A}$gent $\textbf{S}$ystems ($\textbf{TAMAS}$), a benchmark designed to evaluate the robustness and safety of multi-agent LLM systems. TAMAS includes five distinct scenarios comprising 300 adversarial instances across six attack types and 211 tools, along with 100 harmless tasks. We assess system performance across ten backbone LLMs and three agent interaction configurations from Autogen and CrewAI frameworks, highlighting critical challenges and failure modes in current multi-agent deployments. Furthermore, we introduce Effective Robustness Score (ERS) to assess the tradeoff between safety and task effectiveness of these frameworks. Our findings show that multi-agent systems are highly vulnerable to adversarial attacks, underscoring the urgent need for stronger defenses. TAMAS provides a foundation for systematically studying and improving the safety of multi-agent LLM systems.
+
+
+
+## **4. Iterative Self-Tuning LLMs for Enhanced Jailbreaking Capabilities**
+
+cs.CL
+
+Accepted to NAACL 2025 Main (Oral)
+
+**SubmitDate**: 2025-11-07    [abs](http://arxiv.org/abs/2410.18469v6) [paper-pdf](http://arxiv.org/pdf/2410.18469v6)
+
+**Authors**: Chung-En Sun, Xiaodong Liu, Weiwei Yang, Tsui-Wei Weng, Hao Cheng, Aidan San, Michel Galley, Jianfeng Gao
+
+**Abstract**: Recent research has shown that Large Language Models (LLMs) are vulnerable to automated jailbreak attacks, where adversarial suffixes crafted by algorithms appended to harmful queries bypass safety alignment and trigger unintended responses. Current methods for generating these suffixes are computationally expensive and have low Attack Success Rates (ASR), especially against well-aligned models like Llama2 and Llama3. To overcome these limitations, we introduce ADV-LLM, an iterative self-tuning process that crafts adversarial LLMs with enhanced jailbreak ability. Our framework significantly reduces the computational cost of generating adversarial suffixes while achieving nearly 100\% ASR on various open-source LLMs. Moreover, it exhibits strong attack transferability to closed-source models, achieving 99\% ASR on GPT-3.5 and 49\% ASR on GPT-4, despite being optimized solely on Llama3. Beyond improving jailbreak ability, ADV-LLM provides valuable insights for future safety alignment research through its ability to generate large datasets for studying LLM safety. Our code is available at: https://github.com/SunChungEn/ADV-LLM
+
+
+
+## **5. Large Language Models for Cyber Security**
 
 cs.CR
 
@@ -15,7 +69,7 @@ cs.CR
 
 
 
-## **2. AdversariaLLM: A Unified and Modular Toolbox for LLM Robustness Research**
+## **6. AdversariaLLM: A Unified and Modular Toolbox for LLM Robustness Research**
 
 cs.AI
 
@@ -27,7 +81,7 @@ cs.AI
 
 
 
-## **3. Black-Box Guardrail Reverse-engineering Attack**
+## **7. Black-Box Guardrail Reverse-engineering Attack**
 
 cs.CR
 
@@ -39,7 +93,7 @@ cs.CR
 
 
 
-## **4. Transferable & Stealthy Ensemble Attacks: A Black-Box Jailbreaking Framework for Large Language Models**
+## **8. Transferable & Stealthy Ensemble Attacks: A Black-Box Jailbreaking Framework for Large Language Models**
 
 cs.CR
 
@@ -51,7 +105,7 @@ cs.CR
 
 
 
-## **5. Measuring the Security of Mobile LLM Agents under Adversarial Prompts from Untrusted Third-Party Channels**
+## **9. Measuring the Security of Mobile LLM Agents under Adversarial Prompts from Untrusted Third-Party Channels**
 
 cs.CR
 
@@ -63,7 +117,7 @@ cs.CR
 
 
 
-## **6. Whisper Leak: a side-channel attack on Large Language Models**
+## **10. Whisper Leak: a side-channel attack on Large Language Models**
 
 cs.CR
 
@@ -77,7 +131,7 @@ cs.CR
 
 
 
-## **7. Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models**
+## **11. Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models**
 
 cs.CV
 
@@ -89,7 +143,21 @@ cs.CV
 
 
 
-## **8. Let the Bees Find the Weak Spots: A Path Planning Perspective on Multi-Turn Jailbreak Attacks against LLMs**
+## **12. SWAP: Towards Copyright Auditing of Soft Prompts via Sequential Watermarking**
+
+cs.CR
+
+The first two authors contributed equally to this work. 27 pages
+
+**SubmitDate**: 2025-11-05    [abs](http://arxiv.org/abs/2511.04711v1) [paper-pdf](http://arxiv.org/pdf/2511.04711v1)
+
+**Authors**: Wenyuan Yang, Yichen Sun, Changzheng Chen, Zhixuan Chu, Jiaheng Zhang, Yiming Li, Dacheng Tao
+
+**Abstract**: Large-scale vision-language models, especially CLIP, have demonstrated remarkable performance across diverse downstream tasks. Soft prompts, as carefully crafted modules that efficiently adapt vision-language models to specific tasks, necessitate effective copyright protection. In this paper, we investigate model copyright protection by auditing whether suspicious third-party models incorporate protected soft prompts. While this can be viewed as a special case of model ownership auditing, our analysis shows that existing techniques are ineffective due to prompt learning's unique characteristics. Non-intrusive auditing is inherently prone to false positives when independent models share similar data distributions with victim models. Intrusive approaches also fail: backdoor methods designed for CLIP cannot embed functional triggers, while extending traditional DNN backdoor techniques to prompt learning suffers from harmfulness and ambiguity challenges. We find that these failures in intrusive auditing stem from the same fundamental reason: watermarking operates within the same decision space as the primary task yet pursues opposing objectives. Motivated by these findings, we propose sequential watermarking for soft prompts (SWAP), which implants watermarks into a different and more complex space. SWAP encodes watermarks through a specific order of defender-specified out-of-distribution classes, inspired by the zero-shot prediction capability of CLIP. This watermark, which is embedded in a more complex space, keeps the original prediction label unchanged, making it less opposed to the primary task. We further design a hypothesis-test-guided verification protocol for SWAP and provide theoretical analyses of success conditions. Extensive experiments on 11 datasets demonstrate SWAP's effectiveness, harmlessness, and robustness against potential adaptive attacks.
+
+
+
+## **13. Let the Bees Find the Weak Spots: A Path Planning Perspective on Multi-Turn Jailbreak Attacks against LLMs**
 
 cs.CR
 
@@ -101,7 +169,7 @@ cs.CR
 
 
 
-## **9. Death by a Thousand Prompts: Open Model Vulnerability Analysis**
+## **14. Death by a Thousand Prompts: Open Model Vulnerability Analysis**
 
 cs.CR
 
@@ -113,7 +181,7 @@ cs.CR
 
 
 
-## **10. Adaptive and Robust Data Poisoning Detection and Sanitization in Wearable IoT Systems using Large Language Models**
+## **15. Adaptive and Robust Data Poisoning Detection and Sanitization in Wearable IoT Systems using Large Language Models**
 
 cs.LG
 
@@ -125,7 +193,7 @@ cs.LG
 
 
 
-## **11. Do Methods to Jailbreak and Defend LLMs Generalize Across Languages?**
+## **16. Do Methods to Jailbreak and Defend LLMs Generalize Across Languages?**
 
 cs.CL
 
@@ -137,7 +205,7 @@ cs.CL
 
 
 
-## **12. Verifying LLM Inference to Prevent Model Weight Exfiltration**
+## **17. Verifying LLM Inference to Prevent Model Weight Exfiltration**
 
 cs.CR
 
@@ -149,7 +217,7 @@ cs.CR
 
 
 
-## **13. The Dark Side of LLMs: Agent-based Attacks for Complete Computer Takeover**
+## **18. The Dark Side of LLMs: Agent-based Attacks for Complete Computer Takeover**
 
 cs.CR
 
@@ -161,7 +229,7 @@ cs.CR
 
 
 
-## **14. AutoAdv: Automated Adversarial Prompting for Multi-Turn Jailbreaking of Large Language Models**
+## **19. AutoAdv: Automated Adversarial Prompting for Multi-Turn Jailbreaking of Large Language Models**
 
 cs.CL
 
@@ -173,7 +241,7 @@ cs.CL
 
 
 
-## **15. An Automated Framework for Strategy Discovery, Retrieval, and Evolution in LLM Jailbreak Attacks**
+## **20. An Automated Framework for Strategy Discovery, Retrieval, and Evolution in LLM Jailbreak Attacks**
 
 cs.CR
 
@@ -185,7 +253,7 @@ cs.CR
 
 
 
-## **16. Retrieval-Augmented Defense: Adaptive and Controllable Jailbreak Prevention for Large Language Models**
+## **21. Retrieval-Augmented Defense: Adaptive and Controllable Jailbreak Prevention for Large Language Models**
 
 cs.CR
 
@@ -197,7 +265,7 @@ cs.CR
 
 
 
-## **17. Prompt Injection as an Emerging Threat: Evaluating the Resilience of Large Language Models**
+## **22. Prompt Injection as an Emerging Threat: Evaluating the Resilience of Large Language Models**
 
 cs.CR
 
@@ -211,7 +279,7 @@ cs.CR
 
 
 
-## **18. Black-Box Membership Inference Attack for LVLMs via Prior Knowledge-Calibrated Memory Probing**
+## **23. Black-Box Membership Inference Attack for LVLMs via Prior Knowledge-Calibrated Memory Probing**
 
 cs.CR
 
@@ -223,7 +291,7 @@ cs.CR
 
 
 
-## **19. Align to Misalign: Automatic LLM Jailbreak with Meta-Optimized LLM Judges**
+## **24. Align to Misalign: Automatic LLM Jailbreak with Meta-Optimized LLM Judges**
 
 cs.AI
 
@@ -237,7 +305,7 @@ under review, 28 pages
 
 
 
-## **20. Rescuing the Unpoisoned: Efficient Defense against Knowledge Corruption Attacks on RAG Systems**
+## **25. Rescuing the Unpoisoned: Efficient Defense against Knowledge Corruption Attacks on RAG Systems**
 
 cs.CR
 
@@ -251,7 +319,7 @@ cs.CR
 
 
 
-## **21. MistralBSM: Leveraging Mistral-7B for Vehicular Networks Misbehavior Detection**
+## **26. MistralBSM: Leveraging Mistral-7B for Vehicular Networks Misbehavior Detection**
 
 cs.LG
 
@@ -263,7 +331,7 @@ cs.LG
 
 
 
-## **22. Exploring the limits of strong membership inference attacks on large language models**
+## **27. Exploring the limits of strong membership inference attacks on large language models**
 
 cs.CR
 
@@ -277,7 +345,7 @@ NeurIPS 2025
 
 
 
-## **23. SafeDialBench: A Fine-Grained Safety Benchmark for Large Language Models in Multi-Turn Dialogues with Diverse Jailbreak Attacks**
+## **28. SafeDialBench: A Fine-Grained Safety Benchmark for Large Language Models in Multi-Turn Dialogues with Diverse Jailbreak Attacks**
 
 cs.CL
 
@@ -289,7 +357,7 @@ cs.CL
 
 
 
-## **24. Enhancing Adversarial Transferability in Visual-Language Pre-training Models via Local Shuffle and Sample-based Attack**
+## **29. Enhancing Adversarial Transferability in Visual-Language Pre-training Models via Local Shuffle and Sample-based Attack**
 
 cs.CV
 
@@ -303,7 +371,7 @@ Accepted by NAACL2025 findings
 
 
 
-## **25. Adversarial Déjà Vu: Jailbreak Dictionary Learning for Stronger Generalization to Unseen Attacks**
+## **30. Adversarial Déjà Vu: Jailbreak Dictionary Learning for Stronger Generalization to Unseen Attacks**
 
 cs.LG
 
@@ -315,7 +383,7 @@ cs.LG
 
 
 
-## **26. ShadowLogic: Backdoors in Any Whitebox LLM**
+## **31. ShadowLogic: Backdoors in Any Whitebox LLM**
 
 cs.CR
 
@@ -327,7 +395,7 @@ cs.CR
 
 
 
-## **27. SLIP: Securing LLMs IP Using Weights Decomposition**
+## **32. SLIP: Securing LLMs IP Using Weights Decomposition**
 
 cs.CR
 
@@ -339,7 +407,7 @@ cs.CR
 
 
 
-## **28. What Features in Prompts Jailbreak LLMs? Investigating the Mechanisms Behind Attacks**
+## **33. What Features in Prompts Jailbreak LLMs? Investigating the Mechanisms Behind Attacks**
 
 cs.CR
 
@@ -351,7 +419,7 @@ cs.CR
 
 
 
-## **29. Friend or Foe: How LLMs' Safety Mind Gets Fooled by Intent Shift Attack**
+## **34. Friend or Foe: How LLMs' Safety Mind Gets Fooled by Intent Shift Attack**
 
 cs.CL
 
@@ -365,7 +433,7 @@ Preprint, 14 pages, 5 figures, 7 tables
 
 
 
-## **30. Reimagining Safety Alignment with An Image**
+## **35. Reimagining Safety Alignment with An Image**
 
 cs.AI
 
@@ -377,7 +445,7 @@ cs.AI
 
 
 
-## **31. Proactive DDoS Detection and Mitigation in Decentralized Software-Defined Networking via Port-Level Monitoring and Zero-Training Large Language Models**
+## **36. Proactive DDoS Detection and Mitigation in Decentralized Software-Defined Networking via Port-Level Monitoring and Zero-Training Large Language Models**
 
 cs.CR
 
@@ -389,7 +457,7 @@ cs.CR
 
 
 
-## **32. DRIP: Defending Prompt Injection via De-instruction Training and Residual Fusion Model Architecture**
+## **37. DRIP: Defending Prompt Injection via De-instruction Training and Residual Fusion Model Architecture**
 
 cs.CR
 
@@ -401,7 +469,7 @@ cs.CR
 
 
 
-## **33. ToxicTextCLIP: Text-Based Poisoning and Backdoor Attacks on CLIP Pre-training**
+## **38. ToxicTextCLIP: Text-Based Poisoning and Backdoor Attacks on CLIP Pre-training**
 
 cs.CV
 
@@ -415,7 +483,7 @@ Accepted by NeurIPS 2025
 
 
 
-## **34. Enhancing Adversarial Transferability by Balancing Exploration and Exploitation with Gradient-Guided Sampling**
+## **39. Enhancing Adversarial Transferability by Balancing Exploration and Exploitation with Gradient-Guided Sampling**
 
 cs.LG
 
@@ -429,7 +497,7 @@ accepted by iccv 2025
 
 
 
-## **35. Stochastic Subspace Descent Accelerated via Bi-fidelity Line Search**
+## **40. Stochastic Subspace Descent Accelerated via Bi-fidelity Line Search**
 
 cs.LG
 
@@ -441,7 +509,7 @@ cs.LG
 
 
 
-## **36. CoP: Agentic Red-teaming for Large Language Models using Composition of Principles**
+## **41. CoP: Agentic Red-teaming for Large Language Models using Composition of Principles**
 
 cs.AI
 
@@ -453,7 +521,7 @@ cs.AI
 
 
 
-## **37. Exploiting Latent Space Discontinuities for Building Universal LLM Jailbreaks and Data Extraction Attacks**
+## **42. Exploiting Latent Space Discontinuities for Building Universal LLM Jailbreaks and Data Extraction Attacks**
 
 cs.CR
 
@@ -467,7 +535,7 @@ cs.CR
 
 
 
-## **38. Visual Backdoor Attacks on MLLM Embodied Decision Making via Contrastive Trigger Learning**
+## **43. Visual Backdoor Attacks on MLLM Embodied Decision Making via Contrastive Trigger Learning**
 
 cs.AI
 
@@ -479,7 +547,7 @@ cs.AI
 
 
 
-## **39. Decoding Latent Attack Surfaces in LLMs: Prompt Injection via HTML in Web Summarization**
+## **44. Decoding Latent Attack Surfaces in LLMs: Prompt Injection via HTML in Web Summarization**
 
 cs.CR
 
@@ -491,7 +559,7 @@ cs.CR
 
 
 
-## **40. Eliciting Secret Knowledge from Language Models**
+## **45. Eliciting Secret Knowledge from Language Models**
 
 cs.LG
 
@@ -503,7 +571,7 @@ cs.LG
 
 
 
-## **41. Prevalence of Security and Privacy Risk-Inducing Usage of AI-based Conversational Agents**
+## **46. Prevalence of Security and Privacy Risk-Inducing Usage of AI-based Conversational Agents**
 
 cs.CR
 
@@ -517,7 +585,7 @@ cs.CR
 
 
 
-## **42. Adaptive Defense against Harmful Fine-Tuning for Large Language Models via Bayesian Data Scheduler**
+## **47. Adaptive Defense against Harmful Fine-Tuning for Large Language Models via Bayesian Data Scheduler**
 
 cs.LG
 
@@ -529,7 +597,7 @@ cs.LG
 
 
 
-## **43. Characterizing Selective Refusal Bias in Large Language Models**
+## **48. Characterizing Selective Refusal Bias in Large Language Models**
 
 cs.CL
 
@@ -543,7 +611,7 @@ cs.CL
 
 
 
-## **44. Adapting Large Language Models to Emerging Cybersecurity using Retrieval Augmented Generation**
+## **49. Adapting Large Language Models to Emerging Cybersecurity using Retrieval Augmented Generation**
 
 cs.CR
 
@@ -555,81 +623,15 @@ cs.CR
 
 
 
-## **45. LLM-based Multi-class Attack Analysis and Mitigation Framework in IoT/IIoT Networks**
-
-cs.CR
-
-**SubmitDate**: 2025-10-30    [abs](http://arxiv.org/abs/2510.26941v1) [paper-pdf](http://arxiv.org/pdf/2510.26941v1)
-
-**Authors**: Seif Ikbarieh, Maanak Gupta, Elmahedi Mahalal
-
-**Abstract**: The Internet of Things has expanded rapidly, transforming communication and operations across industries but also increasing the attack surface and security breaches. Artificial Intelligence plays a key role in securing IoT, enabling attack detection, attack behavior analysis, and mitigation suggestion. Despite advancements, evaluations remain purely qualitative, and the lack of a standardized, objective benchmark for quantitatively measuring AI-based attack analysis and mitigation hinders consistent assessment of model effectiveness. In this work, we propose a hybrid framework combining Machine Learning (ML) for multi-class attack detection with Large Language Models (LLMs) for attack behavior analysis and mitigation suggestion. After benchmarking several ML and Deep Learning (DL) classifiers on the Edge-IIoTset and CICIoT2023 datasets, we applied structured role-play prompt engineering with Retrieval-Augmented Generation (RAG) to guide ChatGPT-o3 and DeepSeek-R1 in producing detailed, context-aware responses. We introduce novel evaluation metrics for quantitative assessment to guide us and an ensemble of judge LLMs, namely ChatGPT-4o, DeepSeek-V3, Mixtral 8x7B Instruct, Gemini 2.5 Flash, Meta Llama 4, TII Falcon H1 34B Instruct, xAI Grok 3, and Claude 4 Sonnet, to independently evaluate the responses. Results show that Random Forest has the best detection model, and ChatGPT-o3 outperformed DeepSeek-R1 in attack analysis and mitigation.
-
-
-
-## **46. LatentBreak: Jailbreaking Large Language Models through Latent Space Feedback**
+## **50. Reasoning Up the Instruction Ladder for Controllable Language Models**
 
 cs.CL
 
-**SubmitDate**: 2025-10-30    [abs](http://arxiv.org/abs/2510.08604v2) [paper-pdf](http://arxiv.org/pdf/2510.08604v2)
+**SubmitDate**: 2025-10-30    [abs](http://arxiv.org/abs/2511.04694v1) [paper-pdf](http://arxiv.org/pdf/2511.04694v1)
 
-**Authors**: Raffaele Mura, Giorgio Piras, Kamilė Lukošiūtė, Maura Pintor, Amin Karbasi, Battista Biggio
+**Authors**: Zishuo Zheng, Vidhisha Balachandran, Chan Young Park, Faeze Brahman, Sachin Kumar
 
-**Abstract**: Jailbreaks are adversarial attacks designed to bypass the built-in safety mechanisms of large language models. Automated jailbreaks typically optimize an adversarial suffix or adapt long prompt templates by forcing the model to generate the initial part of a restricted or harmful response. In this work, we show that existing jailbreak attacks that leverage such mechanisms to unlock the model response can be detected by a straightforward perplexity-based filtering on the input prompt. To overcome this issue, we propose LatentBreak, a white-box jailbreak attack that generates natural adversarial prompts with low perplexity capable of evading such defenses. LatentBreak substitutes words in the input prompt with semantically-equivalent ones, preserving the initial intent of the prompt, instead of adding high-perplexity adversarial suffixes or long templates. These words are chosen by minimizing the distance in the latent space between the representation of the adversarial prompt and that of harmless requests. Our extensive evaluation shows that LatentBreak leads to shorter and low-perplexity prompts, thus outperforming competing jailbreak algorithms against perplexity-based filters on multiple safety-aligned models.
-
-
-
-## **47. Broken-Token: Filtering Obfuscated Prompts by Counting Characters-Per-Token**
-
-cs.CR
-
-16 pages, 9 figures
-
-**SubmitDate**: 2025-10-30    [abs](http://arxiv.org/abs/2510.26847v1) [paper-pdf](http://arxiv.org/pdf/2510.26847v1)
-
-**Authors**: Shaked Zychlinski, Yuval Kainan
-
-**Abstract**: Large Language Models (LLMs) are susceptible to jailbreak attacks where malicious prompts are disguised using ciphers and character-level encodings to bypass safety guardrails. While these guardrails often fail to interpret the encoded content, the underlying models can still process the harmful instructions. We introduce CPT-Filtering, a novel, model-agnostic with negligible-costs and near-perfect accuracy guardrail technique that aims to mitigate these attacks by leveraging the intrinsic behavior of Byte-Pair Encoding (BPE) tokenizers. Our method is based on the principle that tokenizers, trained on natural language, represent out-of-distribution text, such as ciphers, using a significantly higher number of shorter tokens. Our technique uses a simple yet powerful artifact of using language models: the average number of Characters Per Token (CPT) in the text. This approach is motivated by the high compute cost of modern methods - relying on added modules such as dedicated LLMs or perplexity models. We validate our approach across a large dataset of over 100,000 prompts, testing numerous encoding schemes with several popular tokenizers. Our experiments demonstrate that a simple CPT threshold robustly identifies encoded text with high accuracy, even for very short inputs. CPT-Filtering provides a practical defense layer that can be immediately deployed for real-time text filtering and offline data curation.
-
-
-
-## **48. PVMark: Enabling Public Verifiability for LLM Watermarking Schemes**
-
-cs.CR
-
-This work has been submitted to the IEEE for possible publication
-
-**SubmitDate**: 2025-10-30    [abs](http://arxiv.org/abs/2510.26274v1) [paper-pdf](http://arxiv.org/pdf/2510.26274v1)
-
-**Authors**: Haohua Duan, Liyao Xiang, Xin Zhang
-
-**Abstract**: Watermarking schemes for large language models (LLMs) have been proposed to identify the source of the generated text, mitigating the potential threats emerged from model theft. However, current watermarking solutions hardly resolve the trust issue: the non-public watermark detection cannot prove itself faithfully conducting the detection. We observe that it is attributed to the secret key mostly used in the watermark detection -- it cannot be public, or the adversary may launch removal attacks provided the key; nor can it be private, or the watermarking detection is opaque to the public. To resolve the dilemma, we propose PVMark, a plugin based on zero-knowledge proof (ZKP), enabling the watermark detection process to be publicly verifiable by third parties without disclosing any secret key. PVMark hinges upon the proof of `correct execution' of watermark detection on which a set of ZKP constraints are built, including mapping, random number generation, comparison, and summation. We implement multiple variants of PVMark in Python, Rust and Circom, covering combinations of three watermarking schemes, three hash functions, and four ZKP protocols, to show our approach effectively works under a variety of circumstances. By experimental results, PVMark efficiently enables public verifiability on the state-of-the-art LLM watermarking schemes yet without compromising the watermarking performance, promising to be deployed in practice.
-
-
-
-## **49. IRCopilot: Automated Incident Response with Large Language Models**
-
-cs.CR
-
-**SubmitDate**: 2025-10-30    [abs](http://arxiv.org/abs/2505.20945v3) [paper-pdf](http://arxiv.org/pdf/2505.20945v3)
-
-**Authors**: Xihuan Lin, Jie Zhang, Gelei Deng, Tianzhe Liu, Tianwei Zhang, Qing Guo, Riqing Chen
-
-**Abstract**: Incident response plays a pivotal role in mitigating the impact of cyber attacks. In recent years, the intensity and complexity of global cyber threats have grown significantly, making it increasingly challenging for traditional threat detection and incident response methods to operate effectively in complex network environments. While Large Language Models (LLMs) have shown great potential in early threat detection, their capabilities remain limited when it comes to automated incident response after an intrusion. To address this gap, we construct an incremental benchmark based on real-world incident response tasks to thoroughly evaluate the performance of LLMs in this domain. Our analysis reveals several key challenges that hinder the practical application of contemporary LLMs, including context loss, hallucinations, privacy protection concerns, and their limited ability to provide accurate, context-specific recommendations. In response to these challenges, we propose IRCopilot, a novel framework for automated incident response powered by LLMs. IRCopilot mimics the three dynamic phases of a real-world incident response team using four collaborative LLM-based session components. These components are designed with clear divisions of responsibility, reducing issues such as hallucinations and context loss. Our method leverages diverse prompt designs and strategic responsibility segmentation, significantly improving the system's practicality and efficiency. Experimental results demonstrate that IRCopilot outperforms baseline LLMs across key benchmarks, achieving sub-task completion rates of 150%, 138%, 136%, 119%, and 114% for various response tasks. Moreover, IRCopilot exhibits robust performance on public incident response platforms and in real-world attack scenarios, showcasing its strong applicability.
-
-
-
-## **50. ALMGuard: Safety Shortcuts and Where to Find Them as Guardrails for Audio-Language Models**
-
-cs.SD
-
-Accepted to NeurIPS 2025
-
-**SubmitDate**: 2025-10-30    [abs](http://arxiv.org/abs/2510.26096v1) [paper-pdf](http://arxiv.org/pdf/2510.26096v1)
-
-**Authors**: Weifei Jin, Yuxin Cao, Junjie Su, Minhui Xue, Jie Hao, Ke Xu, Jin Song Dong, Derui Wang
-
-**Abstract**: Recent advances in Audio-Language Models (ALMs) have significantly improved multimodal understanding capabilities. However, the introduction of the audio modality also brings new and unique vulnerability vectors. Previous studies have proposed jailbreak attacks that specifically target ALMs, revealing that defenses directly transferred from traditional audio adversarial attacks or text-based Large Language Model (LLM) jailbreaks are largely ineffective against these ALM-specific threats. To address this issue, we propose ALMGuard, the first defense framework tailored to ALMs. Based on the assumption that safety-aligned shortcuts naturally exist in ALMs, we design a method to identify universal Shortcut Activation Perturbations (SAPs) that serve as triggers that activate the safety shortcuts to safeguard ALMs at inference time. To better sift out effective triggers while preserving the model's utility on benign tasks, we further propose Mel-Gradient Sparse Mask (M-GSM), which restricts perturbations to Mel-frequency bins that are sensitive to jailbreaks but insensitive to speech understanding. Both theoretical analyses and empirical results demonstrate the robustness of our method against both seen and unseen attacks. Overall, \MethodName reduces the average success rate of advanced ALM-specific jailbreak attacks to 4.6% across four models, while maintaining comparable utility on benign benchmarks, establishing it as the new state of the art. Our code and data are available at https://github.com/WeifeiJin/ALMGuard.
+**Abstract**: As large language model (LLM) based systems take on high-stakes roles in real-world decision-making, they must reconcile competing instructions from multiple sources (e.g., model developers, users, and tools) within a single prompt context. Thus, enforcing an instruction hierarchy (IH) in LLMs, where higher-level directives override lower-priority requests, is critical for the reliability and controllability of LLMs. In this work, we reframe instruction hierarchy resolution as a reasoning task. Specifically, the model must first "think" about the relationship between a given user prompt and higher-priority (system) instructions before generating a response. To enable this capability via training, we construct VerIH, an instruction hierarchy dataset of constraint-following tasks with verifiable answers. This dataset comprises both aligned and conflicting system-user instructions. We show that lightweight reinforcement learning with VerIH effectively transfers general reasoning capabilities of models to instruction prioritization. Our finetuned models achieve consistent improvements on instruction following and instruction hierarchy benchmarks. This reasoning ability also generalizes to safety-critical settings beyond the training distribution. By treating safety issues as resolving conflicts between adversarial user inputs and predefined higher-priority policies, our trained model enhances robustness against jailbreak and prompt injection attacks. These results demonstrate that reasoning over instruction hierarchies provides a practical path to reliable LLMs, where updates to system prompts yield controllable and robust changes in model behavior.
 
 
 
