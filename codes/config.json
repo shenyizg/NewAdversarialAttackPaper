@@ -1,0 +1,9 @@
+{
+  "llm_api": {
+    "_comment": "Replace with actual API details",
+    "base_url": "",
+    "api_key": "",
+    "model": "",
+    "temperature": 0.2
+  }
+}
